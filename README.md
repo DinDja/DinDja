@@ -1,4 +1,4 @@
-👨‍ ‍Bruno, tenho 21 anos.
+👨‍ ‍Bruno, tenho 22 anos.
 
 ✈️Sou de Salvador - BA.
 
