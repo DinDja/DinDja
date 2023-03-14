@@ -1,14 +1,14 @@
 👨‍ ‍Bruno, tenho 22 anos.
 
-✈️Sou de Salvador - BA.
+✈️ Sou de Salvador - BA.
 
-📘Cursando Análise e Desenvolvimento de Sistemas
+📘 Cursando Análise e Desenvolvimento de Sistemas
 
-👨‍🎓Estudante JavaScript Full Stack
+👨🏻‍💻 Frontend developer.
 
-🌱Estudando NEXTjs.
+🌱 Aprimorando meus conhecimentos em NEXTjs.
 
-📫Entre em contato comigo no e-mail: brunomomoshiki@gmail.com
+📫 Entre em contato comigo no e-mail: brunomomoshiki@gmail.com
 
 <div align="start">
   <a href="https://github.com/DinDja">
