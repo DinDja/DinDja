@@ -30,9 +30,7 @@
        title="Bootstrap">
    <img align="center" alt="DinDja-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
         title="NEXT">
-    
-<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg"/>
-
+  
 </div>
  
 
