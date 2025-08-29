@@ -12,7 +12,8 @@
 👨‍ Bruno, tenho 25 anos  
 ✈️ Sou de Salvador - BA  
 📘 Cursando **Análise e Desenvolvimento de Sistemas**  
-🌱 Atualmente aprendendo **Next.js**  
+🏢 Atualmente trabalho na **Secretaria de Educação do Estado da Bahia**, desenvolvendo o sistema **AcompanhaTec**  
+🌱 Aprimorando conhecimentos em **Next.js**  
 📫 Contato: **brunomomoshiki@gmail.com**
 
 ---
@@ -39,7 +40,6 @@
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=DinDja&theme=dracula" alt="Streak Stats"/>
 </p>
-
 
 ---
 
