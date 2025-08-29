@@ -4,7 +4,7 @@
 
 📘 Cursando Análise e Desenvolvimento de Sistemas
 
-👨🏻‍💻 Frontend developer.
+👨🏻‍💻 Fullstack developer.
 
 🌱 Aprimorando meus conhecimentos em NEXTjs.
 
