@@ -41,11 +41,6 @@
 </p>
 
 
-## 🐍 Minhas contribuições
-<p align="center">
-  <img src="https://github.com/DinDja/DinDja/blob/output/github-contribution-grid-snake.svg"/>
-</p>
-
 ---
 
 <!-- Footer -->
