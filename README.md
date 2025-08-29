@@ -40,14 +40,6 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=DinDja&theme=dracula" alt="Streak Stats"/>
 </p>
 
----
-
-## 🚀 Projetos em Destaque
-- 🔗 [Meu Portfólio](https://github.com/DinDja/portfolio)  
-- 📊 [Dashboard Admin](https://github.com/DinDja/dashboard-admin)  
-- 🤖 [Jarvis Assistant](https://github.com/DinDja/jarvis-assistant)  
-
----
 
 ## 🐍 Minhas contribuições
 <p align="center">
