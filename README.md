@@ -1,36 +1,60 @@
-👨‍ ‍Bruno, tenho 25 anos.
+<!-- Banner animado -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&section=header&text=Bruno%20%7C%20Fullstack%20Developer&fontSize=32&fontAlignY=35&animation=fadeIn&desc=Bem-vindo%20ao%20meu%20GitHub!&descAlignY=55&descAlign=50"/>
 
-✈️ Sou de Salvador - BA.
+<!-- Typing effect -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&center=true&vCenter=true&width=500&lines=Fullstack+Developer;React+%7C+Next.js+%7C+Node.js;Sempre+aprendendo+novas+tecnologias" alt="Typing SVG" />
+</p>
 
-📘 Cursando Análise e Desenvolvimento de Sistemas
+---
 
-👨🏻‍💻 Fullstack developer.
+## 👨‍💻 Sobre mim
+👨‍ Bruno, tenho 25 anos  
+✈️ Sou de Salvador - BA  
+📘 Cursando **Análise e Desenvolvimento de Sistemas**  
+🌱 Atualmente aprendendo **Next.js**  
+📫 Contato: **brunomomoshiki@gmail.com**
 
-🌱 Aprimorando meus conhecimentos em NEXTjs.
+---
 
-📫 Entre em contato comigo no e-mail: brunomomoshiki@gmail.com
+## 🚀 Tecnologias & Ferramentas
+<p align="center">
+  <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=fff"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff"/>
+  <img src="https://img.shields.io/badge/React-2025-blue?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs"/>
+  <img src="https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=sass&logoColor=fff"/>
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=fff"/>
+</p>
 
-<div align="start">
-  <a href="https://github.com/DinDja">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=7&theme=dracula" title="Linguagens mais utilizadas"/>
-</div>
-  
-  <div style="display: inline_block"><br>
-  <img align="center" alt="DinDja-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" title="Javascript">
-  <img align="center" alt="DInDja-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-       title="HTML">
-  <img align="center" alt="DinDja-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-       title="Javascript"CSS>
-  <img align="center" alt="DinDja-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-       title="React">
-  <img align="center" alt="DinDja-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
-       title="SASS">
-  <img align="center" alt="DinDja-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
-       title="Bootstrap">
-   <img align="center" alt="DinDja-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
-        title="NEXT">
-  
-</div>
- 
+---
 
+## 📊 Estatísticas
+<p align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=dracula" alt="Estatísticas"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=7&theme=dracula"/>
+</p>
 
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DinDja&theme=dracula" alt="Streak Stats"/>
+</p>
+
+---
+
+## 🚀 Projetos em Destaque
+- 🔗 [Meu Portfólio](https://github.com/DinDja/portfolio)  
+- 📊 [Dashboard Admin](https://github.com/DinDja/dashboard-admin)  
+- 🤖 [Jarvis Assistant](https://github.com/DinDja/jarvis-assistant)  
+
+---
+
+## 🐍 Minhas contribuições
+<p align="center">
+  <img src="https://github.com/DinDja/DinDja/blob/output/github-contribution-grid-snake.svg"/>
+</p>
+
+---
+
+<!-- Footer -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer"/>
