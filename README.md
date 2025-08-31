@@ -37,10 +37,6 @@
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=7&theme=dracula"/>
 </p>
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DinDja&theme=dracula" alt="Streak Stats"/>
-</p>
-
 ---
 
 <!-- Footer -->
