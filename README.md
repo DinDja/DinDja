@@ -33,10 +33,20 @@
 ## 📊 Estatísticas & Atividade
 
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&count_private=true" alt="Estatísticas"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&count_private=true&include_all_commits=true" />
-  <img height="180em" src="https://streak-stats.vercel.app?user=DinDja&theme=radical&hide_border=true" alt="Streak"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical"/>
+  <!-- Estatísticas gerais -->
+  <img height="180em" 
+       src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&count_private=true&include_all_commits=true" 
+       alt="Estatísticas"/>
+
+  <!-- Streak (precisa do token pra pegar privados também) -->
+  <img height="180em" 
+       src="https://streak-stats.demolab.com?user=DinDja&theme=radical&hide_border=true&count_private=true" 
+       alt="Streak"/>
+
+  <!-- Linguagens mais usadas -->
+  <img height="180em" 
+       src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical&count_private=true" 
+       alt="Linguagens"/>
 </p>
 
 ---
