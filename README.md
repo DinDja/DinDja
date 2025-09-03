@@ -1,9 +1,11 @@
-# 👨‍💻 Bruno • Full‑Stack Developer
+# 👨‍💻 Bruno • Full-Stack Developer
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Bruno%20%7C%20Fullstack%20Developer&fontSize=40&fontAlignY=35&animation=twinkling&desc=React%20%7C%20Next.js%20%7C%20Node.js&descAlignY=55&descAlign=50"/>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&center=true&vCenter=true&width=600&lines=Fullstack+Developer;Apaixonado+por+Tecnologia+%26+Inovação;Sempre+aprendendo+novas+tecnologias;Clean+Code+%26+Arquitetura+Escalável" alt="Typing SVG" />
+  <img src="https://img.shields.io/badge/Fullstack%20Developer-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Aprendendo%20Novas%20Tecnologias-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Clean%20Code%20%26%20Arquitetura-informational?style=for-the-badge" />
 </p>
 
 ---
@@ -15,7 +17,7 @@
 * 🎓 Estudando **Análise e Desenvolvimento de Sistemas**.
 * 🏢 Desenvolvedor na **Secretaria de Educação da Bahia**, responsável pelo sistema **AcompanhaTec**.
 * 🌱 Estudando profundamente **Next.js**, **Clean Architecture** e **práticas de DevOps**.
-* 🎮 Gamer nas horas vagas, apaixonado por JRPGs, FPS e PCs tunados.
+* 🎮 Gamer nas horas vagas, apaixonado por JRPGs, FPS e PCs tunados (já fui dono de uma RX 580 😎).
 * 📫 Contato: **[brunomomoshiki@gmail.com](mailto:brunomomoshiki@gmail.com)**
 
 ---
@@ -32,7 +34,7 @@
 
 <p align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&count_private=true" alt="Estatísticas"/>
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=radical&hide_border=true" alt="Streak"/>
+  <img height="180em" src="https://streak-stats.vercel.app?user=DinDja&theme=radical&hide_border=true" alt="Streak"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical"/>
 </p>
 
