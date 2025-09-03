@@ -17,7 +17,7 @@
 * 🎓 Estudando **Análise e Desenvolvimento de Sistemas**.
 * 🏢 Desenvolvedor na **Secretaria de Educação da Bahia**, responsável pelo sistema **AcompanhaTec**.
 * 🌱 Estudando profundamente **Next.js**, **Clean Architecture** e **práticas de DevOps**.
-* 🎮 Gamer nas horas vagas, apaixonado por JRPGs, FPS e PCs tunados (já fui dono de uma RX 580 😎).
+* 🎮 Gamer nas horas vagas, apaixonado por JRPGs, FPS e PCs tunados.
 * 📫 Contato: **[brunomomoshiki@gmail.com](mailto:brunomomoshiki@gmail.com)**
 
 ---
@@ -44,21 +44,10 @@
 
 ### 🔹 [AcompanhaTec](#)
 
-Sistema interno de acompanhamento acadêmico e relatórios na rede estadual de ensino.
+Sistema interno de acompanhamento e gestão pedagógica voltada as unidade de Ensino Profissional e Técnológico (EPT).
 
 **Stack**: Next.js • Node.js • PostgreSQL • Firebase
 
----
-
-### 🔹 [clean-next-template](https://github.com/DinDja/clean-next-template)
-
-Template de **Next.js 14** com arquitetura em camadas, **Zod**, **Prisma**, **NextAuth**, **Shadcn UI** e testes automatizados.
-
----
-
-### 🔹 [react-forms-toolkit](https://github.com/DinDja/react-forms-toolkit)
-
-Toolkit para formulários complexos com steps, validação via **Zod** e persistência local.
 
 ---
 
