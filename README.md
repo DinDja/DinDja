@@ -33,9 +33,9 @@
 ## 📊 Estatísticas & Atividade
 
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical" />
-  <img height="180em" src="https://streak-stats.demolab.com?user=DinDja&theme=radical&hide_border=true" alt="Streak Stats"/> 
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical"/>
+<img height="180em" src="https://github-readme-stats-seuuser.vercel.app/api?username=DinDja&show_icons=true&theme=radical" />
+<img height="180em" src="https://streak-stats.demolab.com?user=DinDja&theme=radical&hide_border=true" />
+<img height="180em" src="https://github-readme-stats-seuuser.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical"/>
 </p>
 
 ---
