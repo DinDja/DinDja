@@ -32,8 +32,9 @@
 
 ## 📊 Estatísticas & Atividade
 
-<p align="center"> <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&count_private=true&include_all_commits=true" /> 
-  <img height="180em" src="https://streak-stats.vercel.app?user=DinDja&theme=radical&hide_border=true" alt="Streak"/> 
+<p align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical" />
+  <img height="180em" src="https://streak-stats.demolab.com?user=DinDja&theme=radical&hide_border=true" alt="Streak Stats"/> 
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical"/>
 </p>
 
@@ -43,10 +44,9 @@
 
 ### 🔹 [AcompanhaTec](#)
 
-Sistema interno de acompanhamento e gestão pedagógica voltada as unidade de Ensino Profissional e Técnológico (EPT).
+Sistema interno de acompanhamento e gestão pedagógica voltada às unidades de Ensino Profissional e Tecnológico (EPT).
 
 **Stack**: Next.js • Node.js • PostgreSQL • Firebase
-
 
 ---
 
