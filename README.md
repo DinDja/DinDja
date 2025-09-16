@@ -6,18 +6,19 @@
   <img src="https://img.shields.io/badge/Fullstack%20Developer-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Aprendendo%20Novas%20Tecnologias-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Clean%20Code%20%26%20Arquitetura-informational?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/GitHub%20Trophies-🏆-ff69b4?style=for-the-badge" />
 </p>
 
 ---
 
 ## 🚀 Sobre mim
-- 👨 Sou **Bruno**, tenho 25 anos.  
-- 📍 Moro em **Salvador - BA**.  
-- 🎓 Estudando **Análise e Desenvolvimento de Sistemas**.  
-- 🏢 Desenvolvedor na **Secretaria de Educação da Bahia**, responsável pelo sistema **AcompanhaTec**.  
-- 🌱 Focado em **Next.js**, **Clean Architecture** e **práticas de DevOps**.  
-- 🎮 Gamer nas horas vagas, apaixonado por JRPGs, FPS e PCs tunados.  
-- 📫 Contato: **[brunomomoshiki@gmail.com](mailto:brunomomoshiki@gmail.com)**  
+- 👨 Me chamo **Bruno**, 25 anos.  
+- 📍 Baseado em **Salvador - BA**.  
+- 🎓 Estudante de **Análise e Desenvolvimento de Sistemas**.  
+- 🏢 Desenvolvedor na **Secretaria de Educação da Bahia** (Sistema **AcompanhaTec**).  
+- 🌱 Apaixonado por **Next.js**, **Clean Architecture** e **DevOps**.  
+- 🎮 Gamer: JRPGs, FPS e PCs tunados.  
+- 📫 Contato: [brunomomoshiki@gmail.com](mailto:brunomomoshiki@gmail.com)
 
 ---
 
@@ -28,10 +29,14 @@
 
 ---
 
-## 📊 Estatísticas & Atividade
+## 🏆 GitHub Trophies & Estatísticas
+<p align="center">
+  <img height="150em" src="https://github-profile-trophy.vercel.app/?username=DinDja&theme=radical&no-frame=true&margin-w=10&margin-h=10" />
+</p>
+
 <p align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&count_private=true&include_all_commits=true" />
-  <img height="180em" src="https://streak-stats.vercel.app?user=DinDja&theme=radical&hide_border=true" alt="Streak"/>
+  <img height="180em" src="https://streak-stats.demolab.com?user=DinDja&theme=radical" alt="Streak"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical"/>
 </p>
 
@@ -39,23 +44,23 @@
 
 ## 📌 Projetos em Destaque
 ### 🔹 [AcompanhaTec](#)
-Sistema interno de acompanhamento e gestão pedagógica voltado para as unidades de Ensino Profissional e Tecnológico (EPT).  
+Sistema interno de acompanhamento pedagógico para unidades de Ensino Profissional e Tecnológico (EPT).  
 
-**Stack**: Next.js • Node.js • PostgreSQL • Firebase  
+**Stack:** Next.js • Node.js • PostgreSQL • Firebase  
 
 ---
 
-## 🎯 O que estou fazendo agora
-- Refatorando o **AcompanhaTec** com SSR/ISR e otimização em edge.  
+## 🎯 Atualmente
+- Refatorando **AcompanhaTec** com SSR/ISR e otimização edge.  
 - Criando **componentes headless e acessíveis**.  
-- Automatizando CI/CD com **GitHub Actions** e **Docker**.  
+- Automatizando **CI/CD** com GitHub Actions e Docker.  
 
 ---
 
-## 🎮 Depois do expediente
+## 🎮 Além do trabalho
 - Jogando RPGs e FPS táticos.  
-- Testando novas stacks e frameworks.  
-- Criando projetos open source para aprender e compartilhar.  
+- Explorando novas stacks e frameworks.  
+- Criando projetos open source para aprendizado e compartilhamento.  
 
 ---
 
