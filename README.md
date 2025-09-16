@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/Fullstack%20Developer-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Aprendendo%20Novas%20Tecnologias-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Clean%20Code%20%26%20Arquitetura-informational?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/GitHub%20Trophies-🏆-ff69b4?style=for-the-badge" />
 </p>
 
 ---
