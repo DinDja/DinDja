@@ -30,15 +30,16 @@
 
 ## 🏆 GitHub Trophies & Estatísticas
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DinDja&theme=radical&no-frame=true&margin-w=10&margin-h=10" />
+<img src="https://github-profile-trophy.vercel.app/?username=DinDja&theme=radical&no-frame=true&margin-w=10&margin-h=10&v=1" />
 </p>
 
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical" />
-  <img height="180" src="https://streak-stats.demolab.com?user=DinDja&theme=radical" alt="Streak"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&cache_seconds=86400" />
+
+<img height="180" src="https://streak-stats.demolab.com?user=DinDja&theme=radical&v=1" />
 </p>
 <p align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical&cache_seconds=86400"/>
 </p>
 
 ---
