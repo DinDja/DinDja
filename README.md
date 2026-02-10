@@ -1,4 +1,3 @@
-👨‍💻 Bruno • Full-Stack Developer
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Bruno%20%7C%20Fullstack%20Developer&fontSize=40&fontAlignY=35&animation=twinkling&desc=Software%20Engineering%20%7C%20Cloud%20%7C%20Web%20Platforms&descAlignY=55&descAlign=50"/> <p align="center"> <img src="https://img.shields.io/badge/Software%20Engineering-0A66C2?style=for-the-badge" /> <img src="https://img.shields.io/badge/Enterprise%20Systems-2E8B57?style=for-the-badge" /> <img src="https://img.shields.io/badge/Scalable%20Architecture-6A5ACD?style=for-the-badge" /> </p>
 📌 Perfil Profissional
 
