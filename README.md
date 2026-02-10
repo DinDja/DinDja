@@ -28,25 +28,13 @@
 
 ---
 
-## 🏆 GitHub Trophies & Estatísticas
-<p align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=DinDja&theme=radical&no-frame=true&margin-w=10&margin-h=10&v=1" />
-</p>
-
-<p align="center">
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=radical&cache_seconds=86400" />
-
-<img height="180" src="https://streak-stats.demolab.com?user=DinDja&theme=radical&v=1" />
-</p>
-<p align="center">
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&langs_count=8&theme=radical&cache_seconds=86400"/>
-</p>
-
 ---
 
 ## 📌 Projetos em Destaque
 ### 🔹 [AcompanhaTec](#)
-Sistema interno de acompanhamento pedagógico para unidades de Ensino Profissional e Tecnológico (EPT).  
+Sistema Externo de acompanhamento pedagógico para unidades de Ensino Profissional e Tecnológico (EPT).  
+🔹 [Info.Secti](#)
+Sistema interno de acompanhamento de Projetos científicos do Estado da Bahia.  
 
 **Stack:** Next.js • Node.js • PostgreSQL • Firebase  
 
