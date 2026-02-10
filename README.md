@@ -33,7 +33,7 @@
 ## 📌 Projetos em Destaque
 ### 🔹 [AcompanhaTec](#)
 Sistema Externo de acompanhamento pedagógico para unidades de Ensino Profissional e Tecnológico (EPT).  
-🔹 [Info.Secti](#)
+###🔹 [Info.Secti](#)
 Sistema interno de acompanhamento de Projetos científicos do Estado da Bahia.  
 
 **Stack:** Next.js • Node.js • PostgreSQL • Firebase  
