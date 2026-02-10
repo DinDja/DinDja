@@ -1,64 +1,88 @@
-# 👨‍💻 Bruno • Full-Stack Developer
+👨‍💻 Bruno • Full-Stack Developer
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Bruno%20%7C%20Fullstack%20Developer&fontSize=40&fontAlignY=35&animation=twinkling&desc=Software%20Engineering%20%7C%20Cloud%20%7C%20Web%20Platforms&descAlignY=55&descAlign=50"/> <p align="center"> <img src="https://img.shields.io/badge/Software%20Engineering-0A66C2?style=for-the-badge" /> <img src="https://img.shields.io/badge/Enterprise%20Systems-2E8B57?style=for-the-badge" /> <img src="https://img.shields.io/badge/Scalable%20Architecture-6A5ACD?style=for-the-badge" /> </p>
+📌 Perfil Profissional
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Bruno%20%7C%20Fullstack%20Developer&fontSize=40&fontAlignY=35&animation=twinkling&desc=React%20%7C%20Next.js%20%7C%20Node.js&descAlignY=55&descAlign=50"/>
+Desenvolvedor Full Stack com experiência em desenvolvimento de plataformas web, arquitetura escalável e modernização de sistemas. Atuação em projetos governamentais estratégicos, com foco em confiabilidade, performance e boas práticas de engenharia de software.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Fullstack%20Developer-blueviolet?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Aprendendo%20Novas%20Tecnologias-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Clean%20Code%20%26%20Arquitetura-informational?style=for-the-badge" />
-</p>
+🏢 Experiência Atual
 
----
+Desenvolvedor • SECTI/BA — Secretaria de Ciência, Tecnologia e Inovação da Bahia
 
-## 🚀 Sobre mim
-- 👨 Me chamo **Bruno**, 25 anos.  
-- 📍 Baseado em **Salvador - BA**.  
-- 🎓 Estudante de **Análise e Desenvolvimento de Sistemas**.  
-- 🏢 Desenvolvedor na **Secretaria de Educação da Bahia** (Sistema **AcompanhaTec**).  
-- 🌱 Apaixonado por **Next.js**, **Clean Architecture** e **DevOps**.  
-- 🎮 Gamer: JRPGs, FPS e PCs tunados.  
-- 📫 Contato: [brunomomoshiki@gmail.com](mailto:brunomomoshiki@gmail.com)
+Desenvolvimento e evolução do Info.Secti, sistema de acompanhamento estratégico de projetos científicos e tecnológicos
 
----
+Implementação de melhorias de performance e escalabilidade
 
-## 🧰 Tecnologias & Ferramentas
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,sass,bootstrap,html,css,nodejs,express,prisma,postgres,firebase,git,github,docker,vercel,netlify" />
-</p>
+Apoio na definição de arquitetura e padronização técnica
 
----
+Integração entre serviços e bases de dados institucionais
 
----
+💼 Projetos Relevantes
+Info.Secti
 
-## 📌 Projetos em Destaque
-### 🔹 [AcompanhaTec](#)
-Sistema Externo de acompanhamento pedagógico para unidades de Ensino Profissional e Tecnológico (EPT).  
-###🔹 [Info.Secti](#)
-Sistema interno de acompanhamento de Projetos científicos do Estado da Bahia.  
+Sistema interno para gestão e acompanhamento de projetos científicos e estratégicos do Estado da Bahia.
 
-**Stack:** Next.js • Node.js • PostgreSQL • Firebase  
+AcompanhaTec
 
----
+Plataforma externa de acompanhamento pedagógico para unidades de Ensino Profissional e Tecnológico (EPT).
 
-## 🎯 Atualmente
-- Refatorando **AcompanhaTec** com SSR/ISR e otimização edge.  
-- Criando **componentes headless e acessíveis**.  
-- Automatizando **CI/CD** com GitHub Actions e Docker.  
+Principais tecnologias utilizadas:
+Next.js • Node.js • PostgreSQL • Firebase • Docker
 
----
+🧰 Competências Técnicas
 
-## 🎮 Além do trabalho
-- Jogando RPGs e FPS táticos.  
-- Explorando novas stacks e frameworks.  
-- Criando projetos open source para aprendizado e compartilhamento.  
+Frontend
 
----
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake.svg">
-</picture>
+React
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer"/>
-</p>
+Next.js
+
+TypeScript
+
+Tailwind / CSS / HTML
+
+Backend
+
+Node.js
+
+Express
+
+APIs REST
+
+Integração com serviços cloud
+
+Banco de Dados
+
+PostgreSQL
+
+Firebase / Firestore
+
+DevOps & Infraestrutura
+
+Docker
+
+CI/CD (GitHub Actions)
+
+Deploy Cloud (Vercel / Netlify)
+
+Versionamento Git / GitHub
+
+🎯 Foco Técnico Atual
+
+Arquitetura limpa aplicada a sistemas corporativos
+
+Otimização de performance (SSR, ISR, Edge)
+
+Componentização reutilizável e acessível
+
+Automação de pipelines e qualidade de código
+
+🎓 Formação
+
+Análise e Desenvolvimento de Sistemas
+(Em andamento)
+
+📫 Contato
+
+📧 brunomomoshiki@gmail.com
+
+<picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake-dark.svg"> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake.svg"> <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake.svg"> </picture> <p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer"/> </p>
