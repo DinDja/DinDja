@@ -47,14 +47,6 @@ Sistema externo de acompanhamento pedagógico para unidades de Ensino Profission
 
 ---
 
-## 📊 Métricas GitHub
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=transparent&hide_border=true"/>
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&theme=transparent&hide_border=true"/>
-</p>
-
----
 
 ## 🎯 Foco Técnico Atual
 
