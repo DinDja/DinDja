@@ -22,17 +22,9 @@ Experiência com arquitetura moderna, integração de serviços e otimização d
 ### **SECTI/BA — Secretaria de Ciência, Tecnologia e Inovação da Bahia**
 **Cargo:** Desenvolvedor Full Stack
 
-✔ Desenvolvimento e evolução do **Info.Secti**  
-✔ Arquitetura e padronização técnica  
-✔ Integração entre serviços e bases institucionais  
-✔ Otimização de performance e escalabilidade  
-
 ### **SEC/BA — Secretaria de Educação da Bahia**
 **Cargo:** Tech Lead 
 
-✔ Responsável por orientar a equipe técnica  
-✔ Definir a arquitetura de software
-✔ Garantir a qualidade do código
 ---
 
 ## 📌 Projetos Estratégicos
