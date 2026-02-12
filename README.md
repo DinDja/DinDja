@@ -45,56 +45,6 @@ Sistema externo de acompanhamento pedagógico para unidades de Ensino Profission
   <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,nodejs,express,postgres,firebase,git,github,vercel,netlify&perline=7" />
 </p>
 
-### 🟦 TypeScript
-Superset do JavaScript que adiciona tipagem estática, aumentando previsibilidade, segurança e manutenibilidade do código em projetos grandes.
-
-### 🟨 JavaScript
-Base do desenvolvimento web moderno, usado para lógica de frontend, backend (Node.js) e integrações.
-
-### ⚛ React
-Biblioteca para construção de interfaces dinâmicas baseadas em componentes reutilizáveis, focada em performance e escalabilidade de UI.
-
-### ▲ Next.js
-Framework React para aplicações fullstack com SSR, ISR, rotas otimizadas, API Routes e alta performance para aplicações corporativas.
-
-### 🎨 Tailwind CSS
-Framework CSS utilitário que acelera o desenvolvimento de interfaces consistentes, responsivas e padronizadas.
-
-### 🟩 Node.js
-Ambiente de execução JavaScript server-side, ideal para APIs, microsserviços e sistemas escaláveis.
-
-### 🚂 Express
-Framework minimalista para criação de APIs REST e middlewares no Node.js.
-
-### 🐘 PostgreSQL
-Banco relacional robusto, confiável e performático para sistemas corporativos e dados estruturados.
-
-### 🔥 Firebase
-Plataforma BaaS com autenticação, banco NoSQL (Firestore), storage, analytics e cloud functions.
-
-### 🐳 Docker
-Containerização de aplicações garantindo portabilidade, padronização de ambiente e facilidade em CI/CD.
-
-### 🌿 Git
-Controle de versão distribuído para rastreamento de mudanças e colaboração em código.
-
-### 🐙 GitHub
-Plataforma de hospedagem de código com CI/CD, automações, gestão de projetos e colaboração.
-
-### ▲ Vercel
-Plataforma de deploy focada em aplicações frontend e serverless, com otimizações automáticas para Next.js.
-
----
-
-
-## 🎯 Foco Técnico Atual
-
-- Arquitetura limpa aplicada a sistemas corporativos  
-- SSR • ISR • Edge Performance  
-- Componentização acessível e reutilizável  
-- CI/CD com GitHub Actions + Docker  
-- Padronização e qualidade de código  
-
 ---
 
 ## 🎓 Formação
