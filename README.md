@@ -30,7 +30,7 @@ Experiência com arquitetura moderna, integração de serviços e otimização d
 ### **SEC/BA — Secretaria de Educação da Bahia**
 **Cargo:** Tech Lead 
 
-✔ Responsável por orientar a equipe técnica**  
+✔ Responsável por orientar a equipe técnica  
 ✔ Definir a arquitetura de software
 ✔ Garantir a qualidade do código
 ---
