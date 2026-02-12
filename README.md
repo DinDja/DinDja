@@ -22,7 +22,7 @@ Experiência com arquitetura moderna, integração de serviços e otimização d
 ### **SECTI/BA — Secretaria de Ciência, Tecnologia e Inovação da Bahia**
 **Cargo:** Desenvolvedor Full Stack
 
-### **SEC/BA — Secretaria de Educação da Bahia**
+### **SEC/BA — Secretaria da Educação do Estado da Bahia**
 **Cargo:** Tech Lead 
 
 ---
