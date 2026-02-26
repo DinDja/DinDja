@@ -1,89 +1,78 @@
 <!-- HEADER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:6A5ACD&height=230&section=header&text=Bruno%20Andrade%20|%20Fullstack%20Developer&fontSize=42&fontAlignY=38&animation=fadeIn&desc=Enterprise%20Systems%20•%20Cloud%20Architecture%20•%20Public%20Sector%20Solutions&descAlignY=60"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:6A5ACD&height=220&section=header&text=Bruno%20Andrade%20|%20Fullstack%20Developer&fontSize=42&fontAlignY=38&desc=Enterprise%20Systems%20•%20Public%20Sector%20•%20Cloud%20Architecture&descAlignY=60"/>
 
 ---
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Segoe+UI&weight=500&size=24&duration=3000&pause=700&color=0A66C2&center=true&vCenter=true&width=900&lines=Full+Stack+Developer;Enterprise+Systems+Engineer;Builder+of+Government+Platforms;Clean+Architecture+•+Audit+Logs+•+Cloud+Security" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Segoe+UI&weight=500&size=22&duration=3000&pause=800&color=0A66C2&center=true&vCenter=true&width=900&lines=Full+Stack+Developer;Enterprise+Systems;Public+Sector+Solutions;React+•+Node.js+•+Cloud" />
 </p>
 
 ---
 
-## 🧭 Missão Profissional
+## Perfil Profissional
 
-Construir **sistemas institucionais confiáveis**, com foco em:
-- rastreabilidade de dados  
-- controle de acesso  
-- integridade da informação  
-- escalabilidade  
-- experiência do usuário  
+Desenvolvedor Full Stack com experiência na construção de **sistemas institucionais e corporativos** voltados ao setor público.  
+Atuação em projetos que exigem **controle de acesso, rastreabilidade de dados, padronização de processos e confiabilidade operacional**.
 
-Especializado em transformar **processos burocráticos** em **plataformas digitais auditáveis**.
+Experiência em:
+- Digitalização de processos administrativos;
+- Desenvolvimento de plataformas internas de gestão;
+- Sistemas de contratos, convênios e acompanhamento institucional;
+- Arquitetura web moderna com foco em manutenibilidade e segurança.
 
 ---
 
-## 🏛️ Atuação Institucional
+## Experiência Institucional
 
 **SECTI/BA — Secretaria de Ciência, Tecnologia e Inovação da Bahia**  
-`Desenvolvedor Full Stack`
+Cargo: Desenvolvedor Full Stack  
 
 **SEC/BA — Secretaria da Educação do Estado da Bahia**  
-`Tech Lead`
+Cargo: Tech Lead  
 
 ---
 
-## 🧩 Sistemas Desenvolvidos
+## Sistemas Desenvolvidos
 
-### 🧠 Info.SECTI  
-Plataforma para gestão e acompanhamento de projetos científicos e tecnológicos do Estado da Bahia.
-
-✔️ Organização centralizada de dados  
-✔️ Painel administrativo  
-✔️ Relatórios institucionais  
-✔️ Interface moderna e responsiva  
+### Info.SECTI  
+Sistema institucional para **gestão e acompanhamento de projetos científicos e tecnológicos** do Estado da Bahia, centralizando informações, facilitando o monitoramento e apoiando a tomada de decisão administrativa.
 
 ---
 
-### 📑 SECTI Contratos & Convênios  
-Sistema corporativo para gestão unificada de contratos e convênios públicos.
+### SECTI Contratos & Convênios  
+Sistema corporativo para **gestão unificada de contratos e convênios**, com foco em controle administrativo, transparência e rastreabilidade.
 
-Funcionalidades principais:
-- Autenticação institucional restrita  
-- Perfis de acesso (Gestor, Fiscal e CCC)  
-- Cadastro e edição de contratos e convênios  
-- Controle de vigência e valores  
-- Histórico automático de alterações (auditoria)  
-- Apostilas internas (anotações técnicas)  
-- Filtros inteligentes por prazo  
-- Exportação para Excel  
-- Busca textual avançada  
-- Interface em painel lateral (UX moderna)
-
----
-
-### 🎓 AcompanhaTec  
-Sistema externo para acompanhamento pedagógico de unidades de Ensino Profissional e Tecnológico.
-
-✔️ Monitoramento institucional  
-✔️ Gestão de registros pedagógicos  
-✔️ Apoio à tomada de decisão educacional  
+Funcionalidades:
+- Autenticação restrita por e-mail institucional;
+- Controle de acesso por perfil (Gestor, Fiscal e CCC);
+- Cadastro e edição de contratos e convênios;
+- Gestão de vigência e valores;
+- Registro automático de histórico de alterações;
+- Sistema de apostilas internas;
+- Filtros por prazo e status;
+- Exportação de dados para Excel;
+- Busca textual integrada;
+- Interface orientada à produtividade.
 
 ---
 
-## 🏆 Diferenciais Técnicos (coisas que dev comum quase nunca mostra)
-
-🏗️ Arquitetura orientada a domínio (não só CRUD)  
-🕵️‍♂️ Registro de histórico de alterações (antes/depois)  
-🔐 Controle de acesso por perfil  
-📊 Filtros temporais e indicadores  
-🧾 Exportação estruturada de dados  
-🧠 UX voltada a usuário institucional  
-🧩 Sistemas que sobrevivem a auditoria  
-🗃️ Modelagem para contratos e convênios públicos  
+### AcompanhaTec  
+Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profissional e Tecnológico, voltado ao suporte à gestão educacional.
 
 ---
 
-## 🧰 Stack Tecnológica
+## Competências Técnicas
+
+- Arquitetura de aplicações web
+- Modelagem de dados para sistemas administrativos
+- Controle de permissões e autenticação
+- Registro de histórico e auditoria de dados
+- Desenvolvimento de interfaces institucionais
+- Integração com serviços em nuvem
+
+---
+
+## Stack Tecnológica
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,nodejs,express,postgres,firebase,git,github,vercel,netlify&perline=7" />
@@ -91,50 +80,22 @@ Sistema externo para acompanhamento pedagógico de unidades de Ensino Profission
 
 ---
 
-## 🧠 Áreas de Domínio
+## Formação
 
-- Sistemas administrativos  
-- Plataformas educacionais  
-- Gestão pública digital  
-- Sistemas de contratos  
-- Sistemas de acompanhamento institucional  
-- Dashboards corporativos  
+Análise e Desenvolvimento de Sistemas  
+(Cursando)
 
 ---
 
-## 🏅 Conquistas Não Oficiais
+## Contato
 
-🥇 Sobreviveu a requisitos governamentais mutáveis  
-🥈 Transformou planilhas em sistemas  
-🥉 Eliminou controles manuais  
-🏆 Criou sistemas com histórico auditável  
-🎖️ Reduziu risco de erro humano via automação  
+brunomomoshiki@gmail.com
 
 ---
-
-## 📊 Métricas Visuais
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SEUUSUARIO&show_icons=true&theme=transparent" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SEUUSUARIO&theme=transparent" />
-</p>
-
----
-
-## 🐍 Atividade
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake-dark.svg" />
 </p>
-
----
-
-## 📫 Contato
-
-📧 **brunomomoshiki@gmail.com**
 
 ---
 
