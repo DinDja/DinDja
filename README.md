@@ -75,7 +75,7 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 ## Stack Tecnológica
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,nodejs,express,postgres,firebase,git,github,vercel,netlify&perline=7" />
+  <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,nodejs,express,postgres,firebase,git,github,vercel,netlify,python&perline=7" />
 </p>
 
 ---
