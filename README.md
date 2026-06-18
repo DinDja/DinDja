@@ -171,7 +171,7 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 
 ## 📚 Formação
 
-**Análise e Desenvolvimento de Sistemas** — Cursando
+**Análise e Desenvolvimento de Sistemas** 
 
 ---
 
