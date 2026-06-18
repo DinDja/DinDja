@@ -9,14 +9,14 @@
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=DinDja&label=Profile%20Views&color=0A66C2&style=flat-square&logo=github" alt="Profile views"/>
-  <img src="https://img.shields.io/github/followers/DinDja?label=Followers&style=flat-square&color=6A5ACD&logo=github"/>
-  <img src="https://img.shields.io/github/stars/DinDja?label=Total%20Stars&style=flat-square&color=0A66C2"/>
-  <a href="mailto:brunomomoshiki@gmail.com"><img src="https://img.shields.io/badge/Email-brunomomoshiki@gmail.com-0A66C2?style=flat-square&logo=gmail&logoColor=white"/></a>
+  <img src="https://img.shields.io/github/followers/DinDja?label=Followers&style=flat-square&color=6A5ACD&logo=github" alt="Followers"/>
+  <img src="https://img.shields.io/github/stars/DinDja?label=Total%20Stars&style=flat-square&color=0A66C2" alt="Stars"/>
+  <a href="mailto:brunomomoshiki@gmail.com"><img src="https://img.shields.io/badge/Email-brunomomoshiki@gmail.com-0A66C2?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Waving%20hand.png"/> Sobre
+## 👋 Sobre
 
 Desenvolvedor Full Stack com atuação em **sistemas institucionais e corporativos** voltados ao setor público, com foco em **controle de acesso, rastreabilidade de dados, padronização de processos e confiabilidade operacional**.
 
@@ -24,7 +24,7 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png"/> Atuação
+## 💻 Atuação
 
 - Digitalização de processos administrativos
 - Plataformas internas de gestão
@@ -35,7 +35,7 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20in%20Suit%20Levitating.png"/> Experiência Institucional
+## 🧑‍💼 Experiência Institucional
 
 <table>
   <tr>
@@ -46,9 +46,9 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png"/> Projetos
+## 🚀 Projetos
 
-### <img height="18" src="https://img.icons8.com/fluency/48/rocket.png"/> Editor ThreeJS — Editor 3D Web & Desktop
+### 🧊 Editor ThreeJS — Editor 3D Web & Desktop
 
 Editor 3D experimental em Next.js + React Three Fiber + Electron, com modelagem, sculpt, física, animação e IA.
 
@@ -75,20 +75,20 @@ Editor 3D experimental em Next.js + React Three Fiber + Electron, com modelagem,
 
 <p>
   <a href="https://github.com/DinDja/Editor-ThreeJS">
-    <img src="https://img.shields.io/badge/Ver_Editor_ThreeJS-0A66C2?style=for-the-badge&logo=github&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Ver_Editor_ThreeJS-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Editor ThreeJS"/>
   </a>
-  <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Three.js-r184-000000?style=flat-square&logo=three.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Electron-35-47848f?style=flat-square&logo=electron&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Rapier3D-Physics-0055ff?style=flat-square"/>
-  <img src="https://img.shields.io/badge/NVIDIA_NIM-AI-76b900?style=flat-square&logo=nvidia&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Zustand-State-brown?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Three.js-r184-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js"/>
+  <img src="https://img.shields.io/badge/Electron-35-47848f?style=flat-square&logo=electron&logoColor=white" alt="Electron"/>
+  <img src="https://img.shields.io/badge/Rapier3D-Physics-0055ff?style=flat-square" alt="Rapier3D"/>
+  <img src="https://img.shields.io/badge/NVIDIA_NIM-AI-76b900?style=flat-square&logo=nvidia&logoColor=white" alt="NVIDIA NIM"/>
+  <img src="https://img.shields.io/badge/Zustand-State-brown?style=flat-square" alt="Zustand"/>
 </p>
 
 ---
 
-### <img height="18" src="https://img.icons8.com/fluency/48/contract.png"/> SECTI Contratos & Convênios
+### 📄 SECTI Contratos & Convênios
 
 Sistema corporativo para **gestão unificada de contratos e convênios**, com controle administrativo, transparência e rastreabilidade.
 
@@ -110,37 +110,31 @@ Sistema corporativo para **gestão unificada de contratos e convênios**, com co
 
 ---
 
-### <img height="18" src="https://img.icons8.com/fluency/48/data-configuration.png"/> Info.SECTI
+### 📊 Info.SECTI
 
 Sistema institucional para **gestão e acompanhamento de projetos científicos e tecnológicos** do Estado da Bahia, centralizando informações e apoiando a tomada de decisão administrativa.
 
 ---
 
-### <img height="18" src="https://img.icons8.com/fluency/48/student-center.png"/> AcompanhaTec
+### 🎓 AcompanhaTec
 
 Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profissional e Tecnológico, voltado ao suporte à gestão educacional.
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Barometer.png"/> Estatísticas GitHub
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=blue-purple&count_private=true&hide_border=true&bg_color=00000000" height="170" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&theme=blue-purple&hide_border=true&bg_color=00000000" height="170" alt="Top Languages"/>
-</p>
+## 📈 Atividade GitHub
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=true&background=00000000" height="170" alt="GitHub Streak"/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DinDja&theme=blue-purple&hide_border=true&bg_color=00000000" height="170" alt="Activity Graph"/>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DinDja&theme=bluepurple&no-bg=true&no-frame=true&margin-w=8&margin-h=8" alt="Trophies"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DinDja&theme=blue-purple&hide_border=true&bg_color=00000000" width="92%" alt="Activity Graph"/>
 </p>
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png"/> Stack
+## 🛠️ Stack
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,nodejs,express,postgres,firebase,git,github,vercel,netlify,python&perline=7" alt="Core stack"/>
@@ -148,20 +142,19 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 
 <p align="center">
   <b>3D / Desktop / IA</b><br/>
-  <a href="https://threejs.org/"><img src="https://img.shields.io/badge/Three.js-r184-000000?style=for-the-badge&logo=three.js&logoColor=white"/></a>
-  <a href="https://r3f.docs.pmnd.rs/"><img src="https://img.shields.io/badge/React_Three_Fiber-v9-000000?style=for-the-badge&logo=react&logoColor=61dafb"/></a>
-  <a href="https://drei.docs.pmnd.rs/"><img src="https://img.shields.io/badge/Drei-Helpers-000000?style=for-the-badge&logo=react&logoColor=61dafb"/></a>
-  <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/Electron-35-47848f?style=for-the-badge&logo=electron&logoColor=white"/></a>
-  <a href="https://rapier.rs/"><img src="https://img.shields.io/badge/Rapier3D-Physics-0055ff?style=for-the-badge"/></a>
-  <a href="https://zustand.docs.pmnd.rs/"><img src="https://img.shields.io/badge/Zustand-State-ff6b35?style=for-the-badge"/></a>
-  <a href="https://rim.z.ai/"><img src="https://img.shields.io/badge/NVIDIA_NIM-AI-76b900?style=for-the-badge&logo=nvidia&logoColor=white"/></a>
-  <a href="https://www.blender.org/"><img src="https://img.shields.io/badge/Blender-3D-E87D0D?style=for-the-badge&logo=blender&logoColor=white"/></a>
-  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=black"/></a>
+  <a href="https://threejs.org/"><img src="https://img.shields.io/badge/Three.js-r184-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js"/></a>
+  <a href="https://r3f.docs.pmnd.rs/"><img src="https://img.shields.io/badge/React_Three_Fiber-v9-000000?style=for-the-badge&logo=react&logoColor=61dafb" alt="R3F"/></a>
+  <a href="https://drei.docs.pmnd.rs/"><img src="https://img.shields.io/badge/Drei-Helpers-000000?style=for-the-badge&logo=react&logoColor=61dafb" alt="Drei"/></a>
+  <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/Electron-35-47848f?style=for-the-badge&logo=electron&logoColor=white" alt="Electron"/></a>
+  <a href="https://rapier.rs/"><img src="https://img.shields.io/badge/Rapier3D-Physics-0055ff?style=for-the-badge" alt="Rapier3D"/></a>
+  <a href="https://zustand.docs.pmnd.rs/"><img src="https://img.shields.io/badge/Zustand-State-ff6b35?style=for-the-badge" alt="Zustand"/></a>
+  <a href="https://build.nvidia.com/"><img src="https://img.shields.io/badge/NVIDIA_NIM-AI-76b900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA NIM"/></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=black" alt="Tailwind"/></a>
 </p>
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Brain.png"/> Competências
+## 🧠 Competências
 
 | Categoria | Detalhe |
 | --- | --- |
@@ -176,18 +169,18 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png"/> Formação
+## 📚 Formação
 
 **Análise e Desenvolvimento de Sistemas** — Cursando
 
 ---
 
-## <img height="22" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Card%20Index%20Dividers.png"/> Contato
+## 📇 Contato
 
 <p align="center">
-  <a href="mailto:brunomomoshiki@gmail.com"><img src="https://img.shields.io/badge/Email-brunomomoshiki@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://github.com/DinDja"><img src="https://img.shields.io/badge/GitHub-DinDja-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://linkedin.com/in/"><img src="https://img.shields.io/badge/LinkedIn-Bruno%20Andrade-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="mailto:brunomomoshiki@gmail.com"><img src="https://img.shields.io/badge/Email-brunomomoshiki@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://github.com/DinDja"><img src="https://img.shields.io/badge/GitHub-DinDja-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://linkedin.com/in/"><img src="https://img.shields.io/badge/LinkedIn-Bruno%20Andrade-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 </p>
 
 ---
