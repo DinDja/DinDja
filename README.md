@@ -203,7 +203,6 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 
 **Análise e Desenvolvimento de Sistemas** 
 
-```md
 ## 🏅 Microsoft Learn Badges
 
 <p align="center">
@@ -283,7 +282,6 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
     </td>
   </tr>
 </table>
-```
 
 ---
 
