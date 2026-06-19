@@ -203,53 +203,87 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 
 **Análise e Desenvolvimento de Sistemas** 
 
+```md
 ## 🏅 Microsoft Learn Badges
 
 <p align="center">
-  <a href="https://learn.microsoft.com/en-us/training/achievements/publish-static-web-app-and-api.svg">
-    <img src="https://learn.microsoft.com/en-us/training/achievements/publish-static-web-app-and-api.svg" width="120" alt="Publish a JavaScript app with Azure Static Web Apps" />
-  </a>
-  &nbsp;
-  <a href="https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg">
-    <img src="https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg" width="120" alt="Introduction to Azure OpenAI managed identity authentication with JavaScript" />
-  </a>
-  &nbsp;
-  <a href="https://learn.microsoft.com/en-us/training/achievements/csharp-write-first.svg">
-    <img src="https://learn.microsoft.com/en-us/training/achievements/csharp-write-first.svg" width="120" alt="Write your first C# code" />
-  </a>
-  &nbsp;
-  <a href="https://learn.microsoft.com/en-us/training/achievements/sharepoint-spfx-web-parts.svg">
-    <img src="https://learn.microsoft.com/en-us/training/achievements/sharepoint-spfx-web-parts.svg" width="120" alt="Develop web parts with the SharePoint Framework" />
+  <a href="https://learn.microsoft.com/pt-br/users/brunoandradedequeiroz-7022/">
+    <img src="https://img.shields.io/badge/Microsoft%20Learn-Bruno%20Andrade-258ffa?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft Learn Profile" />
   </a>
 </p>
 
 <p align="center">
-  <strong>Microsoft Learn achievements focused on Azure, JavaScript, C#, SharePoint Framework and Microsoft 365 development.</strong>
+  <strong>Trilha de evolução em C#, GitHub, Azure, DevOps, Dataverse e Microsoft 365.</strong>
 </p>
 
 <table align="center">
   <tr>
-    <td align="center">
-      <strong>Azure Static Web Apps</strong><br/>
-      <sub>Publish an Angular, React, Svelte, or Vue JavaScript app with Azure Static Web Apps</sub>
-    </td>
-    <td align="center">
-      <strong>Azure OpenAI</strong><br/>
-      <sub>Introduction to Azure OpenAI managed identity authentication with JavaScript</sub>
-    </td>
+    <td align="center" colspan="4"><strong>🟢 Fundamentos</strong></td>
   </tr>
   <tr>
     <td align="center">
-      <strong>C# Fundamentals</strong><br/>
-      <sub>Write your first C# code</sub>
+      <img src="https://learn.microsoft.com/en-us/training/achievements/csharp-write-first.svg" width="80" alt="Write your first C# code" /><br/>
+      <sub>Primeiro código em C#</sub>
     </td>
     <td align="center">
-      <strong>SharePoint Framework</strong><br/>
-      <sub>Develop web parts with the SharePoint Framework</sub>
+      <img src="https://learn.microsoft.com/training/achievements/csharp-literals-variables.svg" width="80" alt="Armazenar e recuperar dados usando valores literais e variáveis em C#" /><br/>
+      <sub>Literais e variáveis</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/training/achievements/csharp-basic-formatting.svg" width="80" alt="Executar formatação de cadeia de caracteres básica em C#" /><br/>
+      <sub>Formatação em C#</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/training/achievements/csharp-basic-operations.svg" width="80" alt="Executar operações básicas em números em C#" /><br/>
+      <sub>Operações numéricas</sub>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" colspan="4"><strong>🟡 Desenvolvimento e GitHub</strong></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://learn.microsoft.com/training/achievements/7-introduction-to-github-actions.svg" width="80" alt="GitHub Actions" /><br/>
+      <sub>GitHub Actions</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/training/achievements/introduction-github-packages.svg" width="80" alt="Pacotes do GitHub" /><br/>
+      <sub>GitHub Packages</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/en-us/training/achievements/publish-static-web-app-and-api.svg" width="80" alt="Publish a JavaScript app with Azure Static Web Apps" /><br/>
+      <sub>Static Web Apps com API</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/pt-br/training/achievements/azure-static-web-apps.svg" width="80" alt="Aplicativos Web Estáticos do Azure" /><br/>
+      <sub>Azure Static Web Apps</sub>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" colspan="4"><strong>🟠 Microsoft Cloud e Plataforma</strong></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg" width="80" alt="Introduction to Azure OpenAI managed identity authentication with JavaScript" /><br/>
+      <sub>Azure OpenAI com JS</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/training/achievements/dataverse-web-api.svg" width="80" alt="Trabalhar com a API Web do Dataverse" /><br/>
+      <sub>Dataverse Web API</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/en-us/training/achievements/sharepoint-spfx-web-parts.svg" width="80" alt="Develop web parts with the SharePoint Framework" /><br/>
+      <sub>SharePoint Framework</sub>
+    </td>
+    <td align="center">
+      <img src="https://learn.microsoft.com/training/achievements/1-understand-security-in-the-pipeline.svg" width="80" alt="Secure DevOps" /><br/>
+      <sub>Secure DevOps</sub>
     </td>
   </tr>
 </table>
-
+```
 
 ---
 
