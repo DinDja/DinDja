@@ -39,26 +39,30 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 <table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center">
       <img 
         src="https://bahiaeconomica.com.br/wp/wp-content/uploads/2020/12/SECTI.png" 
-        width="260" 
+        height="140" 
         alt="Sede da SECTI/BA"
       />
-      <br/><br/>
+    </td>
+    <td align="center">
+      <img 
+        src="https://www.ba.gov.br/educacao/sites/site-sec/files/2025-09/Foto%20ilustrativa%20Douglas%20Amaral%20%2824%29_0.jpeg" 
+        height="140" 
+        alt="Sede da SEC/BA"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
       <b>SECTI/BA</b>
       <br/>
       <sub>Secretaria de Ciência, Tecnologia e Inovação da Bahia</sub>
       <br/><br/>
       <code>Desenvolvedor Full Stack</code>
     </td>
-    <td align="center" width="50%">
-      <img 
-        src="https://www.ba.gov.br/educacao/sites/site-sec/files/2025-09/Foto%20ilustrativa%20Douglas%20Amaral%20%2824%29_0.jpeg" 
-        width="260" 
-        alt="Sede da SEC/BA"
-      />
-      <br/><br/>
+    <td align="center">
       <b>SEC/BA</b>
       <br/>
       <sub>Secretaria da Educação do Estado da Bahia</sub>
