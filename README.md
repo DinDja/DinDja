@@ -125,7 +125,7 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 ## 📈 Atividade GitHub
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=true&background=0D1117" height="170" alt="GitHub Streak"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=false&background=0D1117&border=7F3FBF&stroke=7F3FBF" height="170" alt="GitHub Streak"/>
 </p>
 
 <p align="center">
