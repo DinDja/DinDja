@@ -40,7 +40,7 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 <table>
   <tr>
     <td align="center"><b>SECTI/BA</b><br/><sub>Secretaria de Ciência, Tecnologia e Inovação da Bahia</sub><br/><br/>Desenvolvedor Full Stack</td>
-    <td align="center"><b>SEC/BA</b><br/><sub>Secretaria da Educação do Estado da Bahia</sub><br/><br/>Tech Lead</td>
+    <td align="center"><b>SEC/BA</b><br/><sub>Secretaria da Educação do Estado da Bahia</sub><br/><br/>Desenvolvedor Full Stack</td>
   </tr>
 </table>
 
