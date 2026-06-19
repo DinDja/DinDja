@@ -203,6 +203,54 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 
 **Análise e Desenvolvimento de Sistemas** 
 
+## 🏅 Microsoft Learn Badges
+
+<p align="center">
+  <a href="https://learn.microsoft.com/en-us/training/achievements/publish-static-web-app-and-api.svg">
+    <img src="https://learn.microsoft.com/en-us/training/achievements/publish-static-web-app-and-api.svg" width="120" alt="Publish a JavaScript app with Azure Static Web Apps" />
+  </a>
+  &nbsp;
+  <a href="https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg">
+    <img src="https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg" width="120" alt="Introduction to Azure OpenAI managed identity authentication with JavaScript" />
+  </a>
+  &nbsp;
+  <a href="https://learn.microsoft.com/en-us/training/achievements/csharp-write-first.svg">
+    <img src="https://learn.microsoft.com/en-us/training/achievements/csharp-write-first.svg" width="120" alt="Write your first C# code" />
+  </a>
+  &nbsp;
+  <a href="https://learn.microsoft.com/en-us/training/achievements/sharepoint-spfx-web-parts.svg">
+    <img src="https://learn.microsoft.com/en-us/training/achievements/sharepoint-spfx-web-parts.svg" width="120" alt="Develop web parts with the SharePoint Framework" />
+  </a>
+</p>
+
+<p align="center">
+  <strong>Microsoft Learn achievements focused on Azure, JavaScript, C#, SharePoint Framework and Microsoft 365 development.</strong>
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <strong>Azure Static Web Apps</strong><br/>
+      <sub>Publish an Angular, React, Svelte, or Vue JavaScript app with Azure Static Web Apps</sub>
+    </td>
+    <td align="center">
+      <strong>Azure OpenAI</strong><br/>
+      <sub>Introduction to Azure OpenAI managed identity authentication with JavaScript</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>C# Fundamentals</strong><br/>
+      <sub>Write your first C# code</sub>
+    </td>
+    <td align="center">
+      <strong>SharePoint Framework</strong><br/>
+      <sub>Develop web parts with the SharePoint Framework</sub>
+    </td>
+  </tr>
+</table>
+
+
 ---
 
 ## 📇 Contato
