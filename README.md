@@ -444,7 +444,7 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake-dark.svg" width="49%" alt="Snake animation"/>
+ <!-- <--  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake-dark.svg" width="49%" alt="Snake animation"/> --> 
   <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/circuit-board.svg" width="49%" alt="Circuit board contributions"/>
 </p>
 
