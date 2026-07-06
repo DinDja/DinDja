@@ -444,7 +444,8 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/github-contribution-grid-snake-dark.svg" width="49%" alt="Snake animation"/>
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/circuit-board.svg" width="49%" alt="Circuit board contributions"/>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A5ACD,100:0A66C2&height=120&section=footer&animation=fadeIn"/>
