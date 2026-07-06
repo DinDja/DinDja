@@ -60,43 +60,70 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 ## 📊 Stats GitHub
 
-<details open>
-<summary><b>🔥 Estatísticas dinâmicas (clique para recolher)</b></summary>
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/DinDja">
+        <img src="https://img.shields.io/github/commit-activity/m/DinDja?style=for-the-badge&color=0A66C2&label=Commits%2Fmês" alt="Commits per month"/>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/DinDja?tab=repositories">
+        <img src="https://img.shields.io/github/repo-size/DinDja/DinDja?style=for-the-badge&color=6A5ACD&label=Repo%20size" alt="Repo size"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/DinDja?tab=followers">
+        <img src="https://img.shields.io/github/followers/DinDja?label=Followers&style=for-the-badge&color=0A66C2&logo=github" alt="Followers"/>
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/DinDja">
+        <img src="https://img.shields.io/github/stars/DinDja?label=Stars&style=for-the-badge&color=6A5ACD&logo=github" alt="Stars"/>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="https://github.com/DinDja"><img src="https://img.shields.io/badge/📊_Ver_todos_stats-DinDja-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="See all stats"/></a>
+  <a href="https://github.com/DinDja?tab=repositories"><img src="https://img.shields.io/badge/🗂️_Todos_repositórios-19-6A5ACD?style=for-the-badge&logo=github&logoColor=white" alt="All repositories"/></a>
+  <a href="https://github.com/DinDja?tab=repositories&q=&type=source"><img src="https://img.shields.io/badge/🚀_Apenas_source_code-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Source repos"/></a>
+</p>
+
+<details>
+<summary><b>⚡ Linguagens mais usadas (clique para expandir)</b></summary>
 
 <br/>
 
-<p align="center">
-  <a href="https://github.com/DinDja">
-    <img src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=transparent&hide_border=true&bg_color=0D1117&title_color=0A66C2&icon_color=6A5ACD&text_color=C9D1D9" height="170" alt="GitHub Stats"/>
-  </a>
-  <a href="https://github.com/DinDja">
-    <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=transparent&hide_border=true&background=0D1117&stroke=0A66C2&ring=6A5ACD&fire=6A5ACD&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=0A66C2&sideLabels=C9D1D9&dates=C9D1D9" height="170" alt="GitHub Streak"/>
-  </a>
-</p>
+Linguagens usadas nos 19 repositórios indexados (extraídas do grafo de conhecimento):
 
-<p align="center">
-  <a href="https://github.com/DinDja">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&theme=transparent&hide_border=true&bg_color=0D1117&title_color=0A66C2&text_color=C9D1D9" height="170" alt="Top Languages"/>
-  </a>
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DinDja&theme=transparent&no-frame=true&margin-w=8&margin-h=8&column=4" height="170" alt="Trophies"/>
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DinDja&theme=react-dark&hide_border=true&bg_color=0D1117&color=0A66C2&line=6A5ACD&point=FFFFFF" width="92%" alt="Activity Graph"/>
-</p>
+| Linguagem | Uso principal |
+|---|---|
+| TypeScript | Editor-ThreeJS (184 arquivos), SECTI-contratos (85), TSARA (152), Sectinvent-rio |
+| JavaScript | PatentesLab (70), SECTI/Info.SECTI (82), mapfilter-BA, connectaBahia |
+| CSS | Tailwind 4, styled-components, animações SVG |
+| Python | Scripts de automação (PatentesLab) |
+| YAML | Workflows GitHub Actions |
 
 </details>
 
 <details>
-<summary><b>⚡ Contribuições por repo (clique para expandir)</b></summary>
+<summary><b>🔥 Streak e histórico de contribuições (clique para expandir)</b></summary>
 
 <br/>
 
 <p align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=DinDja&limit=8&theme=dark&combine_commit=true&exclude=github,DinDja" width="92%" alt="Contributor stats"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=false&background=0D1117&border=30363D&stroke=58A6FF&ring=FF8C00&fire=FF8C00&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FF8C00&sideLabels=FFFFFF&dates=C9D1D9" height="170" alt="GitHub Streak"/>
 </p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DinDja&theme=blue-purple&hide_border=true&bg_color=00000000" width="92%" alt="Activity Graph"/>
+</p>
+
+> ℹ️ Os cards dinâmicos do `github-readme-stats` estão instáveis ultimamente. Para ver suas estatísticas completas, visite [github.com/DinDja](https://github.com/DinDja).
 
 </details>
 
@@ -370,25 +397,6 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 | INPI | 48 | 58 | — | — |
 | PortifolioBruno | 63 | 85 | — | — |
 | ValentineDay | 66 | 158 | — | React |
-
-</details>
-
----
-
-## 📈 Atividade GitHub
-
-<details>
-<summary><b>🔥 Streak e histórico de contribuições (clique para expandir)</b></summary>
-
-<br/>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=false&background=0D1117&border=30363D&stroke=58A6FF&ring=FF8C00&fire=FF8C00&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FF8C00&sideLabels=FFFFFF&dates=C9D1D9" height="170" alt="GitHub Streak"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DinDja&theme=blue-purple&hide_border=true&bg_color=00000000" width="92%" alt="Activity Graph"/>
-</p>
 
 </details>
 
