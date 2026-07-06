@@ -404,10 +404,6 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 ## 🛠️ Stack
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif" width="100%" alt="Stacks"/>
-</p>
-
-<p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,nodejs,express,postgres,firebase,git,github,vercel,netlify,python&perline=7" alt="Core stack"/>
 </p>
 
