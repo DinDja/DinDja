@@ -1,3 +1,11 @@
+<!--
+  ═══════════════════════════════════════════════════════════
+  README gerado com dados reais extraídos do grafo de
+  conhecimento (codebase-memory-mcp) — 19 repositórios,
+  15.5k nós, 30.4k arestas.
+  ═══════════════════════════════════════════════════════════
+-->
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:6A5ACD&height=220&section=header&text=Bruno%20Andrade&fontSize=42&fontAlignY=38&desc=Fullstack%20Developer%20•%203D%20Web%20•%20Enterprise%20Systems&descAlignY=60&animation=fadeIn"/>
 
 <p align="center">
@@ -169,6 +177,12 @@ Sistema institucional para gestão e acompanhamento de projetos científicos e t
 
 <p>
   <a href="https://github.com/DinDja/hubSECTI"><img src="https://img.shields.io/badge/Ver_Info.SECTI-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Info.SECTI"/></a>
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OpenRouter-FF6B35?style=flat-square&logo=openai&logoColor=white"/>
+  <img src="https://img.shields.io/badge/980%20nós-2205%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
 ---
@@ -192,6 +206,13 @@ Laboratório de patentes com robô autônomo de busca no INPI, geração de docu
 
 <p>
   <a href="https://github.com/DinDja/PatentesLab"><img src="https://img.shields.io/badge/Ver_PatentesLab-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="PatentesLab"/></a>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white"/>
+  <img src="https://img.shields.io/badge/INPI_API-0055ff?style=flat-square&logo=googlepatents&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Serpro-003399?style=flat-square&logo=brasil&logoColor=white"/>
+  <img src="https://img.shields.io/badge/1843%20nós-2881%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
 ---
@@ -215,6 +236,12 @@ E-commerce + agendamento + chat com painel admin completo.
 
 <p>
   <a href="https://github.com/DinDja/TSARA"><img src="https://img.shields.io/badge/Ver_TSARA-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="TSARA"/></a>
+  <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/shadcn/ui-000000?style=flat-square&logo=shadcnui&logoColor=white"/>
+  <img src="https://img.shields.io/badge/InfinitePay-6C2BD9?style=flat-square&logo=visa&logoColor=white"/>
+  <img src="https://img.shields.io/badge/1540%20nós-3804%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
 ---
@@ -232,6 +259,12 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 
 <p>
   <a href="https://github.com/DinDja/Sectinvent-rio"><img src="https://img.shields.io/badge/Ver_Sectinvent_rio-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Sectinvent-rio"/></a>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/shadcn/ui-000000?style=flat-square&logo=shadcnui&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Zustand-ff6b35?style=flat-square&logo=react&logoColor=white"/>
+  <img src="https://img.shields.io/badge/719%20nós-2009%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
 ---
