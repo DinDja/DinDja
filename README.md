@@ -19,7 +19,6 @@
   <img src="https://img.shields.io/github/followers/DinDja?label=Followers&style=flat-square&color=6A5ACD&logo=github" alt="Followers"/>
   <img src="https://img.shields.io/github/stars/DinDja?label=Total%20Stars&style=flat-square&color=0A66C2" alt="Stars"/>
   <a href="mailto:brunomomoshiki@gmail.com"><img src="https://img.shields.io/badge/Email-brunomomoshiki@gmail.com-0A66C2?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://opencode.ai"><img src="https://img.shields.io/badge/Powered%20by-opencode-7c3aed?style=flat-square&logo=openai&logoColor=white" alt="OpenCode"/></a>
 </p>
 
 ---
@@ -63,9 +62,9 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 <table>
   <tr>
     <td width="50%" align="center">
-      <a href="https://github.com/DinDja">
-        <img src="https://img.shields.io/github/commit-activity/m/DinDja?style=for-the-badge&color=0A66C2&label=Commits%2Fmês" alt="Commits per month"/>
-      </a>
+  <a href="https://github.com/DinDja?tab=repositories">
+    <img src="https://img.shields.io/badge/Public%20repos-19-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Public repos"/>
+  </a>
     </td>
     <td width="50%" align="center">
       <a href="https://github.com/DinDja?tab=repositories">
