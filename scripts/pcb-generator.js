@@ -58,114 +58,263 @@ async function fetchContributions(user, token) {
   return res.data.user.contributionsCollection.contributionCalendar;
 }
 
+// Manhattan (90°) routing helper — orthogonal polyline with rounded corners
+function route(sx, sy, ex, ey, mid) {
+  if (sy === ey) return `M ${sx} ${sy} L ${ex} ${ey}`;
+  if (sx === ex) return `M ${sx} ${sy} L ${ex} ${ey}`;
+  const mx = mid !== undefined ? mid : (sx + ex) / 2;
+  return `M ${sx} ${sy} L ${mx} ${sy} L ${mx} ${ey} L ${ex} ${ey}`;
+}
+
 function generatePCB(data) {
-  const W = 900, H = 530;
+  const W = 980, H = 360;
   const weeks = data.weeks;
-  const maxCount = Math.max(1, ...weeks.flatMap(w => w.contributionDays.map(d => d.contributionCount)));
-  const totalWeeks = weeks.length;
-  const totalDays = weeks.reduce((s, w) => s + w.contributionDays.length, 0);
+  const allDays = weeks.flatMap(w => w.contributionDays);
+  const maxCount = Math.max(1, ...allDays.map(d => d.contributionCount));
+  const total = data.totalContributions;
 
-  // PCB traces
-  const traces = [
-    { x1: 40, y1: 60, x2: 860, y2: 60 }, { x1: 40, y1: 100, x2: 860, y2: 100 },
-    { x1: 40, y1: 140, x2: 860, y2: 140 }, { x1: 40, y1: 200, x2: 860, y2: 200 },
-    { x1: 40, y1: 260, x2: 860, y2: 260 }, { x1: 40, y1: 320, x2: 860, y2: 320 },
-    { x1: 40, y1: 380, x2: 860, y2: 380 }, { x1: 40, y1: 440, x2: 860, y2: 440 },
-    { x1: 40, y1: 480, x2: 860, y2: 480 },
-    { x1: 100, y1: 60, x2: 100, y2: 140 }, { x1: 200, y1: 100, x2: 200, y2: 260 },
-    { x1: 300, y1: 60, x2: 300, y2: 200 }, { x1: 400, y1: 140, x2: 400, y2: 320 },
-    { x1: 500, y1: 60, x2: 500, y2: 200 }, { x1: 600, y1: 200, x2: 600, y2: 440 },
-    { x1: 700, y1: 100, x2: 700, y2: 320 }, { x1: 800, y1: 60, x2: 800, y2: 140 },
-    { x1: 150, y1: 60, x2: 250, y2: 200 }, { x1: 350, y1: 140, x2: 450, y2: 260 },
-    { x1: 550, y1: 60, x2: 650, y2: 200 }, { x1: 750, y1: 200, x2: 820, y2: 320 },
-    { x1: 120, y1: 200, x2: 220, y2: 380 }, { x1: 480, y1: 260, x2: 580, y2: 440 },
-  ];
-
-  const vias = [
-    { x: 100, y: 60 }, { x: 100, y: 140 }, { x: 200, y: 100 }, { x: 200, y: 260 },
-    { x: 300, y: 60 }, { x: 300, y: 200 }, { x: 400, y: 140 }, { x: 400, y: 320 },
-    { x: 500, y: 60 }, { x: 500, y: 200 }, { x: 600, y: 200 }, { x: 600, y: 440 },
-    { x: 700, y: 100 }, { x: 700, y: 320 }, { x: 800, y: 60 }, { x: 800, y: 140 },
-  ];
-
+  // === LAYOUT ===
+  // Era: pins spread so traces converge towards a central bus
+  // Chips use QFP style (pins on all 4 sides)
   const chips = [
-    { x: 60, y: 170, w: 70, h: 90, label: "CPU" },
-    { x: 770, y: 350, w: 75, h: 65, label: "GPU" },
-    { x: 380, y: 350, w: 90, h: 70, label: "RAM" },
-    { x: 60, y: 400, w: 70, h: 60, label: "ROM" },
-    { x: 620, y: 50, w: 70, h: 60, label: "PWR" },
-    { x: 210, y: 60, w: 60, h: 50, label: "I/O" },
+    { id: "U1", x: 70, y: 110, w: 110, h: 110, label: "CPU", pinsPerSide: 7, color: "#0d1a0d" },
+    { id: "U2", x: 425, y: 60, w: 130, h: 80, label: "RAM", pinsPerSide: 6, color: "#1a0d0d" },
+    { id: "U3", x: 800, y: 110, w: 110, h: 110, label: "GPU", pinsPerSide: 7, color: "#0d1a0d" },
+    { id: "U4", x: 70, y: 250, w: 90, h: 70, label: "ROM", pinsPerSide: 5, color: "#0d180d" },
+    { id: "U5", x: 810, y: 260, w: 90, h: 60, label: "PWR", pinsPerSide: 4, color: "#1a1a0d" },
+    { id: "U6", x: 425, y: 230, w: 130, h: 70, label: "I/O", pinsPerSide: 6, color: "#0d1a1a" },
   ];
 
-  // Build animated segments from contributions
-  let dayI = 0;
-  const activeSegs = [];
-  const glows = [];
-
-  for (const week of weeks) {
-    for (const day of week.contributionDays) {
-      const intensity = day.contributionCount / maxCount;
-      if (intensity > 0.02) {
-        const tr = traces[dayI % traces.length];
-        const t = ((dayI * 7) % totalDays) / totalDays;
-        const mx = tr.x1 + (tr.x2 - tr.x1) * t;
-        const my = tr.y1 + (tr.y2 - tr.y1) * t;
-        const segLen = 3 + intensity * 18;
-        const ang = Math.atan2(tr.y2 - tr.y1, tr.x2 - tr.x1);
-        const ex = mx + Math.cos(ang) * segLen;
-        const ey = my + Math.sin(ang) * segLen;
-        const color = intensity > 0.7 ? "#00ff88" : intensity > 0.4 ? "#ffaa00" : intensity > 0.15 ? "#ff6600" : "#44aaff";
-        activeSegs.push({ x1: mx, y1: my, x2: ex, y2: ey, color, intensity, delay: Math.random() * 3 });
-        glows.push({ cx: mx, cy: my, r: 1.5 + intensity * 7, color, delay: Math.random() * 3 });
-      }
-      dayI++;
+  // Pin helper for QFP chips (pins on all 4 sides)
+  function chipPins(c) {
+    const pins = [];
+    const pps = c.pinsPerSide;
+    const pinW = 6, pinH = 8;
+    // top
+    for (let i = 0; i < pps; i++) {
+      const px = c.x + 8 + (i + 0.5) * ((c.w - 16) / pps);
+      pins.push({ x: px - pinW / 2, y: c.y - pinH, w: pinW, h: pinH, side: "top", idx: i, cx: px, cy: c.y });
     }
+    // bottom
+    for (let i = 0; i < pps; i++) {
+      const px = c.x + 8 + (i + 0.5) * ((c.w - 16) / pps);
+      pins.push({ x: px - pinW / 2, y: c.y + c.h, w: pinW, h: pinH, side: "bottom", idx: i, cx: px, cy: c.y + c.h });
+    }
+    // left
+    for (let i = 0; i < pps; i++) {
+      const py = c.y + 8 + (i + 0.5) * ((c.h - 16) / pps);
+      pins.push({ x: c.x - pinH, y: py - pinW / 2, w: pinH, h: pinW, side: "left", idx: i, cx: c.x, cy: py });
+    }
+    // right
+    for (let i = 0; i < pps; i++) {
+      const py = c.y + 8 + (i + 0.5) * ((c.h - 16) / pps);
+      pins.push({ x: c.x + c.w, y: py - pinW / 2, w: pinH, h: pinW, side: "right", idx: i, cx: c.x + c.w, cy: py });
+    }
+    return pins;
   }
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
+  const allPins = {};
+  chips.forEach(c => { allPins[c.id] = chipPins(c); });
+
+  // === TRACES — Manhattan routing connecting chip pins ===
+  // Each entry: { from: "U1.top.3", to: "U2.left.2", color, anim }
+  const traceConns = [
+    { from: { chip: "U1", side: "right", idx: 2 }, to: { chip: "U2", side: "left", idx: 1 } },
+    { from: { chip: "U1", side: "right", idx: 4 }, to: { chip: "U2", side: "left", idx: 3 } },
+    { from: { chip: "U1", side: "bottom", idx: 3 }, to: { chip: "U4", side: "top", idx: 2 } },
+    { from: { chip: "U1", side: "bottom", idx: 5 }, to: { chip: "U6", side: "left", idx: 1 } },
+    { from: { chip: "U2", side: "right", idx: 2 }, to: { chip: "U3", side: "left", idx: 2 } },
+    { from: { chip: "U2", side: "right", idx: 4 }, to: { chip: "U3", side: "left", idx: 4 } },
+    { from: { chip: "U3", side: "bottom", idx: 3 }, to: { chip: "U5", side: "top", idx: 1 } },
+    { from: { chip: "U3", side: "bottom", idx: 5 }, to: { chip: "U6", side: "right", idx: 3 } },
+    { from: { chip: "U6", side: "top", idx: 2 }, to: { chip: "U2", side: "bottom", idx: 2 } },
+    { from: { chip: "U4", side: "right", idx: 2 }, to: { chip: "U6", side: "left", idx: 4 } },
+    { from: { chip: "U1", side: "top", idx: 3 }, to: { chip: "U3", side: "top", idx: 3 }, via: 490 },
+    { from: { chip: "U5", side: "left", idx: 1 }, to: { chip: "U4", side: "right", idx: 4 }, via: 720 },
+  ];
+
+  function findPin(conn) {
+    return allPins[conn.chip].find(p => p.side === conn.side && p.idx === conn.idx);
+  }
+
+  // Generate traces as polylines (Manhattan)
+  const traces = traceConns.map((tc, i) => {
+    const a = findPin(tc.from);
+    const b = findPin(tc.to);
+    if (!a || !b) return null;
+    const sx = a.cx, sy = a.cy, ex = b.cx, ey = b.cy;
+    let d;
+    if (tc.via) {
+      d = `M ${sx} ${sy} L ${tc.via} ${sy} L ${tc.via} ${ey} L ${ex} ${ey}`;
+    } else if (Math.abs(sy - ey) < 5) {
+      d = `M ${sx} ${sy} L ${ex} ${ey}`;
+    } else if (Math.abs(sx - ex) < 5) {
+      d = `M ${sx} ${sy} L ${ex} ${ey}`;
+    } else {
+      const mx = (sx + ex) / 2;
+      d = `M ${sx} ${sy} L ${mx} ${sy} L ${mx} ${ey} L ${ex} ${ey}`;
+    }
+    return { d, idx: i };
+  }).filter(Boolean);
+
+  // === PER-DAY: LEDs soldered along traces, lit by contribution count ===
+  // Place an LED every few days along a trace path
+  const leds = [];
+  const traceCount = traces.length;
+  allDays.forEach((day, i) => {
+    const intensity = day.contributionCount / maxCount;
+    if (intensity > 0.03) {
+      const trace = traces[i % traceCount];
+      // Sample a point along the trace by using the midpoint variance
+      const t = ((i * 11) % 100) / 100;
+      // parse "M x y L x y L x y L x y"
+      const pts = trace.d.match(/-?\d+\.?\d*/g).map(Number);
+      const segs = [];
+      let totalLen = 0;
+      for (let j = 0; j < pts.length - 2; j += 2) {
+        const dx = pts[j + 2] - pts[j];
+        const dy = pts[j + 3] - pts[j + 1];
+        const len = Math.hypot(dx, dy);
+        segs.push({ x1: pts[j], y1: pts[j + 1], x2: pts[j + 2], y2: pts[j + 3], len });
+        totalLen += len;
+      }
+      let target = t * totalLen;
+      let cx = pts[0], cy = pts[1];
+      for (const s of segs) {
+        if (target <= s.len) {
+          const r = target / s.len;
+          cx = s.x1 + (s.x2 - s.x1) * r;
+          cy = s.y1 + (s.y2 - s.y1) * r;
+          break;
+        }
+        target -= s.len;
+      }
+      const color = intensity > 0.7 ? "#00ff88" : intensity > 0.4 ? "#aaff00" : intensity > 0.15 ? "#ffaa00" : "#44aaff";
+      leds.push({ cx, cy, r: 1.8 + intensity * 4, color, intensity, delay: (i * 0.05) % 3 });
+    }
+  });
+
+  // Corner mounting holes
+  const holes = [
+    { x: 22, y: 22 }, { x: W - 22, y: 22 },
+    { x: 22, y: H - 22 }, { x: W - 22, y: H - 22 },
+  ];
+
+  // Solder pad dots (decorative random pattern)
+  const seed = 12345;
+  let rng = seed;
+  const rand = () => { rng = (rng * 1103515245 + 12345) & 0x7fffffff; return rng / 0x7fffffff; };
+  const padDots = [];
+  for (let i = 0; i < 120; i++) {
+    padDots.push({ x: 30 + rand() * (W - 60), y: 30 + rand() * (H - 60), r: 0.6 + rand() * 0.8 });
+  }
+
+  // === BUILD SVG ===
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" height="auto">
   <defs>
     <style>
-      @keyframes pulse { 0%,100% { opacity:0.3; } 50% { opacity:1; } }
-      @keyframes flow { 0% { stroke-dashoffset:80; } 100% { stroke-dashoffset:0; } }
-      @keyframes blink { 0%,100% { opacity:0.15; } 50% { opacity:0.8; } }
-      .trace { fill:none; stroke:#1a3a2a; stroke-width:2; }
-      .trace-active { fill:none; stroke-width:2.5; animation: flow 2s ease-in-out infinite; }
-      .via { fill:#1a3a2a; stroke:#2d5a3a; stroke-width:1; }
-      .glow { animation: pulse 2s ease-in-out infinite; }
-      .chip { fill:#0d2818; stroke:#2d5a3a; stroke-width:1.5; rx:4; }
-      .pin { fill:#1a3a2a; stroke:#2d5a3a; stroke-width:0.5; }
-      .label { fill:#44aaff; font-family:'Courier New',monospace; font-size:10px; text-anchor:middle; }
-      .stat { fill:#2d5a3a; font-family:'Courier New',monospace; font-size:9px; }
-      .title { fill:#44aaff; font-family:'Courier New',monospace; font-size:13px; font-weight:bold; }
+      @keyframes pulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+      @keyframes flow { 0% { stroke-dashoffset: 60; } 100% { stroke-dashoffset: 0; } }
+      @keyframes flicker {
+        0%, 100% { opacity: 0.4; }
+        8% { opacity: 1; }
+        9% { opacity: 0.3; }
+        10% { opacity: 0.9; }
+        40%, 60% { opacity: 0.6; }
+      }
+      .substrate { fill: #0c2a1f; }
+      .solder-mask { fill: #0a3d28; opacity: 0.92; }
+      .trace { fill: none; stroke: #c9a227; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .trace-anim { fill: none; stroke: #ffd700; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+                    stroke-dasharray: 8 24; animation: flow 1.6s linear infinite; opacity: 0.9; }
+      .pad { fill: #c9a227; }
+      .pad-ring { fill: none; stroke: #c9a227; stroke-width: 0.8; }
+      .via { fill: #1a1a1a; stroke: #c9a227; stroke-width: 0.8; }
+      .via-inner { fill: #0c2a1f; }
+      .led-glow { animation: pulse 1.8s ease-in-out infinite; }
+      .led-core { animation: flicker 2.4s ease-in-out infinite; }
+      .chip-body { fill: #0a0a0a; stroke: #2a2a2a; stroke-width: 1; rx: 3; }
+      .chip-text { fill: #9a9a9a; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; text-anchor: middle; }
+      .chip-id { fill: #6a6a6a; font-family: 'Courier New', monospace; font-size: 7px; text-anchor: middle; }
+      .pin { fill: #c9a227; }
+      .silkscreen { fill: #e8e8e8; font-family: 'Courier New', monospace; opacity: 0.7; }
+      .silkscreen-line { stroke: #e8e8e8; stroke-width: 0.6; opacity: 0.5; }
+      .label { fill: #e8e8e8; font-family: 'Courier New', monospace; font-size: 8px; }
+      .title { fill: #ffd700; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
+      .hole-outer { fill: #1a1a1a; }
+      .hole-inner { fill: #0c2a1f; }
     </style>
   </defs>
 
-  <rect width="${W}" height="${H}" fill="#0a1a10" rx="8"/>
-  <rect x="2" y="2" width="${W-4}" height="${H-4}" fill="none" stroke="#1a3a2a" stroke-width="1" rx="8"/>
+  <!-- ── Substrate (PCB base) ── -->
+  <rect width="${W}" height="${H}" class="substrate"/>
+  <rect width="${W}" height="${H}" class="solder-mask"/>
 
-  ${traces.map(t => `<line x1="${t.x1}" y1="${t.y1}" x2="${t.x2}" y2="${t.y2}" class="trace"/>`).join("")}
+  <!-- Decorative copper dots (texture) -->
+  ${padDots.map(d => `<circle cx="${d.x}" cy="${d.y}" r="${d.r}" fill="#c9a227" opacity="0.12"/>`).join("")}
 
-  ${activeSegs.map(s => `<line x1="${s.x1}" y1="${s.y1}" x2="${s.x2}" y2="${s.y2}" stroke="${s.color}" class="trace-active" style="stroke-dasharray:${3+s.intensity*18};animation-delay:${s.delay}s"/>`).join("")}
+  <!-- ── Mounting holes ── -->
+  ${holes.map(h => `
+    <circle cx="${h.x}" cy="${h.y}" r="10" fill="#1a1a1a"/>
+    <circle cx="${h.x}" cy="${h.y}" r="6.5" fill="none" stroke="#c9a227" stroke-width="1.2"/>
+    <circle cx="${h.x}" cy="${h.y}" r="4" fill="#0c2a1f"/>
+    <circle cx="${h.x}" cy="${h.y}" r="2" fill="#0a0a0a"/>
+  `).join("")}
 
-  ${glows.map(g => `<circle cx="${g.cx}" cy="${g.cy}" r="${g.r}" fill="${g.color}" opacity="0.5" class="glow" style="animation-delay:${g.delay}s"/><circle cx="${g.cx}" cy="${g.cy}" r="${g.r*0.35}" fill="${g.color}" opacity="0.9"/>`).join("")}
+  <!-- ── Traces (Manhattan routing) ── -->
+  <g>
+    ${traces.map(t => `<path d="${t.d}" class="trace"/>`).join("")}
+  </g>
+  <g>
+    ${traces.map(t => `<path d="${t.d}" class="trace-anim" style="animation-delay:${(t.idx * 0.13) % 2}s"/>`).join("")}
+  </g>
 
-  ${vias.map(v => `<circle cx="${v.x}" cy="${v.y}" r="4" class="via"/><circle cx="${v.x}" cy="${v.y}" r="1.8" fill="#0d2818"/>`).join("")}
+  <!-- ── Vias at trace junctions ── -->
+  ${[
+    { x: 490, y: 110 }, { x: 490, y: 230 }, { x: 490, y: 60 },
+    { x: 720, y: 290 }, { x: 200, y: 285 }, { x: 855, y: 175 },
+  ].map(v => `
+    <circle cx="${v.x}" cy="${v.y}" r="2.5" class="via"/>
+    <circle cx="${v.x}" cy="${v.y}" r="1.2" class="via-inner"/>
+  `).join("")}
 
+  <!-- ── LEDs lit by contributions ── -->
+  <g>
+    ${leds.map(l => `
+      <circle cx="${l.cx}" cy="${l.cy}" r="${l.r * 2}" fill="${l.color}" opacity="0.18" class="led-glow" style="animation-delay:${l.delay}s"/>
+      <circle cx="${l.cx}" cy="${l.cy}" r="${l.r}" fill="${l.color}" opacity="0.95" class="led-core" style="animation-delay:${(l.delay + 0.4) % 3}s"/>
+      <circle cx="${l.cx}" cy="${l.cy}" r="${l.r * 0.45}" fill="#ffffff" opacity="0.9"/>
+    `).join("")}
+  </g>
+
+  <!-- ── IC Chips (QFP style) ── -->
   ${chips.map(c => {
-    const pins = [];
-    for (let i = 0; i < 4; i++) { const py = c.y + 12 + i * ((c.h - 24) / 3); pins.push(`<rect x="${c.x-6}" y="${py-2}" width="6" height="4" class="pin"/>`); }
-    for (let i = 0; i < 4; i++) { const py = c.y + 12 + i * ((c.h - 24) / 3); pins.push(`<rect x="${c.x+c.w}" y="${py-2}" width="6" height="4" class="pin"/>`); }
-    return `<g>${pins.join("")}<rect x="${c.x}" y="${c.y}" width="${c.w}" height="${c.h}" class="chip"/><circle cx="${c.x+c.w/2}" cy="${c.y+4}" r="2.5" fill="#1a3a2a"/><text x="${c.x+c.w/2}" y="${c.y+c.h/2+3}" class="label">${c.label}</text></g>`;
+    const pins = allPins[c.id];
+    return `
+    <g>
+      ${pins.map(p => `<rect x="${p.x}" y="${p.y}" width="${p.w}" height="${p.h}" class="pin"/>`).join("")}
+      <rect x="${c.x}" y="${c.y}" width="${c.w}" height="${c.h}" class="chip-body"/>
+      <!-- Pin 1 indicator -->
+      <circle cx="${c.x + 7}" cy="${c.y + 7}" r="2" fill="#c9a227"/>
+      <!-- Silkscreen outline -->
+      <rect x="${c.x - 2}" y="${c.y - 2}" width="${c.w + 4}" height="${c.h + 4}" fill="none" class="silkscreen-line"/>
+      <text x="${c.x + c.w/2}" y="${c.y + c.h/2 - 2}" class="chip-text">${c.label}</text>
+      <text x="${c.x + c.w/2}" y="${c.y + c.h/2 + 10}" class="chip-id">${c.id}</text>
+    </g>`;
   }).join("")}
 
-  <rect x="20" y="${H-48}" width="${W-40}" height="28" fill="none" stroke="#1a3a2a" stroke-width="1" rx="3"/>
-  <text x="30" y="${H-31}" class="stat">SYS: ONLINE</text>
-  <text x="200" y="${H-31}" class="stat">COMMITS: ${data.totalContributions}</text>
-  <text x="450" y="${H-31}" class="stat">UPTIME: ${YEAR}</text>
-  <text x="700" y="${H-31}" class="stat">NODE: ${GITHUB_USER}</text>
+  <!-- ── Silkscreen labels along traces ── -->
+  <text x="${W/2}" y="30" text-anchor="middle" class="silkscreen" style="font-size:10px;font-weight:bold">GITHUB_COMMIT_BUS_${YEAR}</text>
+  <text x="40" y="22" class="label">REV.${String(total).padStart(4, "0")}</text>
+  <text x="${W - 40}" y="22" text-anchor="end" class="label">@${GITHUB_USER}</text>
 
-  <text x="30" y="30" class="title">${YEAR} // CIRCUIT_BOARD.SVG</text>
-  <text x="${W-30}" y="30" text-anchor="end" class="title">REV ${totalWeeks}.${String(data.totalContributions).slice(0,3)}</text>
+  <!-- Bottom silkscreen info -->
+  <text x="40" y="${H - 12}" class="label">${total} commits · ${YEAR}</text>
+  <text x="${W - 40}" y="${H - 12}" text-anchor="end" class="label" style="opacity:0.4">PCB v2.0 · Manhattan routing</text>
+
+  <!-- ── Edge cut border ── -->
+  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" fill="none" stroke="#0a0a0a" stroke-width="2" rx="6"/>
+  <rect x="6" y="6" width="${W - 12}" height="${H - 12}" fill="none" stroke="#c9a227" stroke-width="0.4" opacity="0.3" rx="4"/>
 </svg>`;
 }
 
