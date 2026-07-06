@@ -86,7 +86,7 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
   </tr>
 </table>
 
-<p align="center">
+<p align="start">
   <a href="https://github.com/DinDja"><img src="https://img.shields.io/badge/📊_Ver_todos_stats-DinDja-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="See all stats"/></a>
   <a href="https://github.com/DinDja?tab=repositories"><img src="https://img.shields.io/badge/🗂️_Todos_repositórios-19-6A5ACD?style=for-the-badge&logo=github&logoColor=white" alt="All repositories"/></a>
   <a href="https://github.com/DinDja?tab=repositories&q=&type=source"><img src="https://img.shields.io/badge/🚀_Apenas_source_code-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Source repos"/></a>
@@ -402,6 +402,10 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 ---
 
 ## 🛠️ Stack
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif" width="100%" alt="Stacks"/>
+</p>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,next,tailwind,nodejs,express,postgres,firebase,git,github,vercel,netlify,python&perline=7" alt="Core stack"/>
