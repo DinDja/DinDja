@@ -1,4 +1,3 @@
-<!-- HEADER -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:6A5ACD&height=220&section=header&text=Bruno%20Andrade&fontSize=42&fontAlignY=38&desc=Fullstack%20Developer%20•%203D%20Web%20•%20Enterprise%20Systems&descAlignY=60&animation=fadeIn"/>
 
 <p align="center">
@@ -12,6 +11,7 @@
   <img src="https://img.shields.io/github/followers/DinDja?label=Followers&style=flat-square&color=6A5ACD&logo=github" alt="Followers"/>
   <img src="https://img.shields.io/github/stars/DinDja?label=Total%20Stars&style=flat-square&color=0A66C2" alt="Stars"/>
   <a href="mailto:brunomomoshiki@gmail.com"><img src="https://img.shields.io/badge/Email-brunomomoshiki@gmail.com-0A66C2?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://opencode.ai"><img src="https://img.shields.io/badge/Powered%20by-opencode-7c3aed?style=flat-square&logo=openai&logoColor=white" alt="OpenCode"/></a>
 </p>
 
 ---
@@ -40,122 +40,238 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 <table>
   <tr>
     <td align="center">
-      <img 
-        src="https://bahiaeconomica.com.br/wp/wp-content/uploads/2020/12/SECTI.png" 
-        height="140" 
-        alt="Sede da SECTI/BA"
-      />
+      <img src="https://bahiaeconomica.com.br/wp/wp-content/uploads/2020/12/SECTI.png" height="140" alt="Sede da SECTI/BA"/>
     </td>
     <td align="center">
-      <img 
-        src="https://www.ba.gov.br/educacao/sites/site-sec/files/2025-09/Foto%20ilustrativa%20Douglas%20Amaral%20%2824%29_0.jpeg" 
-        height="140" 
-        alt="Sede da SEC/BA"
-      />
+      <img src="https://www.ba.gov.br/educacao/sites/site-sec/files/2025-09/Foto%20ilustrativa%20Douglas%20Amaral%20%2824%29_0.jpeg" height="140" alt="Sede da SEC/BA"/>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <b>SECTI/BA</b>
-      <br/>
-      <sub>Secretaria de Ciência, Tecnologia e Inovação da Bahia</sub>
-      <br/><br/>
+      <b>SECTI/BA</b><br/>
+      <sub>Secretaria de Ciência, Tecnologia e Inovação da Bahia</sub><br/><br/>
       <code>Desenvolvedor Full Stack</code>
     </td>
     <td align="center">
-      <b>SEC/BA</b>
-      <br/>
-      <sub>Secretaria da Educação do Estado da Bahia</sub>
-      <br/><br/>
+      <b>SEC/BA</b><br/>
+      <sub>Secretaria da Educação do Estado da Bahia</sub><br/><br/>
       <code>Desenvolvedor Full Stack</code>
     </td>
   </tr>
 </table>
+
+---
 
 ## 🚀 Projetos
 
-### 🧊 Editor ThreeJS — Editor 3D Web & Desktop
+Abaixo, os principais projetos com métricas reais extraídas do grafo de conhecimento do código-fonte.
 
-Editor 3D experimental em Next.js + React Three Fiber + Electron, com modelagem, sculpt, física, animação e IA.
+### 🧊 Editor-ThreeJS
 
-<table>
-  <tr>
-    <td><b>3D / WebGL</b></td><td>Three.js • React Three Fiber • Drei • three-mesh-bvh</td>
-  </tr>
-  <tr>
-    <td><b>Física</b></td><td>Rapier3D — corpos dinâmicos, colliders, triggers</td>
-  </tr>
-  <tr>
-    <td><b>Estado</b></td><td>Zustand — store modular com undo/redo</td>
-  </tr>
-  <tr>
-    <td><b>IA</b></td><td>NVIDIA NIM (meta/llama-3.1-8b-instruct) — geração de cenas por prompt</td>
-  </tr>
-  <tr>
-    <td><b>Desktop</b></td><td>Electron + electron-builder — instalador Windows/macOS/Linux</td>
-  </tr>
-  <tr>
-    <td><b>Features</b></td><td>Edit Mode (vertices/faces) • Sculpt (10 modos) • Timeline/keyframes • Behaviors • Efeitos (partículas, fluid) • Scripts por objeto • Layers • Asset Browser</td>
-  </tr>
-</table>
+Editor 3D experimental Next.js + React Three Fiber + Electron — modelagem, sculpt, física, animação, timeline, IA e exportação de projetos.
+
+| Métrica | Valor |
+|---|---|
+| Arquivos | 184 TypeScript, 193 módulos |
+| Funções | 1.548 |
+| Stores (Zustand) | 21 — sceneStore, historyStore, editorStore, physicsStore, timelineStore... |
+| Motor 3D | Three.js r184 + three-mesh-bvh |
+| Física | Rapier3D (corpos dinâmicos, colliders, triggers) em `PhysicsRuntime.tsx` |
+| IA | `generateSceneWithNvidiaNim()` — geração de cenas por prompt via NIM (meta/llama-3.1-8b-instruct) |
+| Image-to-3D | Pipeline própria: providers modulares, validação, importação |
+| Export Engine | ZIP com schema, API routes, e experiência completa |
+| Template Engine | Seções modulares: hero, features, navbar, footer + blocos |
+| Mesh Ops | `meshOps.ts`, `geometryOps.ts`, `polygonMesh.ts`, `draw3DGeometryFactory.ts` |
+| Efeitos | Partículas (`ParticleField`), fluidos, CSS effects, WebGL effects |
+| Page Builder | Árvore de nós DOM-like, data model, interações, runtime preview |
+| Behaviors/Scripts | Engine de scripts por objeto + behaviors system |
+| Desktop | Electron + electron-builder (Windows/macOS/Linux) |
+| Pipeline | LSP cross-file, semantic edges (211), similaridade (161), ciclomatic complexity |
+
+**Hotspots** (funções mais chamadas): `pushSnapshot` (81 callers), `updateObject` (53), `createId` (27), `setSelectedObject` (25).
+
+**Clusters arquiteturais**: 12 comunidades identificadas — Editor3D core, PageBuilder, Template Engine, Image-to-3D, Effects, Export, Scene Graph, Interactions, Data Model, Timeline, Preferences, Autosave.
+
+```
+src/
+├── app/          — 10 rotas públicas + 5 API routes (AI, assets, models, image-to-3d, download)
+├── components/   — Editor3D (45 componentes), public, auth, effects, ui
+├── lib/          — 31 módulos: mesh, physics, IA, export, template, page-builder, behaviors...
+├── store/        — 21 Zustand stores
+├── types/        — Declarações globais
+└── electron/     — main.js + preload.js
+```
 
 <p>
-  <a href="https://github.com/DinDja/Editor-ThreeJS">
-    <img src="https://img.shields.io/badge/Ver_Editor_ThreeJS-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Editor ThreeJS"/>
-  </a>
+  <a href="https://github.com/DinDja/Editor-ThreeJS"><img src="https://img.shields.io/badge/Ver_Editor_ThreeJS-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Editor ThreeJS"/></a>
   <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
   <img src="https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=black" alt="React"/>
   <img src="https://img.shields.io/badge/Three.js-r184-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js"/>
   <img src="https://img.shields.io/badge/Electron-35-47848f?style=flat-square&logo=electron&logoColor=white" alt="Electron"/>
   <img src="https://img.shields.io/badge/Rapier3D-Physics-0055ff?style=flat-square" alt="Rapier3D"/>
   <img src="https://img.shields.io/badge/NVIDIA_NIM-AI-76b900?style=flat-square&logo=nvidia&logoColor=white" alt="NVIDIA NIM"/>
-  <img src="https://img.shields.io/badge/Zustand-State-brown?style=flat-square" alt="Zustand"/>
+  <img src="https://img.shields.io/badge/Zustand-21%20Stores-brown?style=flat-square" alt="Zustand"/>
+  <img src="https://img.shields.io/badge/1.548%20funções-3031%20nós-0A66C2?style=flat-square" alt="Graph metrics"/>
 </p>
 
 ---
 
-### 📄 SECTI Contratos & Convênios
+### 📄 SECTI-Contratos
 
-Sistema corporativo para **gestão unificada de contratos e convênios**, com controle administrativo, transparência e rastreabilidade.
+Sistema corporativo para gestão unificada de contratos e convênios com controle administrativo e rastreabilidade.
 
-<details>
-<summary><b>Funcionalidades</b></summary>
+| Métrica | Valor |
+|---|---|
+| Stack | Vite + React 19 + TypeScript + Firebase |
+| Funções | 456 |
+| Interfaces/Tipos | 68 |
+| Componentes de UI | shadcn/ui — sidebar, form, table, dialog, select, calendar... |
+| IA | `callNvidiaNim()` no `GuiaPanel.tsx` — assistente jurídico para contratos |
+| Autenticação | `SessionManager.tsx` — login por e-mail institucional, inatividade com auto-logout |
+| Auditoria | Histórico completo de alterações |
+| Export | Excel (`excel.ts`) e PDF (`pdf-export.ts`) |
+| PWA | Service worker em `public/sw.js` |
+| Alertas | Firebase Functions (`contractAlerts.js`) |
+| Tipos | `contract.ts`, `user.ts` — modelagem completa de dados |
+| Hotspots | `cn` (178 callers), `formatDate` (10), `getContractStatus` (8) |
 
-- Autenticação restrita por e-mail institucional
-- Controle de acesso por perfil (Gestor, Fiscal e CCC)
-- Cadastro e edição de contratos e convênios
-- Gestão de vigência e valores
-- Registro automático de histórico de alterações
-- Sistema de apostilas internas
-- Filtros por prazo e status
-- Exportação de dados para Excel
-- Busca textual integrada
-- Interface orientada à produtividade
+**Arquitetura**: autenticação → dashboard → gestão de contratos/convênios/apostilas/termos aditivos/extinção. Cluster IA separado (`GuiaPanel`) com NVIDIA NIM.
 
-</details>
+<p>
+  <a href="https://github.com/DinDja/SECTI-contratos"><img src="https://img.shields.io/badge/Ver_SECTI_Contratos-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="SECTI Contratos"/></a>
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/shadcn/ui-000000?style=flat-square&logo=shadcnui&logoColor=white"/>
+  <img src="https://img.shields.io/badge/NVIDIA_NIM-76b900?style=flat-square&logo=nvidia&logoColor=white"/>
+  <img src="https://img.shields.io/badge/943%20nós-2441%20arestas-6A5ACD?style=flat-square"/>
+</p>
 
 ---
 
 ### 📊 Info.SECTI
 
-Sistema institucional para **gestão e acompanhamento de projetos científicos e tecnológicos** do Estado da Bahia, centralizando informações e apoiando a tomada de decisão administrativa.
+Sistema institucional para gestão e acompanhamento de projetos científicos e tecnológicos do Estado da Bahia.
+
+| Métrica | Valor |
+|---|---|
+| Stack | Vite + React 19 + JavaScript + Firebase + Netlify |
+| Funções | 501 |
+| Geração de docs | PowerPoint (`powerPointGenerator.js`, 44 funções), PDF ABNT (`pdfGenerator.js`), Nota Técnica (`notaTecnicaGenerator.js`) |
+| AI Agent | `searchProjectsWithAI()`, `analyzeProjectWithAI()`, `callAIFrontend()` — busca inteligente via OpenRouter |
+| Mapas | `LocationMapFilter.jsx` — filtro geográfico com 417 municípios da BA |
+| Auditoria | `AuditLogger.log()` — hotspot com 44 callers, IndexedDB, cache manager, rate limiting |
+| Permissões | RBAC por projeto: editor, visualizador, owner |
+| Autenticação | Firebase Auth + AppContext |
+| Serverless | Netlify Functions (`functions/index.js`) |
+
+**Clusters**: Editor de projetos, geradores de documento (PPT/PDF/NT), busca IA, mapa, auditoria.
+
+<p>
+  <a href="https://github.com/DinDja/hubSECTI"><img src="https://img.shields.io/badge/Ver_Info.SECTI-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Info.SECTI"/></a>
+</p>
 
 ---
 
-### 🎓 AcompanhaTec
+### 🔬 PatentesLab
 
-Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profissional e Tecnológico, voltado ao suporte à gestão educacional.
+Laboratório de patentes com robô autônomo de busca no INPI, geração de documentos e viabilidade.
+
+| Métrica | Valor |
+|---|---|
+| Stack | Next.js + JavaScript + Firebase + Netlify |
+| Funções | 528 |
+| Robô INPI | `AutonomousINPIAgent.jsx` + scripts `inpiKeywordSearchProxy.js` e `inpiProcessProxy.js` |
+| Watchlist | `inpiWatchService.js` com GitHub Actions (`sync-patent-viability-kb.yml`) |
+| Documentos | `GeradorDocumentos.jsx` — gera DOCX com compliance INPI (+ assinatura digital Serpro) |
+| Prior Art | `priorArtWorkbenchUtils.js` — normalização textual, marcação de similaridade |
+| API Layer | 6 rotas Next.js + 3 Netlify Functions para proxy e processamento |
+| Clusters | 12 comunidades: UI, robot, tracking, documents, prior art, admin... |
+
+**Hotspots**: `round` (23), `normalizeText` (23), `normalizeKeyword` (9), `createSearchIdentity` (8).
+
+<p>
+  <a href="https://github.com/DinDja/PatentesLab"><img src="https://img.shields.io/badge/Ver_PatentesLab-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="PatentesLab"/></a>
+</p>
+
+---
+
+### 🌙 TSARA
+
+E-commerce + agendamento + chat com painel admin completo.
+
+| Métrica | Valor |
+|---|---|
+| Stack | Next.js 16 + TypeScript + Firebase + shadcn/ui |
+| Funções | 656 |
+| Componentes UI | ~60 shadcn/ui components customizados |
+| Pagamentos | InfinitePay — webhook, checkout, link de pagamento |
+| Agendamento | `components/scheduling/` (8 componentes) — date picker, time slot, booking confirmation |
+| Chat | `chat-window.tsx` + `chat-float-button.tsx` + IA |
+| Admin | 11 páginas: produtos, pedidos, clientes, agendamentos, consultas, cupons... |
+| Serviços | 16 módulos: auth, products, orders, account, appointments, chat, infinitePay... |
+| Layers | 4 core services + hooks + contexts + ui components |
+| Hotspots | `cn` (245), `useAuth` (12), `useFirestorePagination` (8) |
+
+<p>
+  <a href="https://github.com/DinDja/TSARA"><img src="https://img.shields.io/badge/Ver_TSARA-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="TSARA"/></a>
+</p>
+
+---
+
+### 🏭 Sectinvent-rio
+
+Sistema de inventário, movimentação e auditoria para a SECTI.
+
+| Stack | Next.js + TypeScript + Firebase + shadcn/ui |
+|---|---|
+| Funções | 369 |
+| Módulos | Inventário, cadastros, movimentações, usuários, auditoria, dashboard |
+| Store | `inventory-store.tsx` (Zustand) |
+| Hotspots | `cn` (224), `Root` calendar (28), `useInventory` (7), `useAuth` (7) |
+
+<p>
+  <a href="https://github.com/DinDja/Sectinvent-rio"><img src="https://img.shields.io/badge/Ver_Sectinvent_rio-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Sectinvent-rio"/></a>
+</p>
+
+---
+
+### 📈 Grafo de Conhecimento do Workspace
+
+Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa 19 repositórios automaticamente via codebase-memory-mcp:
+
+```
+📊 Total: 15.513 nós · 30.442 arestas · 19 repositórios
+```
+
+| Repositório | Nós | Arestas | Funções | Stack principal |
+|---|---|---|---|---|
+| Editor-ThreeJS | 3.031 | 7.208 | 1.548 | Next, R3F, Three.js, Electron, Zustand, NIM |
+| PatentesLab | 1.843 | 2.881 | 528 | Next, Firebase, Netlify, INPI API |
+| TSARA | 1.540 | 3.804 | 656 | Next, Firebase, shadcn/ui, InfinitePay |
+| ProjetosClubes | 1.162 | 1.211 | — | Firebase |
+| SECTI | 980 | 2.205 | 501 | Vite, React, Firebase, Netlify |
+| SECTI-contratos | 943 | 2.441 | 456 | Vite, React TS, Firebase, shadcn/ui |
+| Sectinvent-rio | 719 | 2.009 | 369 | Next, TS, Firebase, shadcn/ui |
+| mapfilter-BA | 536 | 1.031 | — | React, Mapas |
+| cloudspeak | 450 | 839 | — | Firebase, Streaming |
+| conectaBahia | 414 | 643 | — | React |
+| NATAD | 342 | 584 | — | Firebase |
+| Natad_Frontend_relationSHIP | 342 | 584 | — | React |
+| EduConex | 1.553 | 2.278 | — | React |
+| hubSECTI | 876 | 2.094 | — | Firebase |
+| PatentesSearch | 167 | 282 | — | Next |
+| Trabs_School | 236 | 392 | — | React Native |
+| INPI | 48 | 58 | — | — |
+| PortifolioBruno | 63 | 85 | — | — |
+| ValentineDay | 66 | 158 | — | React |
 
 ---
 
 ## 📈 Atividade GitHub
 
 <p align="center">
-  <img 
-    src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=false&background=0D1117&border=30363D&stroke=58A6FF&ring=FF8C00&fire=FF8C00&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FF8C00&sideLabels=FFFFFF&dates=C9D1D9" 
-    height="170" 
-    alt="GitHub Streak"
-  />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=false&background=0D1117&border=30363D&stroke=58A6FF&ring=FF8C00&fire=FF8C00&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FF8C00&sideLabels=FFFFFF&dates=C9D1D9" height="170" alt="GitHub Streak"/>
 </p>
 
 <p align="center">
@@ -180,6 +296,7 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
   <a href="https://zustand.docs.pmnd.rs/"><img src="https://img.shields.io/badge/Zustand-State-ff6b35?style=for-the-badge" alt="Zustand"/></a>
   <a href="https://build.nvidia.com/"><img src="https://img.shields.io/badge/NVIDIA_NIM-AI-76b900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA NIM"/></a>
   <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind-4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=black" alt="Tailwind"/></a>
+  <a href="https://shadcn.dev/"><img src="https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui"/></a>
 </p>
 
 ---
@@ -187,27 +304,27 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
 ## 🧠 Competências
 
 | Categoria | Detalhe |
-| --- | --- |
-| Arquitetura | Aplicações web, monorepos, serverless |
-| Dados | Modelagem relacional/NoSQL, auditoria, rastreabilidade |
-| Segurança | Autenticação, RBAC, controle de permissões |
-| Frontend | UI institucional, design systems, 3D/WebGL |
-| Backend | APIs REST, integrações, registros de histórico |
-| Infra | Cloud, CI/CD, deploys (Vercel/Netlify) |
-| Real-time | Física 3D, animação, simulações |
-| IA | Integração de LLMs, geração procedural |
+|---|---|
+| Arquitetura | Aplicações web, monorepos, serverless, grafos de conhecimento |
+| Dados | Modelagem relacional/NoSQL, auditoria, rastreabilidade, Firestore |
+| Segurança | Autenticação, RBAC, controle de permissões, sessões |
+| Frontend | UI institucional, design systems, 3D/WebGL, shadcn/ui |
+| Backend | APIs REST, Next.js API routes, Netlify Functions, Firebase Functions |
+| Infra | Cloud (Firebase, Netlify, Vercel), CI/CD GitHub Actions |
+| Real-time | Física 3D (Rapier3D), animação, timelines, behaviors |
+| IA | NVIDIA NIM, OpenRouter, LLMs, geração procedural, busca semântica |
 
 ---
 
 ## 📚 Formação
 
-**Análise e Desenvolvimento de Sistemas** 
+**Análise e Desenvolvimento de Sistemas**
 
 ## 🏅 Microsoft Learn Badges
 
 <p align="center">
   <a href="https://learn.microsoft.com/pt-br/users/brunoandradedequeiroz-7022/">
-    <img src="https://img.shields.io/badge/Microsoft%20Learn-Bruno%20Andrade-258ffa?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft Learn Profile" />
+    <img src="https://img.shields.io/badge/Microsoft%20Learn-Bruno%20Andrade-258ffa?style=for-the-badge&logo=microsoft&logoColor=white" alt="Microsoft Learn Profile"/>
   </a>
 </p>
 
@@ -221,63 +338,61 @@ Sistema externo para **acompanhamento pedagógico** de unidades de Ensino Profis
   </tr>
   <tr>
     <td align="center">
-      <img src="https://learn.microsoft.com/en-us/training/achievements/csharp-write-first.svg" width="80" alt="Write your first C# code" /><br/>
+      <img src="https://learn.microsoft.com/en-us/training/achievements/csharp-write-first.svg" width="80" alt="Write your first C# code"/><br/>
       <sub>Primeiro código em C#</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/training/achievements/csharp-literals-variables.svg" width="80" alt="Armazenar e recuperar dados usando valores literais e variáveis em C#" /><br/>
+      <img src="https://learn.microsoft.com/training/achievements/csharp-literals-variables.svg" width="80" alt="Armazenar e recuperar dados usando valores literais e variáveis em C#"/><br/>
       <sub>Literais e variáveis</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/training/achievements/csharp-basic-formatting.svg" width="80" alt="Executar formatação de cadeia de caracteres básica em C#" /><br/>
+      <img src="https://learn.microsoft.com/training/achievements/csharp-basic-formatting.svg" width="80" alt="Executar formatação de cadeia de caracteres básica em C#"/><br/>
       <sub>Formatação em C#</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/training/achievements/csharp-basic-operations.svg" width="80" alt="Executar operações básicas em números em C#" /><br/>
+      <img src="https://learn.microsoft.com/training/achievements/csharp-basic-operations.svg" width="80" alt="Executar operações básicas em números em C#"/><br/>
       <sub>Operações numéricas</sub>
     </td>
   </tr>
-
   <tr>
     <td align="center" colspan="4"><strong>🟡 Desenvolvimento e GitHub</strong></td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://learn.microsoft.com/training/achievements/7-introduction-to-github-actions.svg" width="80" alt="GitHub Actions" /><br/>
+      <img src="https://learn.microsoft.com/training/achievements/7-introduction-to-github-actions.svg" width="80" alt="GitHub Actions"/><br/>
       <sub>GitHub Actions</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/training/achievements/introduction-github-packages.svg" width="80" alt="Pacotes do GitHub" /><br/>
+      <img src="https://learn.microsoft.com/training/achievements/introduction-github-packages.svg" width="80" alt="Pacotes do GitHub"/><br/>
       <sub>GitHub Packages</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/en-us/training/achievements/publish-static-web-app-and-api.svg" width="80" alt="Publish a JavaScript app with Azure Static Web Apps" /><br/>
+      <img src="https://learn.microsoft.com/en-us/training/achievements/publish-static-web-app-and-api.svg" width="80" alt="Publish a JavaScript app with Azure Static Web Apps"/><br/>
       <sub>Static Web Apps com API</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/pt-br/training/achievements/azure-static-web-apps.svg" width="80" alt="Aplicativos Web Estáticos do Azure" /><br/>
+      <img src="https://learn.microsoft.com/pt-br/training/achievements/azure-static-web-apps.svg" width="80" alt="Aplicativos Web Estáticos do Azure"/><br/>
       <sub>Azure Static Web Apps</sub>
     </td>
   </tr>
-
   <tr>
     <td align="center" colspan="4"><strong>🟠 Microsoft Cloud e Plataforma</strong></td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg" width="80" alt="Introduction to Azure OpenAI managed identity authentication with JavaScript" /><br/>
+      <img src="https://learn.microsoft.com/en-us/learn/achievements/generic-badge.svg" width="80" alt="Introduction to Azure OpenAI managed identity authentication with JavaScript"/><br/>
       <sub>Azure OpenAI com JS</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/training/achievements/dataverse-web-api.svg" width="80" alt="Trabalhar com a API Web do Dataverse" /><br/>
+      <img src="https://learn.microsoft.com/training/achievements/dataverse-web-api.svg" width="80" alt="Trabalhar com a API Web do Dataverse"/><br/>
       <sub>Dataverse Web API</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/en-us/training/achievements/sharepoint-spfx-web-parts.svg" width="80" alt="Develop web parts with the SharePoint Framework" /><br/>
+      <img src="https://learn.microsoft.com/en-us/training/achievements/sharepoint-spfx-web-parts.svg" width="80" alt="Develop web parts with the SharePoint Framework"/><br/>
       <sub>SharePoint Framework</sub>
     </td>
     <td align="center">
-      <img src="https://learn.microsoft.com/training/achievements/1-understand-security-in-the-pipeline.svg" width="80" alt="Secure DevOps" /><br/>
+      <img src="https://learn.microsoft.com/training/achievements/1-understand-security-in-the-pipeline.svg" width="80" alt="Secure DevOps"/><br/>
       <sub>Secure DevOps</sub>
     </td>
   </tr>
