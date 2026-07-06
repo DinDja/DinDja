@@ -24,6 +24,21 @@
 
 ---
 
+## 📑 Índice
+
+<a href="#-sobre"><img src="https://img.shields.io/badge/👋-Sobre-0A66C2?style=flat-square"/></a>
+<a href="#-atuação"><img src="https://img.shields.io/badge/💻-Atuação-6A5ACD?style=flat-square"/></a>
+<a href="#-experiência-institucional"><img src="https://img.shields.io/badge/🧑‍💼-Experiência-0A66C2?style=flat-square"/></a>
+<a href="#-projetos"><img src="https://img.shields.io/badge/🚀-Projetos-6A5ACD?style=flat-square"/></a>
+<a href="#-grafo-de-conhecimento-do-workspace"><img src="https://img.shields.io/badge/📈-Grafo_de_Conhecimento-0A66C2?style=flat-square"/></a>
+<a href="#-stats-github"><img src="https://img.shields.io/badge/📊-Stats_Dinâmicos-6A5ACD?style=flat-square"/></a>
+<a href="#-stack"><img src="https://img.shields.io/badge/🛠️-Stack-0A66C2?style=flat-square"/></a>
+<a href="#-competências"><img src="https://img.shields.io/badge/🧠-Competências-6A5ACD?style=flat-square"/></a>
+<a href="#-formação"><img src="https://img.shields.io/badge/📚-Formação-0A66C2?style=flat-square"/></a>
+<a href="#-contato"><img src="https://img.shields.io/badge/📇-Contato-6A5ACD?style=flat-square"/></a>
+
+---
+
 ## 👋 Sobre
 
 Desenvolvedor Full Stack com atuação em **sistemas institucionais e corporativos** voltados ao setor público, com foco em **controle de acesso, rastreabilidade de dados, padronização de processos e confiabilidade operacional**.
@@ -40,6 +55,50 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 - Arquitetura web moderna com foco em manutenibilidade e segurança
 - Aplicações 3D interativas e ferramentas desktop (Electron)
 - Integração de modelos de IA para geração de conteúdo
+
+---
+
+## 📊 Stats GitHub
+
+<details open>
+<summary><b>🔥 Estatísticas dinâmicas (clique para recolher)</b></summary>
+
+<br/>
+
+<p align="center">
+  <a href="https://github.com/DinDja">
+    <img src="https://github-readme-stats.vercel.app/api?username=DinDja&show_icons=true&theme=transparent&hide_border=true&bg_color=0D1117&title_color=0A66C2&icon_color=6A5ACD&text_color=C9D1D9" height="170" alt="GitHub Stats"/>
+  </a>
+  <a href="https://github.com/DinDja">
+    <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=transparent&hide_border=true&background=0D1117&stroke=0A66C2&ring=6A5ACD&fire=6A5ACD&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=0A66C2&sideLabels=C9D1D9&dates=C9D1D9" height="170" alt="GitHub Streak"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/DinDja">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DinDja&layout=compact&theme=transparent&hide_border=true&bg_color=0D1117&title_color=0A66C2&text_color=C9D1D9" height="170" alt="Top Languages"/>
+  </a>
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=DinDja&theme=transparent&no-frame=true&margin-w=8&margin-h=8&column=4" height="170" alt="Trophies"/>
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DinDja&theme=react-dark&hide_border=true&bg_color=0D1117&color=0A66C2&line=6A5ACD&point=FFFFFF" width="92%" alt="Activity Graph"/>
+</p>
+
+</details>
+
+<details>
+<summary><b>⚡ Contribuições por repo (clique para expandir)</b></summary>
+
+<br/>
+
+<p align="center">
+  <img src="https://github-contributor-stats.vercel.app/api?username=DinDja&limit=8&theme=dark&combine_commit=true&exclude=github,DinDja" width="92%" alt="Contributor stats"/>
+</p>
+
+</details>
 
 ---
 
@@ -78,6 +137,9 @@ Abaixo, os principais projetos com métricas reais extraídas do grafo de conhec
 
 Editor 3D experimental Next.js + React Three Fiber + Electron — modelagem, sculpt, física, animação, timeline, IA e exportação de projetos.
 
+<details>
+<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+
 | Métrica | Valor |
 |---|---|
 | Arquivos | 184 TypeScript, 193 módulos |
@@ -110,6 +172,8 @@ src/
 └── electron/     — main.js + preload.js
 ```
 
+</details>
+
 <p>
   <a href="https://github.com/DinDja/Editor-ThreeJS"><img src="https://img.shields.io/badge/Ver_Editor_ThreeJS-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Editor ThreeJS"/></a>
   <img src="https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
@@ -128,6 +192,9 @@ src/
 
 Sistema corporativo para gestão unificada de contratos e convênios com controle administrativo e rastreabilidade.
 
+<details>
+<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+
 | Métrica | Valor |
 |---|---|
 | Stack | Vite + React 19 + TypeScript + Firebase |
@@ -144,6 +211,8 @@ Sistema corporativo para gestão unificada de contratos e convênios com control
 | Hotspots | `cn` (178 callers), `formatDate` (10), `getContractStatus` (8) |
 
 **Arquitetura**: autenticação → dashboard → gestão de contratos/convênios/apostilas/termos aditivos/extinção. Cluster IA separado (`GuiaPanel`) com NVIDIA NIM.
+
+</details>
 
 <p>
   <a href="https://github.com/DinDja/SECTI-contratos"><img src="https://img.shields.io/badge/Ver_SECTI_Contratos-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="SECTI Contratos"/></a>
@@ -277,6 +346,9 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 📊 Total: 15.513 nós · 30.442 arestas · 19 repositórios
 ```
 
+<details>
+<summary><b>🔍 Ver tabela completa de métricas por repositório</b></summary>
+
 | Repositório | Nós | Arestas | Funções | Stack principal |
 |---|---|---|---|---|
 | Editor-ThreeJS | 3.031 | 7.208 | 1.548 | Next, R3F, Three.js, Electron, Zustand, NIM |
@@ -299,9 +371,16 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 | PortifolioBruno | 63 | 85 | — | — |
 | ValentineDay | 66 | 158 | — | React |
 
+</details>
+
 ---
 
 ## 📈 Atividade GitHub
+
+<details>
+<summary><b>🔥 Streak e histórico de contribuições (clique para expandir)</b></summary>
+
+<br/>
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=DinDja&theme=blue-purple&hide_border=false&background=0D1117&border=30363D&stroke=58A6FF&ring=FF8C00&fire=FF8C00&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FF8C00&sideLabels=FFFFFF&dates=C9D1D9" height="170" alt="GitHub Streak"/>
@@ -310,6 +389,8 @@ Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=DinDja&theme=blue-purple&hide_border=true&bg_color=00000000" width="92%" alt="Activity Graph"/>
 </p>
+
+</details>
 
 ---
 
