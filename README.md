@@ -291,6 +291,9 @@ Sistema institucional para gestão e acompanhamento de projetos científicos e t
 
 Laboratório de patentes com robô autônomo de busca no INPI, geração de documentos e viabilidade.
 
+<details>
+<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+
 | Métrica | Valor |
 |---|---|
 | Stack | Next.js + JavaScript + Firebase + Netlify |
@@ -303,6 +306,8 @@ Laboratório de patentes com robô autônomo de busca no INPI, geração de docu
 | Clusters | 12 comunidades: UI, robot, tracking, documents, prior art, admin... |
 
 **Hotspots**: `round` (23), `normalizeText` (23), `normalizeKeyword` (9), `createSearchIdentity` (8).
+
+</details>
 
 <p>
   <a href="https://github.com/DinDja/PatentesLab"><img src="https://img.shields.io/badge/Ver_PatentesLab-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="PatentesLab"/></a>
@@ -458,9 +463,9 @@ _O GitHub Action atualiza esse "terminal" diariamente com dados reais._
 <!-- Gerado automaticamente a cada push -->
 
 ```
-╔═══════════════════════════════════════════════════════════════════╗
+╔═════════════════════════════════════════════════════════════════════╗
 ║  SYSTEM LOG — Auto-análise do Workspace                           ║
-╚═══════════════════════════════════════════════════════════════════╝
+╚═════════════════════════════════════════════════════════════════════╝
 
 SYSTEM
 Bom dia.
@@ -469,19 +474,19 @@ Bom dia.
 
 WORKSPACE
 ┌─────────────────────────────────────────────────────────┐
-│ 🟢 Editor-ThreeJS    │ Build OK      │ 184 arquivos    │
-│ 🟢 SECTI-contratos   │ Build OK      │ 85 arquivos     │
-│ 🟢 TSARA             │ Build OK      │ 152 arquivos    │
-│ 🟡 PatentesLab       │ 2 warnings    │ 70 arquivos     │
-│ 🟢 Info.SECTI        │ Build OK      │ 82 arquivos     │
-│ 🟢 Sectinvent-rio    │ Build OK      │ 58 arquivos     │
+│ 🟢 Editor-ThreeJS           │ Build OK     │
+│ 🟡 SECTI-contratos          │ Pending      │
+│ 🟡 TSARA                    │ Pending      │
+│ 🟡 hubSECTI                 │ Pending      │
+│ 🟡 PatentesLab              │ Pending      │
+│ 🟡 Sectinvent-rio           │ Pending      │
 └─────────────────────────────────────────────────────────┘
 
 > Status?
 
 CI/CD
 ┌─────────────────────────────────────────────────────────┐
-│ ✅ GitHub Actions   │ 12 workflows ativos              │
+│ ✅ GitHub Actions   │ 3 workflows ativos               │
 │ ✅ Vercel           │ Deploy automático habilitado     │
 │ ✅ Netlify          │ Functions serverless ativas      │
 │ ✅ Firebase         │ 6 projetos conectados            │
@@ -491,10 +496,9 @@ CI/CD
 
 TASKS
 ┌─────────────────────────────────────────────────────────┐
-│ 🔵 3 PRs abertos                                        │
-│ 🟡 5 issues em progresso                                │
-│ 🔴 1 bug crítico (Editor-ThreeJS: physics collision)   │
-│ ⚪ 12 melhorias sugeridas                               │
+│ 🔵 0 PRs abertos                                        │
+│ 🟡 0 issues em progresso                                │
+│ 🔴 0 bug(s) crítico(s)                                      │
 └─────────────────────────────────────────────────────────┘
 
 > Objetivo?
@@ -506,10 +510,42 @@ MISSION
 │  produtividade e inovação tecnológica."                │
 └─────────────────────────────────────────────────────────┘
 ```
+<<<<<<< HEAD
 
 _O README inteiro é uma conversa entre IA e o sistema. Atualizado automaticamente via GitHub Action._
 
 ---
+=======
+📊 Total: 15.513 nós · 30.442 arestas · 19 repositórios
+```
+
+<details>
+<summary><b>🔍 Ver tabela completa de métricas por repositório</b></summary>
+
+| Repositório | Nós | Arestas | Funções | Stack principal |
+|---|---|---|---|---|
+| Editor-ThreeJS | 3.031 | 7.208 | 1.548 | Next, R3F, Three.js, Electron, Zustand, NIM |
+| PatentesLab | 1.843 | 2.881 | 528 | Next, Firebase, Netlify, INPI API |
+| TSARA | 1.540 | 3.804 | 656 | Next, Firebase, shadcn/ui, InfinitePay |
+| ProjetosClubes | 1.162 | 1.211 | — | Firebase |
+| SECTI | 980 | 2.205 | 501 | Vite, React, Firebase, Netlify |
+| SECTI-contratos | 943 | 2.441 | 456 | Vite, React TS, Firebase, shadcn/ui |
+| Sectinvent-rio | 719 | 2.009 | 369 | Next, TS, Firebase, shadcn/ui |
+| mapfilter-BA | 536 | 1.031 | — | React, Mapas |
+| cloudspeak | 450 | 839 | — | Firebase, Streaming |
+| conectaBahia | 414 | 643 | — | React |
+| NATAD | 342 | 584 | — | Firebase |
+| Natad_Frontend_relationSHIP | 342 | 584 | — | React |
+| EduConex | 1.553 | 2.278 | — | React |
+| hubSECTI | 876 | 2.094 | — | Firebase |
+| PatentesSearch | 167 | 282 | — | Next |
+| Trabs_School | 236 | 392 | — | React Native |
+| INPI | 48 | 58 | — | — |
+| PortifolioBruno | 63 | 85 | — | — |
+| ValentineDay | 66 | 158 | — | React |
+
+</details>
+>>>>>>> 06cc909fc44370ca4415243f918a57f4964b71d5
 
 ---
 
