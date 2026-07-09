@@ -1,10 +1,3 @@
-<!--
-  ═══════════════════════════════════════════════════════════
-  README gerado com dados reais extraídos do grafo de
-  conhecimento (codebase-memory-mcp) — 19 repositórios,
-  15.5k nós, 30.4k arestas.
-  ═══════════════════════════════════════════════════════════
--->
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A66C2,100:6A5ACD&height=220&section=header&text=Bruno%20Andrade&fontSize=42&fontAlignY=38&desc=Fullstack%20Developer%20•%203D%20Web%20•%20Enterprise%20Systems&descAlignY=60&animation=fadeIn"/>
 
@@ -386,138 +379,40 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 
 ## 🏙️ Cidade Viva
 
-<!-- GITHUB_ACTION: city-skyline-generator -->
-<!-- Atualizado diariamente às 00:00 UTC -->
+<!-- Atualizado diariamente às 00:00 UTC via city-skyline.yml -->
 
-```
-╔═══════════════════════════════════════════════════════════════════╗
-║                    SKYLINE DO WORKSPACE                           ║
-║                                                                   ║
-║   🏢 Editor-ThreeJS          ████████████████████  184 arquivos   ║
-║   🏢 SECTI-contratos         ███████████░░░░░░░░░  85 arquivos    ║
-║   🏢 TSARA                   ██████████████████░░  152 arquivos   ║
-║   🏢 Info.SECTI              ██████████████████░░  82 arquivos    ║
-║   🏢 PatentesLab             ███████████████░░░░░  70 arquivos    ║
-║   🏢 Sectinvent-rio          ████████████░░░░░░░░  58 arquivos    ║
-║                                                                   ║
-║   💡 CI verde = luzes acesas                                      ║
-║   🐛 Bugs = fumaça saindo do prédio                               ║
-║   🎉 Nova release = fogos de artifício                            ║
-╚═══════════════════════════════════════════════════════════════════╝
-```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/city-skyline.svg" width="100%" alt="Cidade Viva — Skyline do Workspace">
+</p>
 
-_Cada repositório é um prédio. Quanto mais commits, mais alto o prédio._
+_Cada repositório é um prédio pixel art. Quanto mais commits, mais alto o prédio. CI verde = luzes acesas. Bugs = fumaça. Nova release = fogos._
 
 ---
 
 ## 💻 Terminal Interativo
 
-<!-- GITHUB_ACTION: readme-terminal-simulator -->
-<!-- Atualizado diariamente com dados reais do perfil -->
+<!-- Atualizado diariamente às 06:00 UTC via terminal-interactive.yml -->
 
-```bash
-╔═══════════════════════════════════════════════════════════════════╗
-║  root@workspace:~$ ./whoami.sh                                     ║
-╚═══════════════════════════════════════════════════════════════════╝
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/terminal-interactive.svg" width="100%" alt="Terminal Interativo — Simulação de terminal com dados reais">
+</p>
 
-> whoami
-Bruno Andrade
-
-> skills
-┌─────────────────────────────────────────────────────────┐
-│ ✓ React          ✓ Next.js        ✓ Node.js            │
-│ ✓ TypeScript     ✓ Firebase       ✓ Clean Architecture │
-│ ✓ Three.js       ✓ Electron       ✓ NVIDIA NIM         │
-│ ✓ PostgreSQL     ✓ Tailwind       ✓ shadcn/ui          │
-└─────────────────────────────────────────────────────────┘
-
-> projects
-┌─────────────────────────────────────────────────────────┐
-│ 🏗️  Workspace        — Editor 3D + IA                  │
-│ 📝 VestQuiz          — Plataforma de questões          │
-│ 📊 INFO.SECTI        — Gestão de projetos científicos  │
-│ 🔬 PatentesLab       — Robô de patentes INPI           │
-│ 🛒 TSARA             — E-commerce + agendamento        │
-│ 📋 SECTI-contratos   — Gestão contratual               │
-└─────────────────────────────────────────────────────────┘
-
-> roadmap
-████████░░ 82%
-
-┌─────────────────────────────────────────────────────────┐
-│ ✅ Full Stack       ✅ 3D Web       ✅ Desktop (Electron)│
-│ 🔄 IA Integration   ⏳ Mobile       ⏳ Rust/WASM         │
-└─────────────────────────────────────────────────────────┘
-
-> stats --verbose
-Commits hoje: 12 │ PRs abertos: 3 │ Builds falhando: 0
-```
-
-_O GitHub Action atualiza esse "terminal" diariamente com dados reais._
+_Simulação de terminal que responde `whoami`, `skills`, `projects`, `roadmap` e `stats` — atualizado diariamente com dados reais do GitHub._
 
 ---
 
 ## 🤖 IA Conversacional
 
-<!-- GITHUB_ACTION: ai-self-conversation -->
-<!-- Gerado automaticamente a cada push -->
+<!-- Atualizado a cada push e às 12:00 UTC via ai-conversation.yml -->
 
-```
-╔═════════════════════════════════════════════════════════════════════╗
-║  SYSTEM LOG — Auto-análise do Workspace                           ║
-╚═════════════════════════════════════════════════════════════════════╝
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/ai-conversation.svg" width="100%" alt="IA Conversacional — Auto-análise do workspace">
+</p>
 
-SYSTEM
-Bom dia.
-
-> Projetos ativos?
-
-WORKSPACE
-┌─────────────────────────────────────────────────────────┐
-│ 🟢 Editor-ThreeJS           │ Build OK     │
-│ 🟡 SECTI-contratos          │ Pending      │
-│ 🟡 TSARA                    │ Pending      │
-│ 🟡 hubSECTI                 │ Pending      │
-│ 🟡 PatentesLab              │ Pending      │
-│ 🟡 Sectinvent-rio           │ Pending      │
-└─────────────────────────────────────────────────────────┘
-
-> Status?
-
-CI/CD
-┌─────────────────────────────────────────────────────────┐
-│ ✅ GitHub Actions   │ 3 workflows ativos               │
-│ ✅ Vercel           │ Deploy automático habilitado     │
-│ ✅ Netlify          │ Functions serverless ativas      │
-│ ✅ Firebase         │ 6 projetos conectados            │
-└─────────────────────────────────────────────────────────┘
-
-> Pendências?
-
-TASKS
-┌─────────────────────────────────────────────────────────┐
-│ 🔵 0 PRs abertos                                        │
-│ 🟡 0 issues em progresso                                │
-│ 🔴 0 bug(s) crítico(s)                                      │
-└─────────────────────────────────────────────────────────┘
-
-> Objetivo?
-
-MISSION
-┌─────────────────────────────────────────────────────────┐
-│ "Construir um ecossistema completo de ferramentas      │
-│  3D, enterprise e IA — integrando criatividade,        │
-│  produtividade e inovação tecnológica."                │
-└─────────────────────────────────────────────────────────┘
-```
-<<<<<<< HEAD
-
-_O README inteiro é uma conversa entre IA e o sistema. Atualizado automaticamente via GitHub Action._
+_Diálogo entre SYSTEM e WORKSPACE analisando projetos ativos, status CI/CD, pendências e missão do ecossistema._
 
 ---
-=======
 📊 Total: 15.513 nós · 30.442 arestas · 19 repositórios
-```
 
 <details>
 <summary><b>🔍 Ver tabela completa de métricas por repositório</b></summary>
@@ -545,7 +440,6 @@ _O README inteiro é uma conversa entre IA e o sistema. Atualizado automaticamen
 | ValentineDay | 66 | 158 | — | React |
 
 </details>
->>>>>>> 06cc909fc44370ca4415243f918a57f4964b71d5
 
 ---
 

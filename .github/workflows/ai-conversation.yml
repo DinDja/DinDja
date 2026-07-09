@@ -6,32 +6,27 @@ on:
     - cron: "0 12 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  generate-conversation:
+  generate:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Gather data
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate ai-conversation.svg
+        run: node scripts/conversation-generator.js dist/ai-conversation.svg
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PRS=$(gh api search/issues --method GET -f q="author:DinDja type:pr state:open" --jq '.total_count' 2>/dev/null || echo 3)
-          BUGS=$(gh api search/issues --method GET -f q="author:DinDja label:bug state:open" --jq '.total_count' 2>/dev/null || echo 1)
-          ISSUES=$(gh api search/issues --method GET -f q="author:DinDja state:open" --jq '.total_count' 2>/dev/null || echo 5)
-          echo "OPEN_PRS=$PRS" >> $GITHUB_ENV
-          echo "BUGS=$BUGS" >> $GITHUB_ENV
-          echo "ISSUES=$ISSUES" >> $GITHUB_ENV
-      - name: Update conversation
+          GITHUB_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 .github/scripts/update_conversation.py
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --staged --quiet || git commit -m "Update AI conversation [automated]"
-          git push
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
