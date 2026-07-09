@@ -13,11 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate skyline data
+      - name: Generate skyline
         run: |
-          chmod +x .github/scripts/generate-readme-data.sh
-          source .github/scripts/generate-readme-data.sh
-
           REPOS=("Editor-ThreeJS" "SECTI-contratos" "TSARA" "hubSECTI" "PatentesLab" "Sectinvent-rio")
           declare -A FILES
           FILES["Editor-ThreeJS"]=184
@@ -27,45 +24,45 @@ jobs:
           FILES["PatentesLab"]=70
           FILES["Sectinvent-rio"]=58
 
-          SKYLINE="\`\`\`\n╔═══════════════════════════════════════════════════════════════════╗\n║                    SKYLINE DO WORKSPACE                           ║\n║                                                                   ║\n"
-
+          OUTPUT='```\n'
+          OUTPUT+='╔═══════════════════════════════════════════════════════════════════╗\n'
+          OUTPUT+='║                    SKYLINE DO WORKSPACE                           ║\n'
+          OUTPUT+='║                                                                   ║\n'
           for repo in "${REPOS[@]}"; do
             count=${FILES[$repo]}
             bars=$((count / 10))
             bar=$(printf '█%.0s' $(seq 1 $bars))
             dots=$(printf '░%.0s' $(seq 1 $((18 - bars))))
-            SKYLINE+="║   🏢 $repo$(printf '%*s' $((24 - ${#repo})) '')$bar$dots  $count arquivos   ║\n"
+            OUTPUT+="║   🏢 $repo$(printf '%*s' $((24 - ${#repo})) '')$bar$dots  $count arquivos   ║\\n"
           done
-
-          SKYLINE+="║                                                                   ║\n║   💡 CI verde = luzes acesas                                      ║\n║   🐛 Bugs = fumaça saindo do prédio                               ║\n║   🎉 Nova release = fogos de artifício                            ║\n╚═══════════════════════════════════════════════════════════════════╝\n\`\`\`"
-
-          echo "$SKYLINE" > /tmp/skyline.txt
+          OUTPUT+='║                                                                   ║\n'
+          OUTPUT+='║   💡 CI verde = luzes acesas                                      ║\n'
+          OUTPUT+='║   🐛 Bugs = fumaça saindo do prédio                               ║\n'
+          OUTPUT+='║   🎉 Nova release = fogos de artifício                            ║\n'
+          OUTPUT+='╚═══════════════════════════════════════════════════════════════════╝\n'
+          OUTPUT+='```'
+          echo -e "$OUTPUT" > /tmp/skyline.txt
 
       - name: Update README
         run: |
-          python3 -c "
-import re
+          python3 << 'PYEOF'
 with open('README.md', 'r') as f:
     content = f.read()
-
 with open('/tmp/skyline.txt', 'r') as f:
     skyline = f.read()
-
-start = content.find('\`\`\`\n╔═══════════════════════════════════════════════════════════════════╗\n║                    SKYLINE DO WORKSPACE')
+start = content.find('╔═══════════════════════════════════════════════════════════════════╗')
 if start > -1:
-    end = content.find('\`\`\`', start + 3)
-    end = content.find('\`\`\`', end + 3) + 3
-    old = content[start:end]
-    content = content.replace(old, skyline)
-
+    block_start = content.rfind('```', 0, start)
+    block_end = content.find('```', block_start + 3) + 3
+    content = content[:block_start] + skyline + content[block_end:]
 with open('README.md', 'w') as f:
     f.write(content)
-"
+PYEOF
 
       - name: Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --staged --quiet || git commit -m "🏙️ Update city skyline [automated]"
+          git diff --staged --quiet || git commit -m "Update city skyline [automated]"
           git push
