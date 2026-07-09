@@ -511,41 +511,6 @@ _O README inteiro é uma conversa entre IA e o sistema. Atualizado automaticamen
 
 ---
 
-### 📈 Grafo de Conhecimento do Workspace
-
-Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa 19 repositórios automaticamente via codebase-memory-mcp:
-
-```
-📊 Total: 15.513 nós · 30.442 arestas · 19 repositórios
-```
-
-<details>
-<summary><b>🔍 Ver tabela completa de métricas por repositório</b></summary>
-
-| Repositório | Nós | Arestas | Funções | Stack principal |
-|---|---|---|---|---|
-| Editor-ThreeJS | 3.031 | 7.208 | 1.548 | Next, R3F, Three.js, Electron, Zustand, NIM |
-| PatentesLab | 1.843 | 2.881 | 528 | Next, Firebase, Netlify, INPI API |
-| TSARA | 1.540 | 3.804 | 656 | Next, Firebase, shadcn/ui, InfinitePay |
-| ProjetosClubes | 1.162 | 1.211 | — | Firebase |
-| SECTI | 980 | 2.205 | 501 | Vite, React, Firebase, Netlify |
-| SECTI-contratos | 943 | 2.441 | 456 | Vite, React TS, Firebase, shadcn/ui |
-| Sectinvent-rio | 719 | 2.009 | 369 | Next, TS, Firebase, shadcn/ui |
-| mapfilter-BA | 536 | 1.031 | — | React, Mapas |
-| cloudspeak | 450 | 839 | — | Firebase, Streaming |
-| conectaBahia | 414 | 643 | — | React |
-| NATAD | 342 | 584 | — | Firebase |
-| Natad_Frontend_relationSHIP | 342 | 584 | — | React |
-| EduConex | 1.553 | 2.278 | — | React |
-| hubSECTI | 876 | 2.094 | — | Firebase |
-| PatentesSearch | 167 | 282 | — | Next |
-| Trabs_School | 236 | 392 | — | React Native |
-| INPI | 48 | 58 | — | — |
-| PortifolioBruno | 63 | 85 | — | — |
-| ValentineDay | 66 | 158 | — | React |
-
-</details>
-
 ---
 
 ## 🛠️ Stack
