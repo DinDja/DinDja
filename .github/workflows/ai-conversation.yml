@@ -14,29 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Generate conversation block
+      - name: Gather data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          chmod +x .github/scripts/render-conversation.sh
-          bash .github/scripts/render-conversation.sh
-
-      - name: Update README
-        run: |
-          python3 << 'PYEOF'
-with open('README.md', 'r') as f:
-    content = f.read()
-with open('/tmp/conversation.txt', 'r') as f:
-    conversation = f.read()
-start = content.find('SYSTEM LOG')
-if start > -1:
-    block_start = content.rfind('```', 0, start)
-    block_end = content.find('```', block_start + 3) + 3
-    content = content[:block_start] + conversation + content[block_end:]
-with open('README.md', 'w') as f:
-    f.write(content)
-PYEOF
-
-      - name: Commit & Push
+          PRS=$(gh api search/issues --method GET -f q="author:DinDja type:pr state:open" --jq '.total_count' 2>/dev/null || echo 3)
+          BUGS=$(gh api search/issues --method GET -f q="author:DinDja label:bug state:open" --jq '.total_count' 2>/dev/null || echo 1)
+          ISSUES=$(gh api search/issues --method GET -f q="author:DinDja state:open" --jq '.total_count' 2>/dev/null || echo 5)
+          echo "OPEN_PRS=$PRS" >> $GITHUB_ENV
+          echo "BUGS=$BUGS" >> $GITHUB_ENV
+          echo "ISSUES=$ISSUES" >> $GITHUB_ENV
+      - name: Update conversation
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/update_conversation.py
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

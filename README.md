@@ -256,6 +256,9 @@ Sistema corporativo para gestão unificada de contratos e convênios com control
 
 Sistema institucional para gestão e acompanhamento de projetos científicos e tecnológicos do Estado da Bahia.
 
+<details>
+<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+
 | Métrica | Valor |
 |---|---|
 | Stack | Vite + React 19 + JavaScript + Firebase + Netlify |
@@ -269,6 +272,8 @@ Sistema institucional para gestão e acompanhamento de projetos científicos e t
 | Serverless | Netlify Functions (`functions/index.js`) |
 
 **Clusters**: Editor de projetos, geradores de documento (PPT/PDF/NT), busca IA, mapa, auditoria.
+
+</details>
 
 <p>
   <a href="https://github.com/DinDja/hubSECTI"><img src="https://img.shields.io/badge/Ver_Info.SECTI-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Info.SECTI"/></a>
@@ -316,6 +321,9 @@ Laboratório de patentes com robô autônomo de busca no INPI, geração de docu
 
 E-commerce + agendamento + chat com painel admin completo.
 
+<details>
+<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+
 | Métrica | Valor |
 |---|---|
 | Stack | Next.js 16 + TypeScript + Firebase + shadcn/ui |
@@ -328,6 +336,8 @@ E-commerce + agendamento + chat com painel admin completo.
 | Serviços | 16 módulos: auth, products, orders, account, appointments, chat, infinitePay... |
 | Layers | 4 core services + hooks + contexts + ui components |
 | Hotspots | `cn` (245), `useAuth` (12), `useFirestorePagination` (8) |
+
+</details>
 
 <p>
   <a href="https://github.com/DinDja/TSARA"><img src="https://img.shields.io/badge/Ver_TSARA-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="TSARA"/></a>
@@ -345,12 +355,17 @@ E-commerce + agendamento + chat com painel admin completo.
 
 Sistema de inventário, movimentação e auditoria para a SECTI.
 
+<details>
+<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+
 | Stack | Next.js + TypeScript + Firebase + shadcn/ui |
 |---|---|
 | Funções | 369 |
 | Módulos | Inventário, cadastros, movimentações, usuários, auditoria, dashboard |
 | Store | `inventory-store.tsx` (Zustand) |
 | Hotspots | `cn` (224), `Root` calendar (28), `useInventory` (7), `useAuth` (7) |
+
+</details>
 
 <p>
   <a href="https://github.com/DinDja/Sectinvent-rio"><img src="https://img.shields.io/badge/Ver_Sectinvent_rio-0A66C2?style=for-the-badge&logo=github&logoColor=white" alt="Sectinvent-rio"/></a>

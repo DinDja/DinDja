@@ -12,29 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Generate terminal block
+      - name: Gather data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          chmod +x .github/scripts/render-terminal.sh
-          bash .github/scripts/render-terminal.sh
-
-      - name: Update README
-        run: |
-          python3 << 'PYEOF'
-with open('README.md', 'r') as f:
-    content = f.read()
-with open('/tmp/terminal-block.txt', 'r') as f:
-    terminal = f.read()
-start = content.find('root@workspace:~')
-if start > -1:
-    block_start = content.rfind('```bash', 0, start)
-    block_end = content.find('```', block_start + 7) + 3
-    content = content[:block_start] + terminal + content[block_end:]
-with open('README.md', 'w') as f:
-    f.write(content)
-PYEOF
-
-      - name: Commit & Push
+          TODAY=$(gh api search/commits --method GET -f q="author:DinDja committer-date:>=$(date +%Y-%m-%d)" --jq '.total_count' 2>/dev/null || echo 0)
+          PRS=$(gh api search/issues --method GET -f q="author:DinDja type:pr state:open" --jq '.total_count' 2>/dev/null || echo 0)
+          echo "TODAY_COMMITS=$TODAY" >> $GITHUB_ENV
+          echo "OPEN_PRS=$PRS" >> $GITHUB_ENV
+          echo "ROADMAP_PCT=82" >> $GITHUB_ENV
+      - name: Update terminal
+        run: python3 .github/scripts/update_terminal.py
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
