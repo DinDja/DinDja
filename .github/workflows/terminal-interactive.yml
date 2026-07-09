@@ -1,0 +1,95 @@
+name: Terminal Interativo - Auto Update
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-terminal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gather terminal data
+        run: |
+          chmod +x .github/scripts/generate-readme-data.sh
+          source .github/scripts/generate-readme-data.sh
+
+          cat > /tmp/terminal-block.txt << 'TERMEOF'
+```bash
+╔═══════════════════════════════════════════════════════════════════╗
+║  root@workspace:~$ ./whoami.sh                                     ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+> whoami
+Bruno Andrade
+
+> skills
+┌─────────────────────────────────────────────────────────┐
+│ ✓ React          ✓ Next.js        ✓ Node.js            │
+│ ✓ TypeScript     ✓ Firebase       ✓ Clean Architecture │
+│ ✓ Three.js       ✓ Electron       ✓ NVIDIA NIM         │
+│ ✓ PostgreSQL     ✓ Tailwind       ✓ shadcn/ui          │
+└─────────────────────────────────────────────────────────┘
+
+> projects
+┌─────────────────────────────────────────────────────────┐
+│ 🏗️  Workspace        — Editor 3D + IA                  │
+│ 📝 VestQuiz          — Plataforma de questões          │
+│ 📊 INFO.SECTI        — Gestão de projetos científicos  │
+│ 🔬 PatentesLab       — Robô de patentes INPI           │
+│ 🛒 TSARA             — E-commerce + agendamento        │
+│ 📋 SECTI-contratos   — Gestão contratual               │
+└─────────────────────────────────────────────────────────┘
+
+> roadmap
+TERMEOF
+
+          PCT=${ROADMAP_PCT:-82}
+          FULL=$((PCT / 5))
+          EMPTY=$((20 - FULL))
+          BAR=$(printf '█%.0s' $(seq 1 $FULL))
+          EMP=$(printf '░%.0s' $(seq 1 $EMPTY))
+          echo "${BAR}${EMP} ${PCT}%" >> /tmp/terminal.txt
+
+          cat >> /tmp/terminal.txt << 'TERMEOF2'
+
+┌─────────────────────────────────────────────────────────┐
+│ ✅ Full Stack     ✅ 3D Web     ✅ Desktop (Electron)   │
+│ 🔄 IA Integration ⏳ Mobile     ⏳ Rust/WASM            │
+└─────────────────────────────────────────────────────────┘
+
+> stats --verbose
+TERMEOF2
+
+          echo "Commits hoje: ${TODAY_COMMITS:-0} │ PRs abertos: ${OPEN_PRS:-3} │ Builds falhando: 0" >> /tmp/terminal.txt
+          echo '```' >> /tmp/terminal.txt
+
+      - name: Update README Terminal
+        run: |
+          python3 -c "
+with open('README.md', 'r') as f:
+    content = f.read()
+with open('/tmp/terminal.txt', 'r') as f:
+    terminal = f.read()
+
+start = content.find('root@workspace:~')
+if start > -1:
+    block_start = content.rfind('\`\`\`bash', 0, start)
+    block_end = content.find('\`\`\`', block_start + 7) + 3
+    content = content[:block_start] + terminal + content[block_end:]
+
+with open('README.md', 'w') as f:
+    f.write(content)
+"
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "💻 Update terminal simulator [automated]"
+          git push

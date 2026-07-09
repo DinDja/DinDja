@@ -1,0 +1,71 @@
+name: Cidade Viva - Skyline Generator
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-skyline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate skyline data
+        run: |
+          chmod +x .github/scripts/generate-readme-data.sh
+          source .github/scripts/generate-readme-data.sh
+
+          REPOS=("Editor-ThreeJS" "SECTI-contratos" "TSARA" "hubSECTI" "PatentesLab" "Sectinvent-rio")
+          declare -A FILES
+          FILES["Editor-ThreeJS"]=184
+          FILES["SECTI-contratos"]=85
+          FILES["TSARA"]=152
+          FILES["hubSECTI"]=82
+          FILES["PatentesLab"]=70
+          FILES["Sectinvent-rio"]=58
+
+          SKYLINE="\`\`\`\n╔═══════════════════════════════════════════════════════════════════╗\n║                    SKYLINE DO WORKSPACE                           ║\n║                                                                   ║\n"
+
+          for repo in "${REPOS[@]}"; do
+            count=${FILES[$repo]}
+            bars=$((count / 10))
+            bar=$(printf '█%.0s' $(seq 1 $bars))
+            dots=$(printf '░%.0s' $(seq 1 $((18 - bars))))
+            SKYLINE+="║   🏢 $repo$(printf '%*s' $((24 - ${#repo})) '')$bar$dots  $count arquivos   ║\n"
+          done
+
+          SKYLINE+="║                                                                   ║\n║   💡 CI verde = luzes acesas                                      ║\n║   🐛 Bugs = fumaça saindo do prédio                               ║\n║   🎉 Nova release = fogos de artifício                            ║\n╚═══════════════════════════════════════════════════════════════════╝\n\`\`\`"
+
+          echo "$SKYLINE" > /tmp/skyline.txt
+
+      - name: Update README
+        run: |
+          python3 -c "
+import re
+with open('README.md', 'r') as f:
+    content = f.read()
+
+with open('/tmp/skyline.txt', 'r') as f:
+    skyline = f.read()
+
+start = content.find('\`\`\`\n╔═══════════════════════════════════════════════════════════════════╗\n║                    SKYLINE DO WORKSPACE')
+if start > -1:
+    end = content.find('\`\`\`', start + 3)
+    end = content.find('\`\`\`', end + 3) + 3
+    old = content[start:end]
+    content = content.replace(old, skyline)
+
+with open('README.md', 'w') as f:
+    f.write(content)
+"
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "🏙️ Update city skyline [automated]"
+          git push
