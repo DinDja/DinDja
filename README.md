@@ -458,9 +458,9 @@ _O GitHub Action atualiza esse "terminal" diariamente com dados reais._
 <!-- Gerado automaticamente a cada push -->
 
 ```
-╔═══════════════════════════════════════════════════════════════════╗
+╔═════════════════════════════════════════════════════════════════════╗
 ║  SYSTEM LOG — Auto-análise do Workspace                           ║
-╚═══════════════════════════════════════════════════════════════════╝
+╚═════════════════════════════════════════════════════════════════════╝
 
 SYSTEM
 Bom dia.
@@ -469,19 +469,19 @@ Bom dia.
 
 WORKSPACE
 ┌─────────────────────────────────────────────────────────┐
-│ 🟢 Editor-ThreeJS    │ Build OK      │ 184 arquivos    │
-│ 🟢 SECTI-contratos   │ Build OK      │ 85 arquivos     │
-│ 🟢 TSARA             │ Build OK      │ 152 arquivos    │
-│ 🟡 PatentesLab       │ 2 warnings    │ 70 arquivos     │
-│ 🟢 Info.SECTI        │ Build OK      │ 82 arquivos     │
-│ 🟢 Sectinvent-rio    │ Build OK      │ 58 arquivos     │
+│ 🟢 Editor-ThreeJS           │ Build OK     │
+│ 🟡 SECTI-contratos          │ Pending      │
+│ 🟡 TSARA                    │ Pending      │
+│ 🟡 hubSECTI                 │ Pending      │
+│ 🟡 PatentesLab              │ Pending      │
+│ 🟡 Sectinvent-rio           │ Pending      │
 └─────────────────────────────────────────────────────────┘
 
 > Status?
 
 CI/CD
 ┌─────────────────────────────────────────────────────────┐
-│ ✅ GitHub Actions   │ 12 workflows ativos              │
+│ ✅ GitHub Actions   │ 3 workflows ativos               │
 │ ✅ Vercel           │ Deploy automático habilitado     │
 │ ✅ Netlify          │ Functions serverless ativas      │
 │ ✅ Firebase         │ 6 projetos conectados            │
@@ -491,10 +491,9 @@ CI/CD
 
 TASKS
 ┌─────────────────────────────────────────────────────────┐
-│ 🔵 3 PRs abertos                                        │
-│ 🟡 5 issues em progresso                                │
-│ 🔴 1 bug crítico (Editor-ThreeJS: physics collision)   │
-│ ⚪ 12 melhorias sugeridas                               │
+│ 🔵 0 PRs abertos                                        │
+│ 🟡 0 issues em progresso                                │
+│ 🔴 0 bug(s) crítico(s)                                      │
 └─────────────────────────────────────────────────────────┘
 
 > Objetivo?
@@ -505,16 +504,6 @@ MISSION
 │  3D, enterprise e IA — integrando criatividade,        │
 │  produtividade e inovação tecnológica."                │
 └─────────────────────────────────────────────────────────┘
-```
-
-_O README inteiro é uma conversa entre IA e o sistema. Atualizado automaticamente via GitHub Action._
-
----
-
-### 📈 Grafo de Conhecimento do Workspace
-
-Todo o portfólio acima foi extraído de um **grafo de conhecimento** que indexa 19 repositórios automaticamente via codebase-memory-mcp:
-
 ```
 📊 Total: 15.513 nós · 30.442 arestas · 19 repositórios
 ```
