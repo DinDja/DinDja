@@ -6,10 +6,11 @@ on:
     - cron: "0 12 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -17,16 +18,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - name: Generate ai-conversation.svg
         run: node scripts/conversation-generator.js dist/ai-conversation.svg
         env:
           GITHUB_USER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin output
+          git checkout output
+          cp dist/ai-conversation.svg .
+          git add ai-conversation.svg
+          git diff --staged --quiet || git commit -m "Update ai-conversation [automated]"
+          git push origin output
