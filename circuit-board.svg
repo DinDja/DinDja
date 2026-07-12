@@ -480,9 +480,9 @@
       <circle cx="803.279" cy="284.5" r="2" fill="#44aaff" opacity="0.95" class="led-core" style="animation-delay:0.9500000000000007s"/>
       <circle cx="803.279" cy="284.5" r="0.9" fill="#ffffff" opacity="0.9"/>
     
-      <circle cx="217.50857142857143" cy="151.57142857142856" r="4.8" fill="#44aaff" opacity="0.18" class="led-glow" style="animation-delay:0.6000000000000014s"/>
-      <circle cx="217.50857142857143" cy="151.57142857142856" r="2.4" fill="#44aaff" opacity="0.95" class="led-core" style="animation-delay:1.0000000000000013s"/>
-      <circle cx="217.50857142857143" cy="151.57142857142856" r="1.08" fill="#ffffff" opacity="0.9"/>
+      <circle cx="217.50857142857143" cy="151.57142857142856" r="5.2" fill="#ffaa00" opacity="0.18" class="led-glow" style="animation-delay:0.6000000000000014s"/>
+      <circle cx="217.50857142857143" cy="151.57142857142856" r="2.6" fill="#ffaa00" opacity="0.95" class="led-core" style="animation-delay:1.0000000000000013s"/>
+      <circle cx="217.50857142857143" cy="151.57142857142856" r="1.1700000000000002" fill="#ffffff" opacity="0.9"/>
     
   </g>
 
@@ -551,11 +551,11 @@
 
   <!-- ── Silkscreen labels along traces ── -->
   <text x="490" y="30" text-anchor="middle" class="silkscreen" style="font-size:10px;font-weight:bold">GITHUB_COMMIT_BUS_2026</text>
-  <text x="40" y="22" class="label">REV.0947</text>
+  <text x="40" y="22" class="label">REV.0949</text>
   <text x="940" y="22" text-anchor="end" class="label">@DinDja</text>
 
   <!-- Bottom silkscreen info -->
-  <text x="40" y="348" class="label">947 commits · 2026</text>
+  <text x="40" y="348" class="label">949 commits · 2026</text>
   <text x="940" y="348" text-anchor="end" class="label" style="opacity:0.4">PCB v2.0 · Manhattan routing</text>
 
   <!-- ── Edge cut border ── -->
