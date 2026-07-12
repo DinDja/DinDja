@@ -90,15 +90,40 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 <br/>
 
-Linguagens usadas nos 19 repositórios indexados (extraídas do grafo de conhecimento):
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" height="40"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" height="40"/>
+  <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" height="40"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" height="40"/>
+  <img src="https://img.shields.io/badge/YAML-231F20?style=for-the-badge&logo=yaml&logoColor=white" alt="YAML" height="40"/>
+</p>
 
-| Linguagem | Uso principal |
-|---|---|
-| TypeScript | Editor-ThreeJS (184 arquivos), SECTI-contratos (85), TSARA (152), Sectinvent-rio |
-| JavaScript | PatentesLab (70), SECTI/Info.SECTI (82), mapfilter-BA, connectaBahia |
-| CSS | Tailwind 4, styled-components, animações SVG |
-| Python | Scripts de automação (PatentesLab) |
-| YAML | Workflows GitHub Actions |
+<p align="center">
+  <strong>Principais projetos por linguagem:</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-Editor--ThreeJS-184%20arquivos-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript - Editor ThreeJS" height="30"/>
+  <img src="https://img.shields.io/badge/TypeScript-SECTI--contratos-85%20arquivos-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript - SECTI contratos" height="30"/>
+  <img src="https://img.shields.io/badge/TypeScript-TSARA-152%20arquivos-blue?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript - TSARA" height="30"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-PatentesLab-70%20arquivos-yellow?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript - PatentesLab" height="30"/>
+  <img src="https://img.shields.io/badge/JavaScript-SECTI--Info.SECTI-82%20arquivos-yellow?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript - SECTI Info" height="30"/>
+  <img src="https://img.shields.io/badge/JavaScript-mapfilter--BA-yellow?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript - mapfilter-BA" height="30"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/CSS-Tailwind%204-orange?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="CSS - Tailwind 4" height="30"/>
+  <img src="https://img.shields.io/badge/CSS-styled--components-orange?style=for-the-badge&logo=styledcomponents&logoColor=white" alt="CSS - styled-components" height="30"/>
+  <img src="https://img.shields.io/badge/CSS--anima%C3%A7%C3%B5es%20SVG-orange?style=for-the-badge&logo=svg&logoColor=white" alt="CSS - Animações SVG" height="30"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Scripts%20de%20automa%C3%A7%C3%A3o-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python - Scripts" height="30"/>
+  <img src="https://img.shields.io/badge/YAML-Workflows%20GitHub%20Actions-gray?style=for-the-badge&logo=githubactions&logoColor=white" alt="YAML - GitHub Actions" height="30"/>
+</p>
 
 </details>
 
@@ -349,7 +374,7 @@ E-commerce + agendamento + chat com painel admin completo.
 
 ---
 
-### 🏭 Sectinvent-rio
+### 🏭 Sectinventario
 
 Sistema de inventário, movimentação e auditoria para a SECTI.
 
@@ -384,62 +409,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 <p align="center">
   <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/city-skyline.svg" width="100%" alt="Cidade Viva — Skyline do Workspace">
 </p>
-
-_Cada repositório é um prédio pixel art. Quanto mais commits, mais alto o prédio. CI verde = luzes acesas. Bugs = fumaça. Nova release = fogos._
-
----
-
-## 💻 Terminal Interativo
-
-<!-- Atualizado diariamente às 06:00 UTC via terminal-interactive.yml -->
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/terminal-interactive.svg" width="100%" alt="Terminal Interativo — Simulação de terminal com dados reais">
-</p>
-
-_Simulação de terminal que responde `whoami`, `skills`, `projects`, `roadmap` e `stats` — atualizado diariamente com dados reais do GitHub._
-
----
-
-## 🤖 IA Conversacional
-
-<!-- Atualizado a cada push e às 12:00 UTC via ai-conversation.yml -->
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/ai-conversation.svg" width="100%" alt="IA Conversacional — Auto-análise do workspace">
-</p>
-
-_Diálogo entre SYSTEM e WORKSPACE analisando projetos ativos, status CI/CD, pendências e missão do ecossistema._
-
----
-📊 Total: 15.513 nós · 30.442 arestas · 19 repositórios
-
-<details>
-<summary><b>🔍 Ver tabela completa de métricas por repositório</b></summary>
-
-| Repositório | Nós | Arestas | Funções | Stack principal |
-|---|---|---|---|---|
-| Editor-ThreeJS | 3.031 | 7.208 | 1.548 | Next, R3F, Three.js, Electron, Zustand, NIM |
-| PatentesLab | 1.843 | 2.881 | 528 | Next, Firebase, Netlify, INPI API |
-| TSARA | 1.540 | 3.804 | 656 | Next, Firebase, shadcn/ui, InfinitePay |
-| ProjetosClubes | 1.162 | 1.211 | — | Firebase |
-| SECTI | 980 | 2.205 | 501 | Vite, React, Firebase, Netlify |
-| SECTI-contratos | 943 | 2.441 | 456 | Vite, React TS, Firebase, shadcn/ui |
-| Sectinvent-rio | 719 | 2.009 | 369 | Next, TS, Firebase, shadcn/ui |
-| mapfilter-BA | 536 | 1.031 | — | React, Mapas |
-| cloudspeak | 450 | 839 | — | Firebase, Streaming |
-| conectaBahia | 414 | 643 | — | React |
-| NATAD | 342 | 584 | — | Firebase |
-| Natad_Frontend_relationSHIP | 342 | 584 | — | React |
-| EduConex | 1.553 | 2.278 | — | React |
-| hubSECTI | 876 | 2.094 | — | Firebase |
-| PatentesSearch | 167 | 282 | — | Next |
-| Trabs_School | 236 | 392 | — | React Native |
-| INPI | 48 | 58 | — | — |
-| PortifolioBruno | 63 | 85 | — | — |
-| ValentineDay | 66 | 158 | — | React |
-
-</details>
+_Cada repositório é um prédio da cidade. Quanto mais commits, mais alto o prédio. CI verde = luzes acesas. Bugs = fumaça. Stars = constelação no céu. Passe o mouse sobre os prédios para ver detalhes._
 
 ---
 
