@@ -8,26 +8,14 @@ const OUTPUT = process.argv[2] || "dist/city-skyline.svg";
 
 const REPOS = ["Editor-ThreeJS", "SECTI-contratos", "TSARA", "hubSECTI", "PatentesLab", "Sectinvent-rio"];
 const BUILD = { "Editor-ThreeJS": 184, "SECTI-contratos": 85, "TSARA": 152, "hubSECTI": 82, "PatentesLab": 70, "Sectinvent-rio": 58 };
-const STACKS = {
-  "Editor-ThreeJS": ["R3F", "THREE", "ELEC", "NIM"],
-  "SECTI-contratos": ["RT", "FB", "SHCN"],
-  TSARA: ["NX", "FB", "SHCN", "PAY"],
-  hubSECTI: ["RT", "FB", "NTFY"],
-  PatentesLab: ["NX", "FB", "NTFY", "INPI"],
-  "Sectinvent-rio": ["NX", "FB", "SHCN"],
-};
 
 function fetchGraphQL(query, variables, token) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({ query, variables });
     const req = https.request(
-      {
-        hostname: "api.github.com", path: "/graphql", method: "POST",
-        headers: {
-          "User-Agent": "city-generator", "Content-Type": "application/json",
-          Authorization: token ? `Bearer ${token}` : ""
-        }
-      },
+      { hostname: "api.github.com", path: "/graphql", method: "POST",
+        headers: { "User-Agent": "city-generator", "Content-Type": "application/json",
+                   Authorization: token ? `Bearer ${token}` : "" } },
       (res) => {
         let data = "";
         res.on("data", (c) => (data += c));
@@ -50,7 +38,7 @@ async function fetchCommitCounts(user, token) {
       { owner: user, name: repo },
       token
     ).then((r) => ({ repo, commits: r.data.repository.defaultBranchRef.target.history.totalCount }))
-      .catch(() => ({ repo, commits: 0 }))
+     .catch(() => ({ repo, commits: 0 }))
   );
   return await Promise.all(promises);
 }
@@ -61,205 +49,177 @@ async function fetchCIStatus(user, token) {
       `https://api.github.com/repos/${user}/${repo}/commits/main/status`,
       { headers: { Authorization: token ? `Bearer ${token}` : "", "User-Agent": "city-generator" } }
     ).then(r => r.json()).then(d => ({ repo, state: d.state || "unknown" }))
-      .catch(() => ({ repo, state: "unknown" }))
+     .catch(() => ({ repo, state: "unknown" }))
   );
   return await Promise.all(promises);
 }
 
 function generateCitySkylineSVG(repoData, ciData) {
   const W = 1200, H = 560;
-  const P = 4; // Tamanho do "Pixel" (Grid)
-  const snap = (v) => Math.floor(v / P) * P;
+  const PX = 4;
+  const maxCommits = Math.max(1, ...repoData.map((r) => r.commits));
 
-  // Paleta de Cores baseada na sua referência
-  const C_BLACK = "#0A0B08";
-  const C_WHITE = "#F5F5F5";
-  const C_YELLOW = "#FAED42";
-  const C_ORANGE = "#F19D3E";
-  const C_SKY = "#1A1A24"; // Fundo noturno escuro para contraste
-  const C_PASS = "#4ade80"; // Verde 8-bit
-  const C_FAIL = "#ef4444"; // Vermelho 8-bit
+  const BODY = "#F5F5F5";
+  const GROUND = "#F19D3E";
+  const DARK = "#0A0B08";
+  const W_ON = "#FAED42";
+  const W_OFF = "#3a3a4a";
+  const SKY = "#0D1117";
+  const STAR = "#FAED42";
+  const W_GREEN = "#4ade80";
+  const W_RED = "#ef4444";
 
-  let seed = 7777;
-  const rand = () => { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; };
+  const totalCommits = repoData.reduce((a, r) => a + (r.commits || 0), 0);
+  const bottom = H - 100;
+  const pw = PX;
 
-  let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" height="auto" shape-rendering="crispEdges">
+  function px(x, y, w, h, fill, extras) {
+    const a = `x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}"`;
+    return `<rect ${a}${extras ? " " + extras : ""}/>`;
+  }
+
+  let s = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" height="auto">
   <defs>
     <style>
-      .text-pixel { font-family: 'Courier New', Courier, monospace; font-weight: 900; }
-      .text-small { font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 11px; }
-      .blink { animation: blinker 2s steps(2, start) infinite; }
-      .blink-fast { animation: blinker 1s steps(2, start) infinite; }
-      .cloud { animation: drift 40s linear infinite; }
-      .car { animation: drift 15s linear infinite; }
-      @keyframes blinker { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-      @keyframes drift { from { transform: translateX(-200px); } to { transform: translateX(${W + 200}px); } }
+      @keyframes w { 0%,100%{opacity:0.3} 50%{opacity:1} }
+      @keyframes we { 0%,100%{opacity:0.3;fill:#ef4444} 25%{fill:#ff6b6b} 50%{opacity:1;fill:#ff0000} 75%{fill:#ff4444} }
+      .wl { animation:w 2s ease-in-out infinite; }
+      .we { animation:we 0.8s ease-in-out infinite; }
     </style>
   </defs>`;
 
-  function rect(x, y, w, h, fill, stroke = "", sw = 0, cls = "", style = "") {
-    let sAttr = stroke ? `stroke="${stroke}" stroke-width="${sw}"` : "";
-    return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" ${sAttr} class="${cls}" style="${style}" />\n`;
+  const seed = 7777;
+  let rng = seed;
+  const rand = () => { rng = (rng * 1103515245 + 12345) & 0x7fffffff; return rng / 0x7fffffff; };
+
+  // Sky
+  s += `<rect width="${W}" height="${H}" fill="${SKY}"/>`;
+
+  // Pixel stars
+  for (let i = 0; i < 80; i++) {
+    const sx = Math.floor(rand() * W / PX) * PX;
+    const sy = Math.floor(rand() * (bottom - 40) / PX) * PX;
+    const size = PX * (0.5 + Math.floor(rand() * 2));
+    s += px(sx, sy, size, size, STAR, `opacity="${0.3 + rand() * 0.7}"`);
   }
 
-  // 1. Céu Base
-  svg += rect(0, 0, W, H, C_SKY);
+  // Buildings
+  const totalW = W - 160;
+  const gap = Math.floor(totalW / REPOS.length / 6);
+  const bW = Math.floor((totalW - gap * (REPOS.length - 1)) / REPOS.length / PX) * PX;
+  const spacing = bW + gap;
+  const startX = Math.floor((W - (bW * REPOS.length + gap * (REPOS.length - 1))) / 2 / PX) * PX;
 
-  // 2. Estrelas Pixeladas
-  for (let i = 0; i < 40; i++) {
-    let sx = snap(rand() * W);
-    let sy = snap(rand() * (H - 200));
-    let isBlink = rand() > 0.5;
-    svg += rect(sx, sy, P, P, C_WHITE, "", 0, isBlink ? "blink" : "", `animation-delay: ${rand() * 2}s`);
-  }
+  const roofStyles = ["flat", "peak", "step", "dome", "twin", "saw"];
 
-  // 3. Lua/Sol Enorme (Estilo 8-bit retro)
-  const r = snap(90);
-  const cx = snap(W - 250), cy = snap(180);
-  for (let y = -r; y <= r; y += P) {
-    for (let x = -r; x <= r; x += P) {
-      if (x * x + y * y <= r * r) {
-        svg += rect(cx + x, cy + y, P, P, C_ORANGE);
+  for (let i = 0; i < repoData.length; i++) {
+    const rd = repoData[i];
+    const commits = rd.commits || BUILD[rd.repo] || 50;
+    const pct = Math.min(1, commits / maxCommits);
+    const floors = Math.max(3, Math.round(pct * 18));
+    const bh = floors * PX * 2 + PX * 4;
+    const bx = startX + spacing * i;
+    const by = bottom - bh;
+    const ci = ciData.find((c) => c.repo === rd.repo)?.state || "unknown";
+    const roof = roofStyles[i % roofStyles.length];
+
+    // Building body
+    s += px(bx, by, bW, bh, BODY);
+
+    // Dark outline (left + bottom)
+    s += px(bx, by, PX, bh, DARK);
+    s += px(bx, bottom - PX, bW, PX, DARK);
+
+    // Roof
+    if (roof === "peak") {
+      const rx = bx - PX;
+      const ry = by - PX * 3;
+      s += `<polygon points="${rx},${by} ${bx + bW / 2},${ry} ${bx + bW + PX},${by}" fill="${DARK}"/>`;
+      s += px(bx + bW / 2 - PX / 2, ry - PX, PX, PX, DARK);
+    } else if (roof === "step") {
+      const sw = bW - PX * 2;
+      s += px(bx + PX, by - PX * 2, sw, PX * 2, DARK);
+      s += px(bx + PX * 2, by - PX * 3, sw - PX * 2, PX, DARK);
+    } else if (roof === "dome") {
+      s += `<path d="M${bx} ${by} Q${bx + bW / 2} ${by - PX * 3} ${bx + bW} ${by}" fill="${DARK}"/>`;
+    } else if (roof === "twin") {
+      const tw = bW / 2 - PX;
+      s += px(bx, by - PX * 2, tw, PX * 2, DARK);
+      s += px(bx + bW - tw, by - PX * 2, tw, PX * 2, DARK);
+    } else if (roof === "saw") {
+      for (let t = 0; t < Math.floor(bW / (PX * 2)); t++) {
+        s += px(bx + t * PX * 2, by - PX, PX, PX, DARK);
       }
-    }
-  }
-
-  // 4. Nuvens 8-bit
-  for (let i = 0; i < 5; i++) {
-    let cy = snap(50 + rand() * 150);
-    let delay = `animation-delay: -${rand() * 40}s`;
-    let cloudHtml = `<g class="cloud" style="${delay}">`;
-    cloudHtml += rect(0, cy, snap(60), snap(20), C_WHITE, C_BLACK, P);
-    cloudHtml += rect(snap(20), cy - snap(12), snap(40), snap(16), C_WHITE, C_BLACK, P);
-    cloudHtml += rect(snap(-12), cy + snap(8), snap(32), snap(12), C_WHITE, C_BLACK, P);
-    cloudHtml += `</g>`;
-    svg += cloudHtml;
-  }
-
-  // 5. Silhueta de Fundo (Prédios Escuros)
-  let bgX = 0;
-  while (bgX < W) {
-    let bw = snap(60 + rand() * 80);
-    let bh = snap(100 + rand() * 150);
-    svg += rect(bgX, H - bh - snap(40), bw, bh, C_BLACK);
-    // Antenas de fundo
-    if (rand() > 0.6) svg += rect(bgX + snap(20), H - bh - snap(40) - snap(20), P, snap(20), C_BLACK);
-    bgX += bw + snap(rand() * 20);
-  }
-
-  // 6. Prédios Principais (Projetos)
-  const maxCommits = Math.max(1, ...repoData.map((r) => r.commits || BUILD[r.repo] || 50));
-  const buildW = snap(130);
-  const totalGaps = snap(W - (REPOS.length * buildW));
-  const spacing = snap(totalGaps / (REPOS.length + 1));
-
-  let curX = spacing;
-
-  repoData.forEach((rd, idx) => {
-    let commits = rd.commits || BUILD[rd.repo] || 50;
-    let pct = commits / maxCommits;
-    let h = snap(160 + pct * 200);
-    let y = H - snap(50) - h;
-    let ciState = ciData.find((c) => c.repo === rd.repo)?.state || "unknown";
-
-    // Alternar entre estilos Light/Dark para criar contraste com a paleta
-    let isLight = idx % 2 === 0;
-    let bFill = isLight ? C_WHITE : C_BLACK;
-    let bStroke = isLight ? C_BLACK : C_WHITE;
-    let winFill = isLight ? C_BLACK : C_YELLOW;
-
-    // Corpo do Prédio
-    svg += rect(curX, y, buildW, h, bFill, C_BLACK, P);
-
-    // Degraus no topo (Estilo bloco)
-    let roofStyle = Math.floor(rand() * 3);
-    if (roofStyle === 0) {
-      svg += rect(curX + snap(20), y - snap(20), buildW - snap(40), snap(20), bFill, C_BLACK, P);
-    } else if (roofStyle === 1) {
-      svg += rect(curX + snap(12), y - snap(12), snap(24), snap(12), bFill, C_BLACK, P);
-      svg += rect(curX + buildW - snap(36), y - snap(24), snap(24), snap(24), bFill, C_BLACK, P);
     } else {
-      svg += rect(curX + buildW / 2 - P, y - snap(32), P * 2, snap(32), C_BLACK);
+      s += px(bx, by, bW, PX, DARK);
     }
 
-    // Janelas estilo Pixel Art
-    let winW = snap(12);
-    let winH = snap(16);
-    let gapX = snap(16);
-    let gapY = snap(24);
-    let cols = Math.floor((buildW - snap(20)) / gapX);
-    let rows = Math.floor((h - snap(60)) / gapY);
+    // Antenna
+    if (i === 0 || i === 2) {
+      const ax = bx + bW / 2 - PX / 2;
+      s += px(ax, by - PX * 3 - PX * (i + 1), PX, PX * 3 + PX * (i + 1), DARK);
+    }
 
-    let startX = curX + (buildW - (cols * gapX - (gapX - winW))) / 2;
-    let startY = y + snap(20);
+    // Windows grid
+    const wCols = Math.floor((bW - PX * 4) / (PX * 3));
+    const wRows = Math.floor((bh - PX * 4) / (PX * 3));
+    const wPadX = PX * 2 + Math.floor((bW - PX * 4 - wCols * PX * 3) / 2);
+    const wPadY = PX * 2;
 
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        if (rand() > 0.3) {
-          let wx = startX + c * gapX;
-          let wy = startY + r * gapY;
-          svg += rect(wx, wy, winW, winH, winFill);
+    for (let r = 0; r < wRows; r++) {
+      for (let c = 0; c < wCols; c++) {
+        const wx = bx + wPadX + c * PX * 3;
+        const wy = by + wPadY + r * PX * 3;
+        const isLit = ci === "success" ? (r + c + i) % 5 !== 0 :
+                      ci === "failure" ? (r + c) % 3 !== 0 :
+                      (r + c + i * 2) % 4 !== 0;
+
+        if (isLit) {
+          let color = W_ON;
+          let cls = "wl";
+          if (ci === "success") color = W_GREEN;
+          else if (ci === "failure") { color = W_RED; cls = "we"; }
+          s += px(wx, wy, PX * 2, PX * 2, color,
+            `class="${cls}" style="animation-delay:${((r * wCols + c) * 0.08 + i * 0.3).toFixed(2)}s"`);
+        } else if (ci === "failure" && (r + c + i) % 7 === 0) {
+          s += px(wx, wy, PX * 2, PX * 2, W_RED, `class="we" style="animation-delay:${(i * 0.3).toFixed(2)}s"`);
+        } else {
+          s += px(wx, wy, PX * 2, PX * 2, W_OFF);
         }
       }
     }
 
-    // Indicador CI/CD no topo como um LED retro
-    let ciColor = ciState === "success" ? C_PASS : ciState === "failure" ? C_FAIL : C_ORANGE;
-    svg += rect(curX + buildW / 2 - snap(8), y - snap(8), snap(16), snap(8), ciColor, C_BLACK, P);
-
-    // Etiqueta do Prédio (Placa retro)
-    let labelY = H - snap(50) - snap(30);
-    svg += rect(curX - P, labelY, buildW + P * 2, snap(24), C_BLACK, C_WHITE, P);
-
-    let shortName = rd.repo.length > 15 ? rd.repo.slice(0, 13) + ".." : rd.repo;
-    svg += `<g shape-rendering="auto">
-      <text x="${curX + buildW / 2}" y="${labelY + snap(16)}" text-anchor="middle" fill="${C_WHITE}" class="text-small">${shortName}</text>
-    </g>`;
-
-    curX += buildW + spacing;
-  });
-
-  // 7. Chão e Rua
-  svg += rect(0, H - snap(50), W, snap(50), C_BLACK); // Base
-  svg += rect(0, H - snap(46), W, P, C_WHITE); // Linha divisória
-
-  // Faixas da rua
-  for (let x = 0; x < W; x += snap(60)) {
-    svg += rect(x, H - snap(24), snap(32), P, C_YELLOW);
+    // Label
+    const label = rd.repo.length > 16 ? rd.repo.slice(0, 14) + ".." : rd.repo;
+    const ly = bottom + PX * 4;
+    const lx = bx + bW / 2;
+    const lSize = Math.max(9, Math.min(11, Math.floor(bW / 6)));
+    s += `<text x="${lx}" y="${ly}" text-anchor="middle" fill="#C9D1D9" font-family="'Courier New',monospace" font-size="${lSize}" font-weight="bold">${label}</text>`;
+    s += `<text x="${lx}" y="${ly + lSize + 2}" text-anchor="middle" fill="#8B949E" font-family="'Courier New',monospace" font-size="${Math.max(7, lSize - 2)}">${commits} commits</text>`;
   }
 
-  // Carros 8-bit
-  for (let i = 0; i < 3; i++) {
-    let delay = `animation-delay: -${rand() * 15}s`;
-    let cy = H - snap(36) + (i % 2) * snap(16);
-    let carHtml = `<g class="car" style="${delay}">`;
-    carHtml += rect(0, cy, snap(24), snap(8), C_WHITE, C_BLACK, P);
-    carHtml += rect(snap(4), cy - snap(4), snap(12), snap(4), C_WHITE, C_BLACK, P);
-    carHtml += rect(snap(4), cy + snap(8), snap(6), snap(4), C_ORANGE); // Roda 1
-    carHtml += rect(snap(16), cy + snap(8), snap(6), snap(4), C_ORANGE); // Roda 2
-    carHtml += `</g>`;
-    svg += carHtml;
+  // Ground
+  s += px(0, bottom, W, PX, DARK);
+  s += px(0, bottom + PX, W, PX * 5, GROUND);
+  s += px(0, bottom + PX * 6, W, PX, DARK);
+
+  // Ground pixel pattern
+  for (let gx = 0; gx < W; gx += PX * 3) {
+    if (rand() > 0.6) {
+      s += px(gx, bottom + PX + Math.floor(rand() * 3) * PX, PX, PX, DARK, 'opacity="0.3"');
+    }
   }
 
-  // 8. HUD Info Box (Estilo RPG Retro)
-  let totalCommits = repoData.reduce((a, r) => a + (r.commits || 0), 0);
-  let hudW = snap(360);
-  let hudH = snap(32);
-  let hudX = W / 2 - hudW / 2;
-  let hudY = snap(16);
+  // Bottom bar
+  const barY = bottom + PX * 8;
+  s += px(W / 2 - 100, barY, 200, PX * 4, DARK);
+  s += `<text x="${W / 2}" y="${barY + PX * 3}" text-anchor="middle" fill="#FAED42" font-family="'Courier New',monospace" font-size="9">CITY-GEN px v2.0  @${GITHUB_USER}</text>`;
 
-  svg += rect(hudX, hudY, hudW, hudH, C_BLACK, C_WHITE, P);
-  svg += `<g shape-rendering="auto">
-    <text x="${W / 2}" y="${hudY + snap(20)}" text-anchor="middle" fill="${C_YELLOW}" class="text-pixel" font-size="14">
-      USER: ${GITHUB_USER} | COMMITS: ${totalCommits}
-    </text>
-  </g>`;
+  // Total commits
+  s += `<text x="${W / 2}" y="${barY + PX * 7}" text-anchor="middle" fill="#8B949E" font-family="'Courier New',monospace" font-size="8">${totalCommits} commits  ·  ${REPOS.length} repos</text>`;
 
-  // Borda Final Pixelada
-  svg += rect(P, P, W - P * 2, H - P * 2, "none", C_WHITE, P * 2);
-
-  svg += `</svg>`;
-  return svg;
+  s += `</svg>`;
+  return s;
 }
 
 async function main() {
