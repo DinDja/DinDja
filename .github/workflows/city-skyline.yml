@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 24
       - name: Generate city-skyline.svg
-        run: node scripts/city-skyline-generator.js dist/city-skyline.svg
+        run: node scripts/city-skyline-generator.js /tmp/city-skyline.svg
         env:
           GITHUB_USER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,7 +28,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin output
           git checkout output
-          cp dist/city-skyline.svg .
+          cp /tmp/city-skyline.svg .
           git add city-skyline.svg
           git diff --staged --quiet || git commit -m "Update city-skyline [automated]"
           git push origin output

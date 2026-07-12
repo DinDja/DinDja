@@ -23,7 +23,7 @@ jobs:
           node-version: 24
 
       - name: generate circuit-board.svg
-        run: node scripts/pcb-generator.js dist/circuit-board.svg
+        run: node scripts/pcb-generator.js /tmp/circuit-board.svg
         env:
           GITHUB_USER: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,7 +34,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin output
           git checkout output
-          cp dist/circuit-board.svg .
+          cp /tmp/circuit-board.svg .
           git add circuit-board.svg
           git diff --staged --quiet || git commit -m "Update circuit-board [automated]"
           git push origin output
