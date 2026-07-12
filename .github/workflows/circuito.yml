@@ -20,7 +20,7 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: generate circuit-board.svg
         run: node scripts/pcb-generator.js dist/circuit-board.svg
@@ -29,9 +29,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: push circuit-board.svg to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin output
+          git checkout output
+          cp dist/circuit-board.svg .
+          git add circuit-board.svg
+          git diff --staged --quiet || git commit -m "Update circuit-board [automated]"
+          git push origin output
