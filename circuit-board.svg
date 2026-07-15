@@ -484,6 +484,10 @@
       <circle cx="217.50857142857143" cy="151.57142857142856" r="2.6" fill="#ffaa00" opacity="0.95" class="led-core" style="animation-delay:1.0000000000000013s"/>
       <circle cx="217.50857142857143" cy="151.57142857142856" r="1.1700000000000002" fill="#ffffff" opacity="0.9"/>
     
+      <circle cx="120" cy="228.6" r="4" fill="#44aaff" opacity="0.18" class="led-glow" style="animation-delay:0.7000000000000011s"/>
+      <circle cx="120" cy="228.6" r="2" fill="#44aaff" opacity="0.95" class="led-core" style="animation-delay:1.100000000000001s"/>
+      <circle cx="120" cy="228.6" r="0.9" fill="#ffffff" opacity="0.9"/>
+    
   </g>
 
   <!-- ── IC Chips (QFP style) ── -->
@@ -551,11 +555,11 @@
 
   <!-- ── Silkscreen labels along traces ── -->
   <text x="490" y="30" text-anchor="middle" class="silkscreen" style="font-size:10px;font-weight:bold">GITHUB_COMMIT_BUS_2026</text>
-  <text x="40" y="22" class="label">REV.0949</text>
+  <text x="40" y="22" class="label">REV.0951</text>
   <text x="940" y="22" text-anchor="end" class="label">@DinDja</text>
 
   <!-- Bottom silkscreen info -->
-  <text x="40" y="348" class="label">949 commits · 2026</text>
+  <text x="40" y="348" class="label">951 commits · 2026</text>
   <text x="940" y="348" text-anchor="end" class="label" style="opacity:0.4">PCB v2.0 · Manhattan routing</text>
 
   <!-- ── Edge cut border ── -->
