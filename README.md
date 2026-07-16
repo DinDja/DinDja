@@ -449,46 +449,6 @@ _Cada repositório é um prédio da cidade. Quanto mais commits, mais alto o pr�
   <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" height="35"/>
 </p>
 
-### Comparativo de Bancos de Dados por Cenário
-
-<details open>
-<summary><b>📊 Tabela comparativa — Serviços de Banco de Dados Modernos</b></summary>
-
-<br/>
-
-| Serviço | Modelo | Tempo real | Auth | Storage | SQL/NoSQL | Melhor para |
-|---|---|---|---|---|---|---|
-| **Firebase Firestore** | Documentos | ✅ | ✅ | ✅ | NoSQL | Apps mobile/web |
-| **Supabase** | PostgreSQL | ✅ | ✅ | ✅ | SQL | SaaS e sistemas completos |
-| **Convex** | Documentos | ✅ | ✅ | Parcial | NoSQL | Apps React/Next.js |
-| **Appwrite** | Documentos | ✅ | ✅ | ✅ | NoSQL | Self-host ou Cloud |
-| **PocketBase** | SQLite | ✅ | ✅ | ✅ | SQL | Projetos pequenos |
-| **MongoDB Atlas** | Documentos | Streams | Opcional | Não | NoSQL | Grandes aplicações |
-| **Neon** | PostgreSQL | Não nativo | Não | Não | SQL | Backend moderno |
-| **PlanetScale** | MySQL | Não | Não | Não | SQL | Escalabilidade MySQL |
-| **EdgeDB / Gel** | Relacional | Não | Não | Não | SQL+ | Modelagem complexa |
-
-> ✅ = suporte nativo • Parcial = suporte limitado • Streams = via change streams
-
-</details>
-
-### Experiência Prática com Bancos
-
-<details>
-<summary><b>🔧 Detalhes por projeto</b></summary>
-
-<br/>
-
-| Projeto | Banco | Tipo | Uso |
-|---|---|---|---|
-| SECTI-Contratos | Firebase Firestore | NoSQL | Contratos, convênios, usuários, auditoria |
-| Info.SECTI | Firebase Firestore + IndexedDB | NoSQL | Projetos, cache offline, auditoria |
-| PatentesLab | Firebase Firestore | NoSQL | Patentes, watchlist, prior art |
-| TSARA | Firebase Firestore | NoSQL | Produtos, pedidos, agendamentos, chat |
-| Sectinventário | Firebase Firestore | NoSQL | Inventário, movimentações, auditoria |
-| Editor-ThreeJS | Zustand + LocalStorage | Estado | 21 stores de cena, histórico, preferências |
-
-</details>
 
 ---
 
