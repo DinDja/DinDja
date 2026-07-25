@@ -402,17 +402,6 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 
 ---
 
-## 🏙️ Cidade Viva
-
-<!-- Atualizado diariamente às 00:00 UTC via city-skyline.yml -->
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/city-skyline.svg" width="100%" alt="Cidade Viva — Skyline do Workspace">
-</p>
-_Cada repositório é um prédio da cidade. Quanto mais commits, mais alto o prédio. CI verde = luzes acesas. Bugs = fumaça. Stars = constelação no céu. Passe o mouse sobre os prédios para ver detalhes._
-
----
-
 ## 🛠️ Stack
 
 <p align="center">
