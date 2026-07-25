@@ -53,6 +53,41 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 ---
 
+## 🎥 Hub SECTI — Visão Geral
+
+<table>
+  <tr>
+    <td width="55%" align="center" valign="middle">
+      <video src="guia.mp4" controls width="100%" poster="SECTI.png">
+        Seu navegador não suporta a reprodução deste vídeo. Baixe o <a href="guia.mp4">guia.mp4</a>.
+      </video>
+      <br/>
+      <sub><b>📽️ Vídeo guia</b> — tour em vídeo pelo hub SECTI</sub>
+    </td>
+    <td width="45%" align="left" valign="top">
+      <h3>🧭 Sobre o hub SECTI</h3>
+      <p align="justify">
+        O <b>hub SECTI</b> reúne os sistemas internos da Secretaria de Ciência,
+        Tecnologia e Inovação da Bahia em um único ecossistema — unificando
+        <b>gestão de contratos e convênios</b>, <b>inventário e auditoria</b>,
+        <b>acompanhamento de projetos científicos</b> e ferramentas de apoio à decisão.
+      </p>
+      <p align="justify">
+        Cada sistema é <b>independente</b> e conversa com o hub através de
+        autenticação compartilhada, RBAC e rastreabilidade de dados, garantindo
+        padronização de processos administrativos e confiabilidade operacional.
+      </p>
+      <p>
+        <img src="https://img.shields.io/badge/Foco-Rastreabilidade-0A66C2?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Controle-Contratos_&_Convênios-6A5ACD?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Stack-Vite_·_Next_·_Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 📊 Stats GitHub
 
 <table>
