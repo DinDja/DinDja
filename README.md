@@ -25,7 +25,10 @@
 <a href="#-grafo-de-conhecimento-do-workspace"><img src="https://img.shields.io/badge/📈-Grafo_de_Conhecimento-0A66C2?style=flat-square"/></a>
 <a href="#-stats-github"><img src="https://img.shields.io/badge/📊-Stats_Dinâmicos-6A5ACD?style=flat-square"/></a>
 <a href="#-stack"><img src="https://img.shields.io/badge/🛠️-Stack-0A66C2?style=flat-square"/></a>
-<a href="#-competências"><img src="https://img.shields.io/badge/🧠-Competências-6A5ACD?style=flat-square"/></a>
+<a href="#-banco-de-dados--storage"><img src="https://img.shields.io/badge/🗄️-Banco_de_Dados-6A5ACD?style=flat-square"/></a>
+<a href="#-backend--apis"><img src="https://img.shields.io/badge/⚙️-Backend_&_APIs-0A66C2?style=flat-square"/></a>
+<a href="#-analista-de-dados--bi"><img src="https://img.shields.io/badge/📈-Analista_de_Dados-6A5ACD?style=flat-square"/></a>
+<a href="#-competências"><img src="https://img.shields.io/badge/🧠-Competências-0A66C2?style=flat-square"/></a>
 <a href="#-formação"><img src="https://img.shields.io/badge/📚-Formação-0A66C2?style=flat-square"/></a>
 <a href="#-contato"><img src="https://img.shields.io/badge/📇-Contato-6A5ACD?style=flat-square"/></a>
 
@@ -423,18 +426,118 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 
 ---
 
+## 🗄️ Banco de Dados & Storage
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" height="35"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" height="35"/>
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" height="35"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" height="35"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" height="35"/>
+  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" height="35"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" height="35"/>
+</p>
+
+
+---
+
+## ⚙️ Backend & APIs
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js_API_Routes-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js API" height="35"/>
+  <img src="https://img.shields.io/badge/Netlify_Functions-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Functions" height="35"/>
+  <img src="https://img.shields.io/badge/Firebase_Functions-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase Functions" height="35"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" height="35"/>
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" height="35"/>
+  <img src="https://img.shields.io/badge/REST_API-0A66C2?style=for-the-badge&logo=fastapi&logoColor=white" alt="REST" height="35"/>
+  <img src="https://img.shields.io/badge/Serverless-FF6B35?style=for-the-badge&logo=serverless&logoColor=white" alt="Serverless" height="35"/>
+</p>
+
+| Capacidade | Detalhe |
+|---|---|
+| **APIs REST** | Design, versionamento, validação, rate limiting, middlewares |
+| **Serverless** | Netlify Functions, Firebase Functions, Vercel Edge Functions |
+| **Next.js API Routes** | Rotas dinâmicas, handlers REST, streaming, middleware |
+| **Autenticação** | Firebase Auth, JWT, OAuth2, RBAC, sessões com auto-logout |
+| **Webhooks** | Integração de pagamentos (InfinitePay), INPI, GitHub Actions |
+| **Proxy Layer** | Proxy reverso para APIs externas (INPI, Serpro, NVIDIA NIM) |
+| **Realtime** | Firestore listeners, change streams, WebSocket, SSE |
+| **Background Jobs** | GitHub Actions cron, Firebase scheduled functions |
+| **Caching** | IndexedDB, cache manager, rate limiting, cache de IA |
+| **Segurança** | Validação de entrada, CORS, headers, secrets management |
+
+<details>
+<summary><b>🔧 Arquiteturas de backend por projeto</b></summary>
+
+<br/>
+
+| Projeto | Camada Backend | Funções/Rotas | Destaques |
+|---|---|---|---|
+| **Editor-ThreeJS** | Next.js API Routes | 5 rotas (AI, assets, models, image-to-3d, download) | Geração de cena via NIM, export ZIP |
+| **SECTI-Contratos** | Firebase Functions | `contractAlerts.js` | Alertas de contrato, PWA service worker |
+| **Info.SECTI** | Netlify Functions | `functions/index.js` | Serverless + busca IA (OpenRouter) |
+| **PatentesLab** | Next.js + Netlify | 6 rotas + 3 functions | Proxy INPI, processamento de patentes |
+| **TSARA** | Next.js API Routes | Webhook InfinitePay | Pagamentos, checkout, agendamento |
+
+</details>
+
+---
+
+## 📈 Analista de Dados & BI
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" height="35"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" height="35"/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" height="35"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white" alt="Matplotlib" height="35"/>
+  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel" height="35"/>
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" height="35"/>
+  <img src="https://img.shields.io/badge/Recharts-FF7300?style=for-the-badge&logo=react&logoColor=white" alt="Recharts" height="35"/>
+</p>
+
+| Capacidade | Detalhe |
+|---|---|
+| **Coleta & ETL** | Scripts Python de automação, scraping, normalização de dados |
+| **Análise Exploratória** | Pandas, NumPy, estatística descritiva, detecção de outliers |
+| **Visualização** | Recharts (React), Matplotlib, gráficos interativos, dashboards |
+| **Relatórios Automatizados** | Geração de PDF (ABNT), PowerPoint, Nota Técnica, Excel |
+| **Auditoria & Rastreabilidade** | Logs estruturados, histórico de alterações, IndexedDB |
+| **BI Institucional** | Dashboards de projetos, contratos, inventário, indicadores |
+| **IA Analítica** | Busca semântica, classificação, similaridade textual (prior art) |
+| **Geolocalização** | Filtro geográfico com 417 municípios, mapas interativos |
+| **Data Quality** | Normalização textual, validação, deduplicação, marcação |
+
+<details>
+<summary><b>🔧 Projetos com capacidade analítica</b></summary>
+
+<br/>
+
+| Projeto | Capacidade Analítica | Ferramentas |
+|---|---|---|
+| **Info.SECTI** | Geração de relatórios PPT/PDF/NT, busca IA, mapa geográfico | JavaScript, OpenRouter, LocationMapFilter |
+| **SECTI-Contratos** | Export Excel/PDF, auditoria, alertas de vencimento | excel.ts, pdf-export.ts, Firebase Functions |
+| **PatentesLab** | Prior art, similaridade textual, watchlist de patentes | normalizeText, priorArtWorkbenchUtils |
+| **Sectinventário** | Dashboard de inventário, movimentações, auditoria | Zustand, Firebase, shadcn/ui |
+| **Editor-ThreeJS** | Grafo de conhecimento (211 arestas semânticas, 161 similaridades) | LSP cross-file, análise de complexidade |
+
+</details>
+
+---
+
 ## 🧠 Competências
 
 | Categoria | Detalhe |
 |---|---|
 | Arquitetura | Aplicações web, monorepos, serverless, grafos de conhecimento |
-| Dados | Modelagem relacional/NoSQL, auditoria, rastreabilidade, Firestore |
+| Dados | Modelagem relacional/NoSQL, auditoria, rastreabilidade, Firestore, PostgreSQL, MongoDB |
 | Segurança | Autenticação, RBAC, controle de permissões, sessões |
 | Frontend | UI institucional, design systems, 3D/WebGL, shadcn/ui |
-| Backend | APIs REST, Next.js API routes, Netlify Functions, Firebase Functions |
+| Backend | APIs REST, Next.js API routes, Netlify Functions, Firebase Functions, webhooks, serverless |
+| Banco de Dados | Firestore, Supabase, MongoDB Atlas, Neon, PlanetScale, PocketBase, EdgeDB |
 | Infra | Cloud (Firebase, Netlify, Vercel), CI/CD GitHub Actions |
-| Real-time | Física 3D (Rapier3D), animação, timelines, behaviors |
+| Real-time | Física 3D (Rapier3D), animação, timelines, behaviors, Firestore listeners |
 | IA | NVIDIA NIM, OpenRouter, LLMs, geração procedural, busca semântica |
+| Analista de Dados | ETL, Pandas, visualização, relatórios automatizados, BI, auditoria, data quality |
 
 ---
 
