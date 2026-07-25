@@ -215,10 +215,13 @@ Abaixo, os principais projetos com métricas reais extraídas do grafo de conhec
 
 ### 🧊 Editor-ThreeJS
 
+<details>
+<summary><b>🔧 Ver detalhes do projeto</b></summary>
+
 Editor 3D experimental Next.js + React Three Fiber + Electron — modelagem, sculpt, física, animação, timeline, IA e exportação de projetos.
 
 <details>
-<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+<summary><b>📊 Ver métricas técnicas detalhadas</b></summary>
 
 | Métrica | Valor |
 |---|---|
@@ -266,9 +269,14 @@ src/
   <img src="https://img.shields.io/badge/1.548%20funções-3031%20nós-0A66C2?style=flat-square" alt="Graph metrics"/>
 </p>
 
+</details>
+
 ---
 
 ### 📄 SECTI-Contratos
+
+<details>
+<summary><b>🔧 Ver detalhes do projeto</b></summary>
 
 Sistema corporativo para gestão unificada de contratos e convênios com controle administrativo e rastreabilidade.
 
@@ -304,14 +312,19 @@ Sistema corporativo para gestão unificada de contratos e convênios com control
   <img src="https://img.shields.io/badge/943%20nós-2441%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
+</details>
+
 ---
 
 ### 📊 Info.SECTI
 
+<details>
+<summary><b>🔧 Ver detalhes do projeto</b></summary>
+
 Sistema institucional para gestão e acompanhamento de projetos científicos e tecnológicos do Estado da Bahia.
 
 <details>
-<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+<summary><b>📊 Ver métricas técnicas detalhadas</b></summary>
 
 | Métrica | Valor |
 |---|---|
@@ -339,14 +352,19 @@ Sistema institucional para gestão e acompanhamento de projetos científicos e t
   <img src="https://img.shields.io/badge/980%20nós-2205%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
+</details>
+
 ---
 
 ### 🔬 PatentesLab
 
+<details>
+<summary><b>🔧 Ver detalhes do projeto</b></summary>
+
 Laboratório de patentes com robô autônomo de busca no INPI, geração de documentos e viabilidade.
 
 <details>
-<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+<summary><b>📊 Ver métricas técnicas detalhadas</b></summary>
 
 | Métrica | Valor |
 |---|---|
@@ -374,14 +392,19 @@ Laboratório de patentes com robô autônomo de busca no INPI, geração de docu
   <img src="https://img.shields.io/badge/1843%20nós-2881%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
+</details>
+
 ---
 
 ### 🌙 TSARA
 
+<details>
+<summary><b>🔧 Ver detalhes do projeto</b></summary>
+
 E-commerce + agendamento + chat com painel admin completo.
 
 <details>
-<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+<summary><b>📊 Ver métricas técnicas detalhadas</b></summary>
 
 | Métrica | Valor |
 |---|---|
@@ -408,14 +431,19 @@ E-commerce + agendamento + chat com painel admin completo.
   <img src="https://img.shields.io/badge/1540%20nós-3804%20arestas-6A5ACD?style=flat-square"/>
 </p>
 
+</details>
+
 ---
 
 ### 🏭 Sectinventario
 
+<details>
+<summary><b>🔧 Ver detalhes do projeto</b></summary>
+
 Sistema de inventário, movimentação e auditoria para a SECTI.
 
 <details>
-<summary><b>🔧 Ver métricas técnicas detalhadas</b></summary>
+<summary><b>📊 Ver métricas técnicas detalhadas</b></summary>
 
 | Stack | Next.js + TypeScript + Firebase + shadcn/ui |
 |---|---|
@@ -435,6 +463,8 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
   <img src="https://img.shields.io/badge/Zustand-ff6b35?style=flat-square&logo=react&logoColor=white"/>
   <img src="https://img.shields.io/badge/719%20nós-2009%20arestas-6A5ACD?style=flat-square"/>
 </p>
+
+</details>
 
 ---
 
