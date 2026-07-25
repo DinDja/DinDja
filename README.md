@@ -58,9 +58,7 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 <table>
   <tr>
     <td width="55%" align="center" valign="middle">
-      <video src="guia.mp4" controls width="100%" poster="SECTI.png">
-        Seu navegador não suporta a reprodução deste vídeo. Baixe o <a href="guia.mp4">guia.mp4</a>.
-      </video>
+      <img src="guia.gif" width="100%" alt="Vídeo guia do hub SECTI"/>
       <br/>
       <sub><b>📽️ Vídeo guia</b> — tour em vídeo pelo hub SECTI</sub>
     </td>
@@ -671,5 +669,9 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 ---
 
 <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/circuit-board.svg" width="100%" alt="Circuit board contributions"/>
+
+<p align="center">
+  <sub><b>🧩 Motherboard de contribuições</b> — cada bloco do circuito representa um commit no repositório do perfil. Pinos acesos indicam dias ativos e a densidade dos traços mostra fluxo de trabalho contínuo.</sub>
+</p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A5ACD,100:0A66C2&height=120&section=footer&animation=fadeIn"/>
