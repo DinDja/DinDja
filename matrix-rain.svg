@@ -441,7 +441,7 @@
   <!-- ── Frame labels ── -->
   <text x="40" y="30" class="title">DinDja@matrix:~$ git log --contributions 2026</text>
   <text x="940" y="30" text-anchor="end" class="title" style="opacity:0.75">sudo make me productive</text>
-  <text x="40" y="344" class="label">1555 commits decoded · 53 weeks</text>
+  <text x="40" y="344" class="label">1557 commits decoded · 53 weeks</text>
   <text x="940" y="344" text-anchor="end" class="label" style="opacity:0.55">the grid has you</text>
 
   <!-- ── Border ── -->

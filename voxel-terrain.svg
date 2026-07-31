@@ -577,7 +577,7 @@
   <!-- ── Frame labels ── -->
   <text x="40" y="30" class="title">VOXEL_TERRAIN_2026</text>
   <text x="940" y="30" text-anchor="end" class="title" style="opacity:0.75">@DinDja</text>
-  <text x="40" y="344" class="label">1555 commits · 53 weeks</text>
+  <text x="40" y="344" class="label">1557 commits · 53 weeks</text>
   <text x="940" y="344" text-anchor="end" class="label" style="opacity:0.55">isometric 30° · height = activity</text>
 
   <!-- ── Border ── -->
