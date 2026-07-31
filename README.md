@@ -706,43 +706,31 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🌌 Galáxia de contribuições</b> — cada semana do ano vira um sistema estelar nos braços da espiral (ângulo dourado 137,5°). A intensidade dos commits dita o brilho e o calor de cada estrela: dias excepcionais forjam estrelas douradas.</sub>
+  <sub><b>🌌 Galáxia de contribuições</b> — oxe, cada semana do ano vira um sistema estelar nos braços da espiral (ângulo dourado 137,5°). Quanto mais eu comito, mais a estrela brilha e esquenta: em dia de destaque até estrela dourada eu forjei!</sub>
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/galaga-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/galaga-contribution-graph.svg">
-    <img alt="galaga contribution graph" src="https://raw.githubusercontent.com/DinDja/DinDja/output/galaga-contribution-graph.svg" width="100%">
-  </picture>
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/galaga-contribution-graph.svg" width="100%" alt="Galaga contributions"/>
 </p>
 
 <p align="center">
-  <sub><b>🛸 Galaga de commits</b> — a nave dispara lasers contra sua grade de contribuições; cada célula que explodia era um commit que você mandou para produção.</sub>
+  <sub><b>🛸 Galaga de commits</b> — oxe, aqui eu sou o piloto! A nave dispara lasers na minha grade de contribuições e cada célula que explode é um commit que eu mandei pra produção.</sub>
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/breakout-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/breakout-contribution-graph.svg">
-    <img alt="breakout contribution graph" src="https://raw.githubusercontent.com/DinDja/DinDja/output/breakout-contribution-graph.svg" width="100%">
-  </picture>
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/breakout-contribution-graph.svg" width="100%" alt="Breakout contributions"/>
 </p>
 
 <p align="center">
-  <sub><b>🧱 Breakout de contribuições</b> — a bola quica e quebra os tijolos do seu histórico. Dias muito ativos viram tijolos reforçados que resistem a mais impactos.</sub>
+  <sub><b>🧱 Breakout de contribuições</b> — oxe, adoro essa! A bola quica e vai quebrando os tijolinhos do meu histórico. Nos dias que eu tô mais ativo os tijolos ficam reforçados, aguentam até mais impacto.</sub>
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/pacman-contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/pacman-contribution-graph.svg">
-    <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/DinDja/DinDja/output/pacman-contribution-graph.svg" width="100%">
-  </picture>
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/pacman-contribution-graph.svg" width="100%" alt="Pacman contributions"/>
 </p>
 
 <p align="center">
-  <sub><b>🟡 Pacman devorando commits</b> — o Pacman percorre o grafo de contribuições comendo cada dia ativo, liderado pelos fantasmas. Já comi <code>pac-dots</code> suficientes para subir de nível!</sub>
+  <sub><b>🟡 Pacman devorando commits</b> — oxe, o bichinho anda comendo meus commits! Ele percorre o grafo guiado pelos fantasmas e já comi tantos pac-dots que subi de nível.</sub>
 </p>
 
 <p align="center">
@@ -750,7 +738,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🏔️ Terreno voxel</b> — projeção isométrica das suas contribuições: cada coluna é um dia, e a altura do relevo é a sua atividade. Semanas intensas formam picos; os topos quentes piscam como faróis.</sub>
+  <sub><b>🏔️ Terreno voxel</b> — oxe, cada coluna dessa é um dia meu e a altura do relevo é o tanto que eu trabalhei. Teve semana que virou pico — e os topos quentes piscam como farol me avisando pra eu parar um pouco.</sub>
 </p>
 
 <p align="center">
@@ -758,7 +746,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🟢 Matrix rain</b> — chuva de código decodificada das suas contribuições: quanto mais ativa a semana, mais longa e veloz a coluna de glifos. A matriz tem você.</sub>
+  <sub><b>🟢 Matrix rain</b> — oxe, essa chuva de código é decodificada do meu ano: quanto mais ativa a semana, mais longa e veloz a coluna de glifos. A matriz já me pegou faz tempo.</sub>
 </p>
 
 <p align="center">
@@ -766,7 +754,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🧬 Hélice dupla</b> — cada semana é um par de bases (A-T · C-G). A cor dos degraus reflete a intensidade dos commits e pacotes de energia percorrem as fitas azul e roxa do seu código.</sub>
+  <sub><b>🧬 Hélice dupla</b> — oxe, cada semana minha é um par de bases (A-T · C-G). A cor do degrau mostra a intensidade dos meus commits e os pacotes de energia deslizam pelas fitas azul e roxa do meu código.</sub>
 </p>
 
 ---

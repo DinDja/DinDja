@@ -217,7 +217,7 @@ function generateGalaxy(data) {
       }
       @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
       .star-glow { animation: twinkle 2.4s ease-in-out infinite; }
-      .galaxy { animation: fadein 2.2s ease-out both; transform-origin: ${CX}px ${CY}px; }
+      .galaxy { animation: fadein 2.2s ease-out both; }
       .core { animation: corepulse 5s ease-in-out infinite; transform-origin: ${CX}px ${CY}px; }
       .label { fill: #aab8e8; font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; }
       .title { fill: #d6e4ff; font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
@@ -251,42 +251,44 @@ function generateGalaxy(data) {
 
   <!-- ── Rotating galaxy disk ── -->
   <g class="galaxy">
-    <animateTransform attributeName="transform" type="rotate" from="0 ${CX} ${CY}" to="360 ${CX} ${CY}" dur="300s" repeatCount="indefinite"/>
-
-    <!-- Nebulae -->
     <g>
-      ${nebulae.map((n, i) => `
-        <ellipse cx="${n.cx}" cy="${n.cy}" rx="${n.rx}" ry="${n.ry}" fill="url(#neb${i + 1})" transform="rotate(${n.rot} ${n.cx} ${n.cy})"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 ${CX} ${CY}" to="360 ${CX} ${CY}" dur="300s" repeatCount="indefinite"/>
+
+      <!-- Nebulae -->
+      <g>
+        ${nebulae.map((n, i) => `
+          <ellipse cx="${n.cx}" cy="${n.cy}" rx="${n.rx}" ry="${n.ry}" fill="url(#neb${i + 1})" transform="rotate(${n.rot} ${n.cx} ${n.cy})"/>
+        `).join("")}
+      </g>
+
+      <!-- Faint disk rings -->
+      ${[130, 195, 262].map((r) => `<circle cx="${CX}" cy="${CY}" r="${r}" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.045"/>`).join("")}
+
+      <!-- Dust lanes -->
+      <path d="${dustLane1}" fill="none" stroke="#05060f" stroke-width="30" stroke-linecap="round" opacity="0.55"/>
+      <path d="${dustLane2}" fill="none" stroke="#05060f" stroke-width="26" stroke-linecap="round" opacity="0.5"/>
+      <path d="${dustLane1}" fill="none" stroke="#020309" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+      <path d="${dustLane2}" fill="none" stroke="#020309" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+
+      <!-- Open-cluster halos (soft light around active weeks) -->
+      ${clusters.map((c) => `<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="9" fill="#9db8ff" opacity="${c.o.toFixed(2)}"/>`).join("")}
+
+      <!-- Week markers (spiral path) -->
+      ${markers.map((m) => `<circle cx="${m.x.toFixed(1)}" cy="${m.y.toFixed(1)}" r="1.1" fill="#ffffff" opacity="0.10"/>`).join("")}
+
+      <!-- Stars (one per active day) -->
+      ${stars.map((s) => `
+        <circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="${(s.r * 4.2).toFixed(1)}" fill="${s.glow}" opacity="0.22" class="star-glow" style="animation-duration:${s.tw.toFixed(1)}s;animation-delay:${s.delay.toFixed(1)}s"/>
+        <circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="${s.r.toFixed(1)}" fill="${s.core}" opacity="0.96"/>
+        ${s.intensity > 0.6 ? `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="${(s.r * 0.42).toFixed(1)}" fill="#ffffff" opacity="0.9"/>` : ""}
       `).join("")}
-    </g>
 
-    <!-- Faint disk rings -->
-    ${[130, 195, 262].map((r) => `<circle cx="${CX}" cy="${CY}" r="${r}" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.045"/>`).join("")}
-
-    <!-- Dust lanes -->
-    <path d="${dustLane1}" fill="none" stroke="#05060f" stroke-width="30" stroke-linecap="round" opacity="0.55"/>
-    <path d="${dustLane2}" fill="none" stroke="#05060f" stroke-width="26" stroke-linecap="round" opacity="0.5"/>
-    <path d="${dustLane1}" fill="none" stroke="#020309" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
-    <path d="${dustLane2}" fill="none" stroke="#020309" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
-
-    <!-- Open-cluster halos (soft light around active weeks) -->
-    ${clusters.map((c) => `<circle cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="9" fill="#9db8ff" opacity="${c.o.toFixed(2)}"/>`).join("")}
-
-    <!-- Week markers (spiral path) -->
-    ${markers.map((m) => `<circle cx="${m.x.toFixed(1)}" cy="${m.y.toFixed(1)}" r="1.1" fill="#ffffff" opacity="0.10"/>`).join("")}
-
-    <!-- Stars (one per active day) -->
-    ${stars.map((s) => `
-      <circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="${(s.r * 4.2).toFixed(1)}" fill="${s.glow}" opacity="0.22" class="star-glow" style="animation-duration:${s.tw.toFixed(1)}s;animation-delay:${s.delay.toFixed(1)}s"/>
-      <circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="${s.r.toFixed(1)}" fill="${s.core}" opacity="0.96"/>
-      ${s.intensity > 0.6 ? `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="${(s.r * 0.42).toFixed(1)}" fill="#ffffff" opacity="0.9"/>` : ""}
-    `).join("")}
-
-    <!-- Galactic core -->
-    <circle cx="${CX}" cy="${CY}" r="95" fill="url(#coreGrad)"/>
-    <g class="core">
-      <circle cx="${CX}" cy="${CY}" r="46" fill="url(#coreGrad)"/>
-      <circle cx="${CX}" cy="${CY}" r="12" fill="#ffffff" opacity="0.95"/>
+      <!-- Galactic core -->
+      <circle cx="${CX}" cy="${CY}" r="95" fill="url(#coreGrad)"/>
+      <g class="core">
+        <circle cx="${CX}" cy="${CY}" r="46" fill="url(#coreGrad)"/>
+        <circle cx="${CX}" cy="${CY}" r="12" fill="#ffffff" opacity="0.95"/>
+      </g>
     </g>
   </g>
 
