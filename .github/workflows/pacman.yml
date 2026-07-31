@@ -30,6 +30,8 @@ jobs:
 
       # One process per game: the GitHub GraphQL fetch can hang on a reused
       # keep-alive connection, and a fresh process per render stays reliable.
+      # No GITHUB_TOKEN here: with no token the renderer uses the public REST
+      # search endpoint, which works reliably through the fetch polyfill.
       - name: render arcade games (dark theme)
         run: |
           mkdir -p dist
@@ -39,7 +41,6 @@ jobs:
           ls -la dist/
         env:
           GITHUB_USER: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: push SVGs to the output branch
         run: |
