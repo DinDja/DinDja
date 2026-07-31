@@ -704,4 +704,16 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
   <sub><b>🧩 Motherboard de contribuições</b> — cada bloco do circuito representa um commit no repositório do perfil. Pinos acesos indicam dias ativos e a densidade dos traços mostra fluxo de trabalho contínuo.</sub>
 </p>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/pacman-contribution-graph.svg">
+    <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/DinDja/DinDja/output/pacman-contribution-graph.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <sub><b>🟡 Pacman devorando commits</b> — o Pacman percorre o grafo de contribuições comendo cada dia ativo, liderado pelos fantasmas. Já comi <code>pac-dots</code> suficientes para subir de nível!</sub>
+</p>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A5ACD,100:0A66C2&height=120&section=footer&animation=fadeIn"/>
