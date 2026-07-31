@@ -1,0 +1,58 @@
+name: generate custom animations
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: setup node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: generate galaxy.svg
+        run: node scripts/galaxy-generator.js /tmp/galaxy.svg
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: generate voxel-terrain.svg
+        run: node scripts/voxel-terrain-generator.js /tmp/voxel-terrain.svg
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: generate matrix-rain.svg
+        run: node scripts/matrix-rain-generator.js /tmp/matrix-rain.svg
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: generate dna-helix.svg
+        run: node scripts/dna-helix-generator.js /tmp/dna-helix.svg
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: push SVGs to output branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin output
+          git checkout output
+          cp /tmp/galaxy.svg /tmp/voxel-terrain.svg /tmp/matrix-rain.svg /tmp/dna-helix.svg .
+          git add galaxy.svg voxel-terrain.svg matrix-rain.svg dna-helix.svg
+          git diff --staged --quiet || git commit -m "Update custom animations [automated]"
+          git push origin output

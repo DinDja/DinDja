@@ -18,10 +18,11 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - name: generate pacman-contribution-graph.svg
+      - name: generate arcade contribution graphs (pacman, galaga, breakout)
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
+          games: 'pacman,galaga,breakout'
 
       # Since Dec 2025 actions run in their own directory by default, so the
       # SVGs land inside the action's checkout instead of the workspace.

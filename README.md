@@ -30,6 +30,7 @@
 <a href="#-analista-de-dados--bi"><img src="https://img.shields.io/badge/📈-Analista_de_Dados-6A5ACD?style=flat-square"/></a>
 <a href="#-competências"><img src="https://img.shields.io/badge/🧠-Competências-0A66C2?style=flat-square"/></a>
 <a href="#-formação"><img src="https://img.shields.io/badge/📚-Formação-0A66C2?style=flat-square"/></a>
+<a href="#-galeria-de-contribuições"><img src="https://img.shields.io/badge/🌌-Galeria_de_Contribuições-6A5ACD?style=flat-square"/></a>
 <a href="#-contato"><img src="https://img.shields.io/badge/📇-Contato-6A5ACD?style=flat-square"/></a>
 
 ---
@@ -698,10 +699,38 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 
 ---
 
-<img src="https://raw.githubusercontent.com/DinDja/DinDja/output/circuit-board.svg" width="100%" alt="Circuit board contributions"/>
+## 🌌 Galeria de Contribuições
 
 <p align="center">
-  <sub><b>🧩 Motherboard de contribuições</b> — cada bloco do circuito representa um commit no repositório do perfil. Pinos acesos indicam dias ativos e a densidade dos traços mostra fluxo de trabalho contínuo.</sub>
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/galaxy.svg" width="100%" alt="Galaxy contributions"/>
+</p>
+
+<p align="center">
+  <sub><b>🌌 Galáxia de contribuições</b> — cada semana do ano vira um sistema estelar nos braços da espiral (ângulo dourado 137,5°). A intensidade dos commits dita o brilho e o calor de cada estrela: dias excepcionais forjam estrelas douradas.</sub>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/galaga-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/galaga-contribution-graph.svg">
+    <img alt="galaga contribution graph" src="https://raw.githubusercontent.com/DinDja/DinDja/output/galaga-contribution-graph.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <sub><b>🛸 Galaga de commits</b> — a nave dispara lasers contra sua grade de contribuições; cada célula que explodia era um commit que você mandou para produção.</sub>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/breakout-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/DinDja/DinDja/output/breakout-contribution-graph.svg">
+    <img alt="breakout contribution graph" src="https://raw.githubusercontent.com/DinDja/DinDja/output/breakout-contribution-graph.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <sub><b>🧱 Breakout de contribuições</b> — a bola quica e quebra os tijolos do seu histórico. Dias muito ativos viram tijolos reforçados que resistem a mais impactos.</sub>
 </p>
 
 <p align="center">
@@ -714,6 +743,38 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 
 <p align="center">
   <sub><b>🟡 Pacman devorando commits</b> — o Pacman percorre o grafo de contribuições comendo cada dia ativo, liderado pelos fantasmas. Já comi <code>pac-dots</code> suficientes para subir de nível!</sub>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/voxel-terrain.svg" width="100%" alt="Voxel terrain contributions"/>
+</p>
+
+<p align="center">
+  <sub><b>🏔️ Terreno voxel</b> — projeção isométrica das suas contribuições: cada coluna é um dia, e a altura do relevo é a sua atividade. Semanas intensas formam picos; os topos quentes piscam como faróis.</sub>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/matrix-rain.svg" width="100%" alt="Matrix rain contributions"/>
+</p>
+
+<p align="center">
+  <sub><b>🟢 Matrix rain</b> — chuva de código decodificada das suas contribuições: quanto mais ativa a semana, mais longa e veloz a coluna de glifos. A matriz tem você.</sub>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/dna-helix.svg" width="100%" alt="DNA helix contributions"/>
+</p>
+
+<p align="center">
+  <sub><b>🧬 Hélice dupla</b> — cada semana é um par de bases (A-T · C-G). A cor dos degraus reflete a intensidade dos commits e pacotes de energia percorrem as fitas azul e roxa do seu código.</sub>
+</p>
+
+---
+
+<img src="https://raw.githubusercontent.com/DinDja/DinDja/output/circuit-board.svg" width="100%" alt="Circuit board contributions"/>
+
+<p align="center">
+  <sub><b>🧩 Motherboard de contribuições</b> — cada bloco do circuito representa um commit no repositório do perfil. Pinos acesos indicam dias ativos e a densidade dos traços mostra fluxo de trabalho contínuo.</sub>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6A5ACD,100:0A66C2&height=120&section=footer&animation=fadeIn"/>
