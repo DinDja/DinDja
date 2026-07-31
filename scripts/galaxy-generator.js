@@ -217,7 +217,7 @@ function generateGalaxy(data) {
       }
       @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
       .star-glow { animation: twinkle 2.4s ease-in-out infinite; }
-      .galaxy { animation: fadein 2.2s ease-out both; }
+      .galaxy { animation: fadein 2.2s ease-out; }
       .core { animation: corepulse 5s ease-in-out infinite; transform-origin: ${CX}px ${CY}px; }
       .label { fill: #aab8e8; font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; }
       .title { fill: #d6e4ff; font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; font-size: 12px; font-weight: bold; letter-spacing: 2px; }

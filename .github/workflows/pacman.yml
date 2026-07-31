@@ -15,47 +15,31 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
 
     steps:
       - uses: actions/checkout@v5
 
-      # The upstream action renders the light SVG first and then stalls on
-      # the dark render, exiting silently. Workaround: one game per run.
-      - name: generate pacman
-        uses: abozanona/pacman-contribution-graph@main
+      - name: setup node
+        uses: actions/setup-node@v5
         with:
-          github_user_name: ${{ github.repository_owner }}
-          games: 'pacman'
+          node-version: 24
 
-      - name: stage pacman SVG
-        shell: bash
+      - name: install arcade renderer
+        run: npm install pacman-contribution-graph@5.3.1 --no-audit --no-fund --no-save
+
+      # One process per game: the GitHub GraphQL fetch can hang on a reused
+      # keep-alive connection, and a fresh process per render stays reliable.
+      - name: render arcade games (dark theme)
         run: |
           mkdir -p dist
-          find "$RUNNER_WORKSPACE/_actions/abozanona/pacman-contribution-graph" -name "pacman-contribution-graph.svg" -exec cp {} dist/ \; 2>/dev/null || true
-
-      - name: generate galaga
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          games: 'galaga'
-
-      - name: stage galaga SVG
-        shell: bash
-        run: |
-          find "$RUNNER_WORKSPACE/_actions/abozanona/pacman-contribution-graph" -name "galaga-contribution-graph.svg" -exec cp {} dist/ \; 2>/dev/null || true
-
-      - name: generate breakout
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          games: 'breakout'
-
-      - name: stage breakout SVG
-        shell: bash
-        run: |
-          find "$RUNNER_WORKSPACE/_actions/abozanona/pacman-contribution-graph" -name "breakout-contribution-graph.svg" -exec cp {} dist/ \; 2>/dev/null || true
+          for g in pacman galaga breakout; do
+            node scripts/arcade-render.mjs $g github-dark dist/${g}-contribution-graph.svg
+          done
           ls -la dist/
+        env:
+          GITHUB_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: push SVGs to the output branch
         run: |
@@ -63,7 +47,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin output
           git checkout output
-          cp dist/*.svg .
+          cp dist/pacman-contribution-graph.svg dist/galaga-contribution-graph.svg dist/breakout-contribution-graph.svg .
           git add pacman-contribution-graph.svg galaga-contribution-graph.svg breakout-contribution-graph.svg
           git diff --staged --quiet || git commit -m "Update arcade games [automated]"
           git push origin output
