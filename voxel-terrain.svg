@@ -170,7 +170,7 @@
     
   </g>
   <g class="rise" style="animation-delay:0.63s">
-    <polygon points="637.8,133.0 630.0,137.5 630.0,128.9 637.8,124.5" fill="#10337b" stroke="#0b0e1a" stroke-width="0.4"/><polygon points="637.8,133.0 645.6,137.5 645.6,128.9 637.8,124.5" fill="#0c275f" stroke="#0b0e1a" stroke-width="0.4"/><polygon points="637.8,124.5 630.0,128.9 637.8,133.4 645.6,128.9" fill="#1544a5" stroke="#0b0e1a" stroke-width="0.5"/>
+    <polygon points="637.8,133.0 630.0,137.5 630.0,128.9 637.8,124.5" fill="#0d4694" stroke="#0b0e1a" stroke-width="0.4"/><polygon points="637.8,133.0 645.6,137.5 645.6,128.9 637.8,124.5" fill="#0a3672" stroke="#0b0e1a" stroke-width="0.4"/><polygon points="637.8,124.5 630.0,128.9 630.0,120.4 637.8,115.9" fill="#0d4694" stroke="#0b0e1a" stroke-width="0.4"/><polygon points="637.8,124.5 645.6,128.9 645.6,120.4 637.8,115.9" fill="#0a3672" stroke="#0b0e1a" stroke-width="0.4"/><polygon points="637.8,115.9 630.0,120.4 637.8,124.9 645.6,120.4" fill="#125dc6" stroke="#0b0e1a" stroke-width="0.5"/>
     
   </g>
   <g class="rise" style="animation-delay:0.49s">
@@ -577,7 +577,7 @@
   <!-- ── Frame labels ── -->
   <text x="40" y="30" class="title">VOXEL_TERRAIN_2026</text>
   <text x="940" y="30" text-anchor="end" class="title" style="opacity:0.75">@DinDja</text>
-  <text x="40" y="344" class="label">1560 commits · 53 weeks</text>
+  <text x="40" y="344" class="label">1553 commits · 53 weeks</text>
   <text x="940" y="344" text-anchor="end" class="label" style="opacity:0.55">isometric 30° · height = activity</text>
 
   <!-- ── Border ── -->
