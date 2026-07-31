@@ -21,6 +21,7 @@ globalThis.fetch = (url, options = {}) =>
         path: u.pathname + u.search,
         method: options.method || "GET",
         headers: {
+          "User-Agent": "arcade-render",
           ...(options.headers || {}),
           ...(body ? { "Content-Length": body.length } : {}),
         },
