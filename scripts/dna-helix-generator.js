@@ -88,6 +88,9 @@ function mockCalendar() {
 }
 
 // === DNA HELIX — 53 base pairs, one per week ===
+// The helix is drawn with real depth: segments whose midpoint is on the
+// viewer-facing half of the cylinder (sin θ < 0) are the "front" layer and
+// are drawn on top; the others form the "back" layer drawn underneath.
 const AX = 60, AW = 920;              // helix horizontal extent
 const CY = 180, AMP = 56;             // vertical center & amplitude
 const PERIOD = 20;                    // weeks per full turn
@@ -119,48 +122,98 @@ function generateDNA(data) {
   const total = data.totalContributions;
   const N = weeks.length;
 
-  // Strand polylines
-  const pts1 = [], pts2 = [];
+  const xs = [], y1s = [], y2s = [], thetas = [];
   for (let i = 0; i < N; i++) {
-    const x = rungX(i, N);
-    pts1.push(`${x.toFixed(1)},${strandY(i, N, 0).toFixed(1)}`);
-    pts2.push(`${x.toFixed(1)},${strandY(i, N, Math.PI).toFixed(1)}`);
+    xs.push(rungX(i, N));
+    y1s.push(strandY(i, N, 0));
+    y2s.push(strandY(i, N, Math.PI));
+    thetas.push((i / PERIOD) * 2 * Math.PI);
   }
-  const d1 = `M ${pts1.join(" L ")}`;
-  const d2 = `M ${pts2.join(" L ")}`;
 
-  // Rungs + base-pair labels + nucleotide beads
-  const rungs = [];
-  const beads = [];
+  // Split a strand into a single path containing only front (or back)
+  // segments. Each segment is classified by the sign of sin at its midpoint.
+  function splitStrand(ys, front) {
+    let d = "";
+    let penUp = true;
+    for (let i = 0; i < N - 1; i++) {
+      const isFront = Math.sin(thetas[i]) + Math.sin(thetas[i + 1]) < 0;
+      if (isFront === front) {
+        d += (penUp ? `M ${xs[i].toFixed(1)},${ys[i].toFixed(1)}` : "") +
+          ` L ${xs[i + 1].toFixed(1)},${ys[i + 1].toFixed(1)}`;
+        penUp = false;
+      } else {
+        penUp = true;
+      }
+    }
+    return d || `M ${xs[0].toFixed(1)},${ys[0].toFixed(1)}`;
+  }
+
+  const backRungs = [], frontRungs = [];
+  const backBeads = [], frontBeads = [];
+  const labels = [];
+
   for (let i = 0; i < N; i++) {
     const count = weekCounts[i];
-    const x = rungX(i, N);
-    const y1 = strandY(i, N, 0);
-    const y2 = strandY(i, N, Math.PI);
+    const x = xs[i], y1 = y1s[i], y2 = y2s[i];
     const intensity = count / maxW;
+    const front = Math.sin(thetas[i]) < 0;
+    const pair = i % 2 === 0 ? ["A", "T"] : ["C", "G"];
+    const delay = ((i * 0.11) % 2.4).toFixed(2);
 
     if (count > 0) {
-      const w = (2 + 3.2 * intensity).toFixed(1);
-      const cls = intensity > 0.75 ? "rung rung-hot" : "rung";
-      const delay = ((i * 0.11) % 2.4).toFixed(2);
-      rungs.push(`<line x1="${x.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${rungColor(intensity)}" stroke-width="${w}" class="${cls}" style="animation-delay:${delay}s"/>`);
+      const w = front
+        ? (2.5 + 4.5 * intensity).toFixed(1)
+        : (1.6 + 2.4 * intensity).toFixed(1);
+      const cls = front
+        ? intensity > 0.75 ? "rung rung-hot" : "rung"
+        : "rung rung-back";
+      const rung = `<line x1="${x.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${rungColor(intensity)}" stroke-width="${w}" class="${cls}" style="animation-delay:${delay}s"/>`;
+      if (front) frontRungs.push(rung); else backRungs.push(rung);
+
       if (intensity > 0.3) {
-        const pair = i % 2 === 0 ? ["A", "T"] : ["C", "G"];
-        rungs.push(`<text x="${x.toFixed(1)}" y="183" class="basepair" opacity="0.55">${pair[0]}${pair[1]}</text>`);
+        labels.push(`<text x="${x.toFixed(1)}" y="183" class="basepair" opacity="${front ? 0.75 : 0.28}">${pair[0]}${pair[1]}</text>`);
+      }
+
+      if (front && intensity > 0.6) {
+        frontRungs.push(`<circle cx="${x.toFixed(1)}" cy="${CY}" r="2.2" fill="#e0f2ff" opacity="0.9"/>`);
       }
     }
 
-    // Nucleotide beads on the backbones (every week)
-    const pair = i % 2 === 0 ? ["A", "T"] : ["C", "G"];
-    beads.push(`<circle cx="${x.toFixed(1)}" cy="${y1.toFixed(1)}" r="2.1" fill="${NUC[pair[0]]}" opacity="0.85"/>`);
-    beads.push(`<circle cx="${x.toFixed(1)}" cy="${y2.toFixed(1)}" r="2.1" fill="${NUC[pair[1]]}" opacity="0.85"/>`);
+    const mkBead = (y, c, f) =>
+      `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${f ? 2.7 : 1.7}" fill="${c}" opacity="${f ? 0.95 : 0.42}"/>`;
+    if (front) {
+      frontBeads.push(mkBead(y1, NUC[pair[0]], true));
+      frontBeads.push(mkBead(y2, NUC[pair[1]], true));
+    } else {
+      backBeads.push(mkBead(y1, NUC[pair[0]], false));
+      backBeads.push(mkBead(y2, NUC[pair[1]], false));
+    }
   }
 
-  // Week guides (vertical hairline per base pair)
-  const guides = [];
-  for (let i = 0; i < N; i++) {
-    const x = rungX(i, N);
-    guides.push(`<line x1="${x.toFixed(1)}" y1="48" x2="${x.toFixed(1)}" y2="312" stroke="#ffffff" stroke-width="1" opacity="0.035"/>`);
+  const d1F = splitStrand(y1s, true), d1B = splitStrand(y1s, false);
+  const d2F = splitStrand(y2s, true), d2B = splitStrand(y2s, false);
+
+  // Hottest week marker
+  let peakIdx = 0;
+  for (let i = 1; i < N; i++) if (weekCounts[i] > weekCounts[peakIdx]) peakIdx = i;
+  const peakX = xs[peakIdx];
+
+  // Seeded rng for background particles (deterministic output)
+  let rng = 424242;
+  const rand = () => {
+    rng = (rng * 1103515245 + 12345) & 0x7fffffff;
+    return rng / 0x7fffffff;
+  };
+  const particles = [];
+  for (let i = 0; i < 46; i++) {
+    particles.push({
+      x: 8 + rand() * (W - 16),
+      y: 8 + rand() * (H - 16),
+      r: 0.4 + rand() * 0.9,
+      c: rand() > 0.5 ? "#7fb3ff" : "#b794f6",
+      tw: 2.6 + rand() * 3.2,
+      dl: rand() * 3,
+    });
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" height="auto">
@@ -168,22 +221,44 @@ function generateDNA(data) {
     <style>
       @keyframes helixin { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
       @keyframes rungpulse {
-        0%, 100% { opacity: 0.65; }
+        0%, 100% { opacity: 0.6; }
         50%      { opacity: 1; }
       }
+      @keyframes twinkle { 0%, 100% { opacity: 0.12; } 50% { opacity: 0.75; } }
+      @keyframes halo {
+        0%, 100% { opacity: 0.2; transform: scale(1); }
+        50%      { opacity: 0.55; transform: scale(1.25); }
+      }
+      @keyframes peakpulse {
+        0%, 100% { transform: rotate(45deg) scale(1); }
+        50%      { transform: rotate(45deg) scale(1.45); }
+      }
       @keyframes energyblur { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.6; } }
-      .helix { animation: helixin 1.6s ease-out both; }
+      .helix { animation: helixin 1.6s ease-out; }
       .strand { fill: none; stroke-linecap: round; stroke-linejoin: round; }
-      .strand-glow { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .flow { fill: none; stroke-linecap: round; }
       .rung { stroke-linecap: round; }
+      .rung-back { opacity: 0.4; }
       .rung-hot { animation: rungpulse 1.8s ease-in-out infinite; }
+      .particle { animation: twinkle 3.2s ease-in-out infinite; }
+      .peak-halo { fill: #ffd166; transform-origin: ${peakX.toFixed(1)}px ${CY}px; animation: halo 2s ease-in-out infinite; }
+      .peak { fill: #ffd166; transform-origin: ${peakX.toFixed(1)}px ${CY}px; animation: peakpulse 2s ease-in-out infinite; }
       .energy { animation: energyblur 1.6s ease-in-out infinite; }
       .basepair { fill: #9db8ff; font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; font-size: 6.5px; text-anchor: middle; letter-spacing: 0.5px; }
       .label { fill: #aab8e8; font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; }
       .title { fill: #9db8ff; font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
     </style>
+    <linearGradient id="strandGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
     <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#1b2a55" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0b0e1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="30%" cy="25%" r="60%">
+      <stop offset="0%" stop-color="#14225c" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#0b0e1a" stop-opacity="0"/>
     </radialGradient>
   </defs>
@@ -191,36 +266,70 @@ function generateDNA(data) {
   <!-- ── Background ── -->
   <rect width="${W}" height="${H}" fill="#0b0e1a"/>
   <ellipse cx="490" cy="180" rx="460" ry="175" fill="url(#bgGlow)"/>
-  ${guides.join("")}
+  <ellipse cx="330" cy="120" rx="360" ry="150" fill="url(#bgGlow2)"/>
+  ${particles.map((p) => `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${p.r.toFixed(1)}" fill="${p.c}" class="particle" style="animation-duration:${p.tw.toFixed(1)}s;animation-delay:${p.dl.toFixed(1)}s"/>`).join("")}
 
-  <!-- ── Helix ── -->
+  <!-- Week guides (vertical hairline per base pair) -->
+  ${xs.map((x) => `<line x1="${x.toFixed(1)}" y1="48" x2="${x.toFixed(1)}" y2="312" stroke="#ffffff" stroke-width="1" opacity="0.03"/>`).join("")}
+
   <g class="helix">
-    <!-- Strand glows -->
-    <path d="${d1}" class="strand-glow" stroke="#3b82f6" stroke-width="12" opacity="0.16"/>
-    <path d="${d2}" class="strand-glow" stroke="#8b5cf6" stroke-width="12" opacity="0.16"/>
+    <!-- ── Back layer: dim strands + flowing nucleotides ── -->
+    <path d="${d1B}" class="strand" stroke="url(#strandGrad)" stroke-width="11" opacity="0.07"/>
+    <path d="${d2B}" class="strand" stroke="url(#strandGrad)" stroke-width="11" opacity="0.07"/>
+    <path d="${d1B}" class="strand" stroke="url(#strandGrad)" stroke-width="4.5" opacity="0.4"/>
+    <path d="${d2B}" class="strand" stroke="url(#strandGrad)" stroke-width="4.5" opacity="0.4"/>
+    <path d="${d1B}" class="flow" stroke="#ffffff" stroke-width="2" stroke-dasharray="2 30" opacity="0.2">
+      <animate attributeName="stroke-dashoffset" from="640" to="0" dur="9s" repeatCount="indefinite"/>
+    </path>
+    <path d="${d2B}" class="flow" stroke="#ffffff" stroke-width="2" stroke-dasharray="2 30" opacity="0.2">
+      <animate attributeName="stroke-dashoffset" from="640" to="0" dur="9s" repeatCount="indefinite" begin="1.2s"/>
+    </path>
 
-    <!-- Rungs + labels (drawn under the backbones) -->
-    <g>${rungs.join("")}</g>
+    <!-- ── Back rungs, labels and beads ── -->
+    <g>${backRungs.join("")}</g>
+    <g>${labels.filter(() => false).join("")}</g>
+    <g>${backBeads.join("")}</g>
 
-    <!-- Backbones -->
-    <path d="${d1}" class="strand" stroke="#3b82f6" stroke-width="4.5"/>
-    <path d="${d2}" class="strand" stroke="#8b5cf6" stroke-width="4.5"/>
+    <!-- ── Axis spine (cylinder illusion) ── -->
+    <line x1="${AX}" y1="${CY}" x2="${AW}" y2="${CY}" stroke="#3b82f6" stroke-width="34" opacity="0.035"/>
+    <line x1="${AX}" y1="${CY}" x2="${AW}" y2="${CY}" stroke="#22d3ee" stroke-width="10" opacity="0.06"/>
+    <line x1="${AX}" y1="${CY}" x2="${AW}" y2="${CY}" stroke="#ffffff" stroke-width="1.2" opacity="0.14"/>
 
-    <!-- Nucleotide beads -->
-    <g>${beads.join("")}</g>
+    <!-- ── Front rungs, labels and beads ── -->
+    <g>${frontRungs.join("")}</g>
+    <g>${labels.join("")}</g>
+    <g>${frontBeads.join("")}</g>
 
-    <!-- Energy packets riding the strands -->
+    <!-- ── Front layer: bright strands + flowing nucleotides ── -->
+    <path d="${d1F}" class="strand" stroke="url(#strandGrad)" stroke-width="24" opacity="0.05"/>
+    <path d="${d2F}" class="strand" stroke="url(#strandGrad)" stroke-width="24" opacity="0.05"/>
+    <path d="${d1F}" class="strand" stroke="url(#strandGrad)" stroke-width="13" opacity="0.14"/>
+    <path d="${d2F}" class="strand" stroke="url(#strandGrad)" stroke-width="13" opacity="0.14"/>
+    <path d="${d1F}" class="strand" stroke="url(#strandGrad)" stroke-width="4.5"/>
+    <path d="${d2F}" class="strand" stroke="url(#strandGrad)" stroke-width="4.5"/>
+    <path d="${d1F}" class="flow" stroke="#9bd1ff" stroke-width="2.5" stroke-dasharray="2 30" opacity="0.85">
+      <animate attributeName="stroke-dashoffset" from="640" to="0" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path d="${d2F}" class="flow" stroke="#d4b8ff" stroke-width="2.5" stroke-dasharray="2 30" opacity="0.85">
+      <animate attributeName="stroke-dashoffset" from="640" to="0" dur="8s" repeatCount="indefinite" begin="1.2s"/>
+    </path>
+
+    <!-- ── Peak week marker ── -->
+    <circle cx="${peakX.toFixed(1)}" cy="${CY}" r="13" class="peak-halo"/>
+    <rect x="${(peakX - 4.5).toFixed(1)}" y="${CY - 4.5}" width="9" height="9" class="peak"/>
+
+    <!-- ── Energy packets riding the strands ── -->
     <circle r="4.5" fill="#ffffff">
-      <animateMotion dur="7s" repeatCount="indefinite" path="${d1}"/>
+      <animateMotion dur="8s" repeatCount="indefinite" path="${d1F}"/>
     </circle>
     <circle r="10" fill="#3b82f6" class="energy">
-      <animateMotion dur="7s" repeatCount="indefinite" path="${d1}"/>
+      <animateMotion dur="8s" repeatCount="indefinite" path="${d1F}"/>
     </circle>
     <circle r="4.5" fill="#ffffff">
-      <animateMotion dur="11s" repeatCount="indefinite" begin="2s" path="${d2}"/>
+      <animateMotion dur="12s" repeatCount="indefinite" begin="2s" path="${d2F}"/>
     </circle>
     <circle r="10" fill="#8b5cf6" class="energy">
-      <animateMotion dur="11s" repeatCount="indefinite" begin="2s" path="${d2}"/>
+      <animateMotion dur="12s" repeatCount="indefinite" begin="2s" path="${d2F}"/>
     </circle>
   </g>
 
