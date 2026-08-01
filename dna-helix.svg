@@ -118,7 +118,7 @@
   <!-- ── Frame labels ── -->
   <text x="40" y="30" class="title">DOUBLE_HELIX_2026</text>
   <text x="940" y="30" text-anchor="end" class="title" style="opacity:0.75">@DinDja</text>
-  <text x="40" y="344" class="label">1553 commits · 53 base pairs</text>
+  <text x="40" y="344" class="label">1554 commits · 53 base pairs</text>
   <text x="940" y="344" text-anchor="end" class="label" style="opacity:0.55">A-T · C-G · one pair per week</text>
 
   <!-- ── Border ── -->
