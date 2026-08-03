@@ -1,0 +1,14 @@
+query {
+  viewer {
+    name
+    login
+    profileAchievements(first: 10) {
+      nodes {
+        achievement {
+          name
+          tier
+        }
+      }
+    }
+  }
+}

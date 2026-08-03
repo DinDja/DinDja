@@ -706,7 +706,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🌌 Galáxia de contribuições</b> — oxe, cada semana do ano vira um sistema estelar nos braços da espiral (ângulo dourado 137,5°). Quanto mais eu comito, mais a estrela brilha e esquenta: em dia de destaque até estrela dourada eu forjei!</sub>
+  <sub><b>🌌 Galáxia de contribuições</b> — cada semana do ano vira um sistema estelar nos braços da espiral (ângulo dourado 137,5°). Quanto mais eu comito, mais a estrela brilha e esquenta: em dia de destaque até estrela dourada eu forjei!</sub>
 </p>
 
 <p align="center">
@@ -714,7 +714,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🛸 Galaga de commits</b> — oxe, aqui eu sou o piloto! A nave dispara lasers na minha grade de contribuições e cada célula que explode é um commit que eu mandei pra produção.</sub>
+  <sub><b>🛸 Galaga de commits</b> — aqui eu sou o piloto! A nave dispara lasers na minha grade de contribuições e cada célula que explode é um commit que eu mandei pra produção.</sub>
 </p>
 
 <p align="center">
@@ -722,7 +722,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🧱 Breakout de contribuições</b> — oxe, adoro essa! A bola quica e vai quebrando os tijolinhos do meu histórico. Nos dias que eu tô mais ativo os tijolos ficam reforçados, aguentam até mais impacto.</sub>
+  <sub><b>🧱 Breakout de contribuições</b> — adoro essa! A bola quica e vai quebrando os tijolinhos do meu histórico. Nos dias que eu tô mais ativo os tijolos ficam reforçados, aguentam até mais impacto.</sub>
 </p>
 
 <p align="center">
@@ -730,7 +730,7 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🟡 Pacman devorando commits</b> — oxe, o bichinho anda comendo meus commits! Ele percorre o grafo guiado pelos fantasmas e já comi tantos pac-dots que subi de nível.</sub>
+  <sub><b>🟡 Pacman devorando commits</b> — o bichinho anda comendo meus commits! Ele percorre o grafo guiado pelos fantasmas e já comi tantos pac-dots que subi de nível.</sub>
 </p>
 
 <p align="center">
@@ -738,24 +738,24 @@ Sistema de inventário, movimentação e auditoria para a SECTI.
 </p>
 
 <p align="center">
-  <sub><b>🏔️ Terreno voxel</b> — oxe, cada coluna dessa é um dia meu e a altura do relevo é o tanto que eu trabalhei. Teve semana que virou pico — e os topos quentes piscam como farol me avisando pra eu parar um pouco.</sub>
+  <sub><b>🏔️ Terreno voxel</b> — cada coluna dessa é um dia meu e a altura do relevo é o tanto que eu trabalhei. Teve semana que virou pico — e os topos quentes piscam como farol me avisando pra eu parar um pouco.</sub>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/matrix-rain.svg" width="100%" alt="Matrix rain contributions"/>
 </p>
 
 <p align="center">
-  <sub><b>🟢 Matrix rain</b> — oxe, essa chuva de código é decodificada do meu ano: quanto mais ativa a semana, mais longa e veloz a coluna de glifos. A matriz já me pegou faz tempo.</sub>
-</p>
+  <sub><b>🟢 Matrix rain</b> — essa chuva de código é decodificada do meu ano: quanto mais ativa a semana, mais longa e veloz a coluna de glifos. A matriz já me pegou faz tempo.</sub>
+</p> -->
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://raw.githubusercontent.com/DinDja/DinDja/output/dna-helix.svg" width="100%" alt="DNA helix contributions"/>
 </p>
 
 <p align="center">
-  <sub><b>🧬 Hélice dupla</b> — oxe, cada semana minha é um par de bases (A-T · C-G). A cor do degrau mostra a intensidade dos meus commits e os pacotes de energia deslizam pelas fitas azul e roxa do meu código.</sub>
-</p>
+  <sub><b>🧬 Hélice dupla</b> — cada semana minha é um par de bases (A-T · C-G). A cor do degrau mostra a intensidade dos meus commits e os pacotes de energia deslizam pelas fitas azul e roxa do meu código.</sub>
+</p> -->
 
 ---
 
