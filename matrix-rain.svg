@@ -269,7 +269,7 @@
     <text x="514.0" y="218.0" class="glyph" opacity="1.00">ヤ</text><text x="514.0" y="235.0" class="glyph" opacity="0.84">カ</text><text x="514.0" y="252.0" class="glyph" opacity="0.70">I</text><text x="514.0" y="269.0" class="glyph" opacity="0.57">ル</text><text x="514.0" y="286.0" class="glyph" opacity="0.44">2</text><text x="514.0" y="303.0" class="glyph" opacity="0.33">N</text><text x="514.0" y="320.0" class="glyph" opacity="0.23">テ</text><text x="514.0" y="337.0" class="glyph" opacity="0.15">S</text><text x="514.0" y="354.0" class="glyph" opacity="0.08">0</text><text x="514.0" y="371.0" class="glyph" opacity="0.06">X</text>
     <text x="514.0" y="422.0" class="head" opacity="0.56">ヤ</text>
   </g>
-  <g style="animation: fall32 5.46s linear infinite; animation-delay:-6.41s">
+  <g style="animation: fall32 5.44s linear infinite; animation-delay:-6.41s">
     <text x="530.0" y="14.0" class="glyph-bright" opacity="1.00">ヘ</text><text x="530.0" y="31.0" class="glyph" opacity="0.84">2</text><text x="530.0" y="48.0" class="glyph" opacity="0.70">ヒ</text><text x="530.0" y="65.0" class="glyph" opacity="0.57">2</text><text x="530.0" y="82.0" class="glyph" opacity="0.44">セ</text><text x="530.0" y="99.0" class="glyph-bright" opacity="0.33">モ</text><text x="530.0" y="116.0" class="glyph" opacity="0.23">ナ</text><text x="530.0" y="133.0" class="glyph" opacity="0.15">キ</text><text x="530.0" y="150.0" class="glyph-bright" opacity="0.08">2</text><text x="530.0" y="167.0" class="glyph" opacity="0.06">3</text>
     <text x="530.0" y="218.0" class="head" opacity="0.56">ヘ</text>
     <text x="530.0" y="218.0" class="glyph-bright" opacity="1.00">ヘ</text><text x="530.0" y="235.0" class="glyph" opacity="0.84">2</text><text x="530.0" y="252.0" class="glyph" opacity="0.70">ヒ</text><text x="530.0" y="269.0" class="glyph" opacity="0.57">2</text><text x="530.0" y="286.0" class="glyph" opacity="0.44">セ</text><text x="530.0" y="303.0" class="glyph-bright" opacity="0.33">モ</text><text x="530.0" y="320.0" class="glyph" opacity="0.23">ナ</text><text x="530.0" y="337.0" class="glyph" opacity="0.15">キ</text><text x="530.0" y="354.0" class="glyph-bright" opacity="0.08">2</text><text x="530.0" y="371.0" class="glyph" opacity="0.06">3</text>
@@ -441,7 +441,7 @@
   <!-- ── Frame labels ── -->
   <text x="40" y="30" class="title">DinDja@matrix:~$ git log --contributions 2026</text>
   <text x="940" y="30" text-anchor="end" class="title" style="opacity:0.75">sudo make me productive</text>
-  <text x="40" y="344" class="label">1581 commits decoded · 53 weeks</text>
+  <text x="40" y="344" class="label">1589 commits decoded · 53 weeks</text>
   <text x="940" y="344" text-anchor="end" class="label" style="opacity:0.55">the grid has you</text>
 
   <!-- ── Border ── -->
