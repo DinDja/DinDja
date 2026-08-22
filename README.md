@@ -187,26 +187,53 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 
 <table>
   <tr>
-    <td align="center">
-      <img src="SECTI.png" height="140" alt="Sede da SECTI/BA"/>
+    <td align="center" width="33%">
+      <img src="sec_ba_original.jpg" height="100" alt="Sede da SEC/BA"/>
     </td>
-    <td align="center">
-      <img src="sec_ba_original.jpg" height="140" alt="Sede da SEC/BA"/>
+    <td align="center" width="33%">
+      <img src="SECTI.png" height="100" alt="Sede da SECTI/BA"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="sec_ba_original.jpg" height="100" alt="Sede da SEC/BA"/>
     </td>
   </tr>
   <tr>
-    <td align="center">
+    <td align="center" width="33%">
+      <b>SEC/BA</b><br/>
+      <sub>Secretaria da Educação do Estado da Bahia</sub><br/><br/>
+      <code>Desenvolvedor Full Stack</code>
+    </td>
+    <td align="center" width="33%">
       <b>SECTI/BA</b><br/>
       <sub>Secretaria de Ciência, Tecnologia e Inovação da Bahia</sub><br/><br/>
       <code>Desenvolvedor Full Stack</code>
     </td>
-    <td align="center">
+    <td align="center" width="33%">
       <b>SEC/BA</b><br/>
       <sub>Secretaria da Educação do Estado da Bahia</sub><br/><br/>
       <code>Desenvolvedor Full Stack</code>
     </td>
   </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://img.shields.io/badge/2025--Atual-0A66C2?style=flat-square" alt="2025"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://img.shields.io/badge/Ago_2026-6A5ACD?style=flat-square" alt="Ago 2026"/>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://img.shields.io/badge/Set_2026--Atual-0A66C2?style=flat-square" alt="Set 2026"/>
+    </td>
+  </tr>
 </table>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🕐_2025-0A66C2?style=for-the-badge" alt="2025"/>
+  <img src="https://img.shields.io/badge/➡️-6A5ACD?style=for-the-badge" alt="→"/>
+  <img src="https://img.shields.io/badge/🕐_2026 até Ago-6A5ACD?style=for-the-badge" alt="2026 até Ago"/>
+  <img src="https://img.shields.io/badge/➡️-0A66C2?style=for-the-badge" alt="→"/>
+  <img src="https://img.shields.io/badge/🕐_Set_2026--Atual-0A66C2?style=for-the-badge" alt="Set 2026"/>
+</p>
 
 ---
 
