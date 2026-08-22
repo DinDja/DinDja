@@ -186,46 +186,8 @@ Atualmente expandindo para **3D Web e aplicações desktop** — construindo um 
 ## 🧑‍💼 Experiência Institucional
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Fev_2025-0A66C2?style=for-the-badge" alt="Fev 2025"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-0A66C2?style=flat-square" alt="──────"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Mar_2026-6A5ACD?style=for-the-badge" alt="Mar 2026"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-6A5ACD?style=flat-square" alt="──────"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Set_2026-0A66C2?style=for-the-badge" alt="Set 2026"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━-0A66C2?style=flat-square" alt="──────"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Atualmente-00ff00?style=for-the-badge" alt="Atualmente"/>
+  <img src="timeline-institutional.svg" width="100%" alt="Linha do Tempo - Experiência Institucional"/>
 </p>
-
-<table width="100%">
-  <tr>
-    <td width="33%" align="center" valign="top">
-      <img src="sec_ba_original.jpg" width="110" alt="Sede da SEC/BA"/><br/>
-      <b>SEC/BA</b><br/>
-      <sub>Secretaria da Educação do Estado da Bahia</sub><br/>
-      <code>Desenvolvedor Full Stack</code><br/>
-      <img src="https://img.shields.io/badge/03/02/2025_à_03/03/2026-0A66C2?style=flat-square" alt="03/02/2025 à 03/03/2026"/>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <img src="SECTI.png" width="110" alt="Sede da SECTI/BA"/><br/>
-      <b>SECTI/BA</b><br/>
-      <sub>Secretaria de Ciência, Tecnologia e Inovação da Bahia</sub><br/>
-      <code>Desenvolvedor Full Stack</code><br/>
-      <img src="https://img.shields.io/badge/02/02/2026_à_30/09/2026-6A5ACD?style=flat-square" alt="02/02/2026 à 30/09/2026"/>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <img src="sec_ba_original.jpg" width="110" alt="Sede da SEC/BA"/><br/>
-      <b>SEC/BA</b><br/>
-      <sub>Secretaria da Educação do Estado da Bahia</sub><br/>
-      <code>Desenvolvedor Full Stack</code><br/>
-      <img src="https://img.shields.io/badge/A partir_de_Set/2026-00ff00?style=flat-square" alt="A partir de Set/2026"/>
-    </td>
-  </tr>
-</table>
 
 ---
 
